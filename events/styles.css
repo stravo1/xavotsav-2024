@@ -1,0 +1,101 @@
+.opacity-40 {
+  opacity: 40%;
+}
+.screen {
+  height: 100vh;
+}
+.p-3rem {
+  padding: 3rem;
+}
+.mt-1rem {
+  margin-top: 1rem;
+}
+.mt-2rem {
+  margin-top: 2rem;
+}
+
+.mt-5rem {
+  margin-top: 5rem;
+}
+.mb-15p {
+  margin-bottom: 15%;
+}
+.flex-basis-15 {
+  flex-basis: 35%;
+}
+
+.flex-basis-75 {
+  flex-basis: 75%;
+}
+.h-15rem {
+  min-height: 20rem;
+  height: 45vh;
+}
+select {
+  padding: 5px;
+  color: white;
+  font-size: 14px;
+  font-family: "Karla", sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+  background: transparent;
+  -webkit-appearance: none;
+  border: 2px rgba(255, 255, 255, 0.5) solid;
+}
+
+.select-button {
+  flex-basis: 25%;
+  color: white;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  border-radius: 5px;
+}
+.gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.register-button,
+.info-button {
+  width: 100%;
+  border: none;
+  background-color: rgba(245, 222, 179, 0.21);
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-family: "Karla";
+  font-size: large;
+  color: white;
+}
+
+.gap-05rem {
+  gap: 0.5rem;
+}
+
+.swiper {
+  max-width: 20rem;
+}
+
+.transparent-glass-bg {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: all;
+}
+
+.transparent-glass-bg-2 {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1px);
+  transition: all;
+}
+
+.bg-images{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}

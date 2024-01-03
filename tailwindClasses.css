@@ -107,7 +107,7 @@
 
 /* Borders */
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 0.5rem !important;
 }
 
 /* Shadows */
@@ -164,6 +164,10 @@
 /* Overflow */
 .overflow-hidden {
   overflow: hidden !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
 }
 
 /* Visibility */
@@ -225,6 +229,10 @@
   opacity: 75%;
 }
 
+.opacity-100 {
+  opacity: 100%;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -250,5 +258,11 @@
 }
 
 .p-05rem {
-  gap: 0.5rem !important;
+  padding: 0.5rem !important;
+}
+
+.transition-all {
+  transition: all;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
