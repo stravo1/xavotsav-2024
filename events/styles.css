@@ -96,6 +96,6 @@ select {
 }
 
 .bg-images{
-  -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(75%);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
