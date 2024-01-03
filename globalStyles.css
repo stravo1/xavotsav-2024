@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Karla:wght@300;400;500;600&family=Yeseva+One&display=swap");
+
+body {
+  height: 100dvh;
+  width: 100dvw;
+  margin: 0px;
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Karla", monospace;
+  --primary-color: #ae3444;
+  --primary-color-text: #ff5f74;
+  --primary-color-text-dark: #611a23;
+  --accent-color: rgb(255, 151, 165);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  user-select: none;
+}
+
+.mobile,
+.desktop {
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.italiana {
+  line-height: 1.5;
+  font-family: "Italiana", sans-serif;
+  font-weight: 500;
+}
+
+.display {
+  line-height: 1.5;
+  font-family: "Yeseva One", sans-serif;
+}
+
+.black-bg {
+  background-color: black;
+  color: white;
+}
+
+.white-bg {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 850px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}

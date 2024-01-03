@@ -1,0 +1,46 @@
+@import url("./domino.css");
+
+.transition-wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 101;
+  font-size: 20px;
+}
+
+.transition-visible {
+  visibility: visible;
+  opacity: 100%;
+  transition: all 0.2s ease-in;
+}
+
+.transition-invisible {
+  visibility: hidden;
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+.transition-invisible-no-anim {
+  visibility: hidden;
+  opacity: 0%;
+  transition: none;
+}
+
+.bottom-text{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    opacity: 75%;
+}
+
+.domino{
+    opacity: 75%;
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.loader {
+  position: fixed;
+  z-index: 200;
+  width: 100dvw;
+  height: 100dvh;
+  margin: 0px;
+  font-family: "DotGothic16", monospace;
+  font-weight: 800;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dynamic {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: 36px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.hidden-no-anim {
+  visibility: hidden;
+  opacity: 0;
+  transition: all;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 100;
+  transition: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s ease-in-out;
+}

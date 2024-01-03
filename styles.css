@@ -1,0 +1,51 @@
+.opacity-40 {
+  opacity: 40%;
+}
+.mobile {
+  height: auto !important;
+}
+.screen {
+  height: 100vh;
+}
+.p-3rem {
+  padding: 3rem;
+}
+.mt-2rem {
+  margin-top: 2rem;
+}
+.mb-15p{
+  margin-bottom: 15%;
+}
+.infinite-anim {
+  width: calc(100vw - 6rem);
+  transition: all;
+  transition-duration: 1s;
+  opacity: 1;
+}
+.holder {
+  width: 50vw;
+  height: 50vw;
+  background-color: white;
+  opacity: 30%;
+  border-radius: 5px;
+}
+button {
+  border: none;
+  font-family: "Yeseva One", sans-serif;
+  font-size: 18px;
+  /* font-weight: bold; */
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0.65rem 0.75rem;
+  color: white;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-x: scroll;
+}
+
+.scroll-item {
+  scroll-snap-align: center;
+}
