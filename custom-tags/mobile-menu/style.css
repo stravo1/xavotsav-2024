@@ -38,13 +38,13 @@
 .socials-mobile {
   position: fixed;
   margin: 1rem 0;
-  font-size: 10px;
+  font-size: 12px;
   display: flex;
   width: 100dvw;
-  flex-direction: column;
+  flex-direction: row-reverse;
   box-sizing: border-box;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   bottom: 0;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .info-mobile {
-  text-align: center;
+  text-align: left;
   opacity: 0.5;
 }
 
