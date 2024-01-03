@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#7B4125" />
     <title>Xavotsav - 2024</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="tailwindClasses.css" />
@@ -229,14 +229,14 @@
             secondEntered = true;
             setTimeout(() => {
               locoScroll.scrollTo(document.querySelector("#second"));
-            }, 100);
+            }, 1);
           } else {
             secondEntered = false;
             setTimeout(() => {
               if (!thirdEntered) {
                 locoScroll.scrollTo(document.querySelector("#first"));
               }
-            }, 100);
+            }, 1);
           }
         }
         if (event == "thirdVisible") {
@@ -244,12 +244,12 @@
             thirdEntered = true;
             setTimeout(() => {
               locoScroll.scrollTo(document.querySelector("#third"));
-            }, 100);
+            }, 1);
           } else {
             thirdEntered = false;
             setTimeout(() => {
               locoScroll.scrollTo(document.querySelector("#second"));
-            }, 100);
+            }, 1);
           }
         }
       });
