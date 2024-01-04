@@ -120,6 +120,9 @@
 .text-sm {
   font-size: 0.875rem !important;
 }
+.text-md {
+  font-size: 1.1rem !important;
+}
 
 .text-lg {
   font-size: 1.25rem !important;

@@ -10,8 +10,8 @@ function openModal(headerName, description, link) {
     setTimeout(() => {
         modalWrapper.style.opacity = 1;
     }, 1)
-    modalHeader.innerHTML = headerName;
-    modalContent.innerHTML = description;
+    if (headerName) modalHeader.innerHTML = headerName;
+    if (description) modalContent.innerHTML = description;
     if (!link) {
         modalLink.style.display = "none";
         modalBottom.style.backgroundColor = "white";

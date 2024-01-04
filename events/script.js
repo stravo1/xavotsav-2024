@@ -19,13 +19,15 @@ const resetPositions = () => {
     // topSection.style.minHeight = "300px";
     // eventSection.style.paddingTop = "70px";
     // console.log("resetting end");
-    topBar.classList.remove("transparent-glass-bg")
+    topBar.classList.remove("transparent-glass-bg");
+    header.classList.add("text-3xl");
+    header.classList.remove("text-2xl");
 }
 
 window.addEventListener("scroll", function () {
     let msgPositionFromTop = msg.getBoundingClientRect().top;
     console.log(msgPositionFromTop, "eeh");
-    if (msg.style.paddingTop == "140px") {
+    if (msg.style.paddingTop == "155px") {
         if (msgPositionFromTop > 0) {
             resetPositions();
             return;
@@ -39,10 +41,12 @@ window.addEventListener("scroll", function () {
         //     msg.style.transition = "none";
         // }
         if (msgPositionFromTop <= 75) {
-            msg.style.marginTop = "140px";
+            msg.style.marginTop = "155px";
             header.style.position = "fixed";
             header.style.top = 0;
             header.style.marginTop = "0.5rem";
+            header.classList.remove("text-3xl");
+            header.classList.add("text-2xl");
             topBar.classList.add("transparent-glass-bg")
         }
     }
@@ -86,12 +90,12 @@ eventDetails.forEach((item) => {
             />
         </div>
         <div class="gradient absolute inset-0 rounded"></div>
-        <div class="display text-lg z-5">${item.name}</div>
-        <div class="text-sm z-5">
+        <div class="display text-xl z-5">${item.name}</div>
+        <div class="z-5">
           ${item.description}
         </div>
         <div class="flex z-5 event-button-group w-full gap-05rem">
-          <button class="register-button event-1" onclick="openModal('${item.name}','${item.modalDescription}','${item.formLink}')">Register</button>
+          <button class="text-md font-bold register-button event-1" onclick="openModal('${item.name}','${item.modalDescription}','${item.formLink}')">Register</button>
         </div>
     `
     eventSection.appendChild(newEventDiv)

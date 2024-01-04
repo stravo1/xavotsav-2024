@@ -30,9 +30,7 @@
           class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
           src="/assets/images/landing/background.jpg"
         />
-        <div
-          class="fixed inset-0 w-full h-full transparent-glass-bg-2 z-1"
-        ></div>
+        <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
       </div>
       <div
         class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
@@ -47,14 +45,18 @@
       </div>
       <div class="screen relative content w-full p-3rem box-border">
         <div class="top-section">
-          <div class="relative display text-2xl mt-5rem z-10" id="page-header">
+          <div class="relative display text-3xl mt-5rem z-10" id="page-header">
             events
           </div>
-          <div class="relative about mt-1rem font-light z-5" id="page-msg">
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="page-msg"
+          >
             Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
             diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
             mauris enim ipsum dictumst pretium convallis.
           </div>
+          <div class="mt-1rem text-lg font-bold underline cursor-pointer" onclick="openModal()">View Guidelines</div>
           <div class="relative w-full z-5 flex mt-2rem gap-1rem">
             <select class="flex flex-basis-75">
               <option disabled selected>Skip to...</option>
