@@ -95,3 +95,7 @@ select {
   transition: all;
 }
 
+.w-85p {
+  width: 85%;
+  max-width: 300px;
+}

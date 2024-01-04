@@ -33,7 +33,7 @@
 }
 
 .relative {
-  position: relative !important;
+  position: relative;
 }
 
 /* Margins, Padding, and Borders */

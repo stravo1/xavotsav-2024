@@ -16,21 +16,26 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/modal/component.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <custom-mobile-menu />
+    <custom-modal />
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
           class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
           src="/assets/images/landing/background.jpg"
         />
-        <div class="fixed inset-0 w-full h-full transparent-glass-bg-2 z-1"></div>
+        <div
+          class="fixed inset-0 w-full h-full transparent-glass-bg-2 z-1"
+        ></div>
       </div>
       <div
-        class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border transparent-glass-bg z-10"
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
       >
         <img height="35px" src="/assets/logo/logo.png" />
         <span
@@ -40,123 +45,35 @@
           menu
         </span>
       </div>
-      <div
-        id="first"
-        class="screen relative content w-full p-3rem box-border overflow-scroll"
-      >
-        <div class="relative display text-2xl mt-5rem z-5">events</div>
-        <div class="relative about mt-1rem font-light z-5">
-          Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-          diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-          mauris enim ipsum dictumst pretium convallis.
-        </div>
-        <div class="relative w-full z-5 flex mt-2rem gap-1rem">
-          <select class="flex flex-basis-75">
-            <option disabled selected>Skip to...</option>
-            <option value="Dance">Dance</option>
-            <option value="Art">Art</option>
-            <option value="Music">Music</option>
-          </select>
-          <button class="select-button">
-            <span class="material-symbols-rounded"> arrow_forward </span>
-          </button>
-        </div>
-        <!-- Slider main container -->
-        <div
-          class="swiper w-full mt-2rem rounded"
-        >
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper w-full rounded">
-            <!-- Slides -->
-            <div class="swiper-slide rounded">
-              <div
-                class="flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded"
-              >
-                <div class="picture absolute inset-0 rounded">
-                  <img
-                    class="w-full h-full object-cover rounded"
-                    src="/assets/images/landing/background.jpg"
-                  />
-                </div>
-                <div class="gradient absolute inset-0"></div>
-                <div class="display text-lg z-5">Star Night</div>
-                <div class="text-sm z-5">
-                  Lorem ipsum dolor sit amet consectetur. Odio enim commodo
-                  dignissim diam eget. Vel velit mauris nisi pharetra id.
-                </div>
-                <div class="flex z-5 event-button-group w-full gap-05rem">
-                  <button class="info-button flex-basis-15">
-                    <span
-                      class="material-symbols-rounded flex justify-center items-center"
-                    >
-                      info
-                    </span>
-                  </button>
-                  <button class="register-button">Register</button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide rounded">
-              <div
-                class="flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded"
-              >
-                <div class="picture absolute inset-0 rounded">
-                  <img
-                    class="w-full h-full object-cover rounded"
-                    src="/assets/images/events/dance.jpg"
-                  />
-                </div>
-                <div class="gradient absolute inset-0"></div>
-                <div class="display text-lg z-5">Star Night</div>
-                <div class="text-sm z-5">
-                  Lorem ipsum dolor sit amet consectetur. Odio enim commodo
-                  dignissim diam eget. Vel velit mauris nisi pharetra id.
-                </div>
-                <div class="flex z-5 event-button-group w-full gap-05rem">
-                  <button class="info-button flex-basis-15">
-                    <span
-                      class="material-symbols-rounded flex justify-center items-center"
-                    >
-                      info
-                    </span>
-                  </button>
-                  <button class="register-button">Register</button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide rounded">
-                <div
-                  class="flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded"
-                >
-                  <div class="picture absolute inset-0 rounded">
-                    <img
-                      class="w-full h-full object-cover rounded"
-                      src="/assets/images/events/holder.jpg"
-                    />
-                  </div>
-                  <div class="gradient absolute inset-0"></div>
-                  <div class="display text-lg z-5">Star Night</div>
-                  <div class="text-sm z-5">
-                    Lorem ipsum dolor sit amet consectetur. Odio enim commodo
-                    dignissim diam eget. Vel velit mauris nisi pharetra id.
-                  </div>
-                  <div class="flex z-5 event-button-group w-full gap-05rem">
-                    <button class="info-button flex-basis-15">
-                      <span
-                        class="material-symbols-rounded flex justify-center items-center"
-                      >
-                        info
-                      </span>
-                    </button>
-                    <button class="register-button">Register</button>
-                  </div>
-                </div>
-              </div>
+      <div class="screen relative content w-full p-3rem box-border">
+        <div class="top-section">
+          <div class="relative display text-2xl mt-5rem z-10" id="page-header">
+            events
+          </div>
+          <div class="relative about mt-1rem font-light z-5" id="page-msg">
+            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
+            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
+            mauris enim ipsum dictumst pretium convallis.
+          </div>
+          <div class="relative w-full z-5 flex mt-2rem gap-1rem">
+            <select class="flex flex-basis-75">
+              <option disabled selected>Skip to...</option>
+              <option value="Dance">Dance</option>
+              <option value="Art">Art</option>
+              <option value="Music">Music</option>
+            </select>
+            <button class="select-button">
+              <span class="material-symbols-rounded"> arrow_forward </span>
+            </button>
           </div>
         </div>
+        <div
+          class="event-items flex flex-col gap-1rem justify-center items-center mt-2rem"
+        ></div>
       </div>
     </div>
   </body>
   <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/modal/script.js"></script>
   <script src="./script.js"></script>
 </html>
