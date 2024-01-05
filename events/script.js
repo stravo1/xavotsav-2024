@@ -1,3 +1,22 @@
+const eventDetails = [
+    {
+        name: "Dance",
+        description: "Experience the mesmerizing spectacle of diverse rhythms colliding on one stage in Xavotsav.",
+        modalDescription: "<b>Hello World</b>",
+        formLink: "https://google.com",
+        imageName: "dance.jpg"
+    },
+    {
+        name: "Event 2",
+        description: "Lorem Ipsum Dolor Sit Amet 2",
+        modalDescription: "<b>Hello World 2</b>",
+        formLink: "https://google.com",
+        imageName: "holder.jpg"
+    }
+]
+
+
+
 // Code scrolling effects of the page header:
 let header = document.querySelector("#page-header");
 let msg = document.querySelector("#page-msg");
@@ -26,7 +45,6 @@ const resetPositions = () => {
 
 window.addEventListener("scroll", function () {
     let msgPositionFromTop = msg.getBoundingClientRect().top;
-    console.log(msgPositionFromTop, "eeh");
     if (msg.style.paddingTop == "155px") {
         if (msgPositionFromTop > 0) {
             resetPositions();
@@ -61,23 +79,6 @@ window.addEventListener("scroll", function () {
         }
     }, 100)
 });
-
-const eventDetails = [
-    {
-        name: "Event 1",
-        description: "Lorem Ipsum Dolor Sit Amet",
-        modalDescription: "<b>Hello World</b>",
-        formLink: "https://google.com",
-        imageName: "dance.jpg"
-    },
-    {
-        name: "Event 2",
-        description: "Lorem Ipsum Dolor Sit Amet 2",
-        modalDescription: "<b>Hello World 2</b>",
-        formLink: "https://google.com",
-        imageName: "holder.jpg"
-    }
-]
 
 eventDetails.forEach((item) => {
     let newEventDiv = document.createElement("div");

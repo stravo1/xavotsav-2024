@@ -4,8 +4,8 @@
 .screen {
   height: 100vh;
 }
-.p-3rem {
-  padding: 3rem;
+.p-2rem {
+  padding: 2rem;
 }
 .mt-1rem {
   margin-top: 1rem;
@@ -28,8 +28,8 @@
   flex-basis: 75%;
 }
 .h-15rem {
-  min-height: 20rem;
-  height: 45vh;
+  min-height: 15rem;
+  height: 40vh;
 }
 select {
   padding: 5px;
@@ -39,12 +39,14 @@ select {
   padding: 1rem;
   border-radius: 5px;
   background: transparent;
+  width: 100%;
   -webkit-appearance: none;
   border: 2px rgba(255, 255, 255, 0.5) solid;
 }
 
 .select-button {
-  flex-basis: 25%;
+  width: 4rem;
+  height: 4rem;
   color: white;
   background: rgba(255, 255, 255, 0.35);
   border: none;
@@ -80,7 +82,7 @@ select {
 
 .transparent-glass-bg {
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -96,7 +98,7 @@ select {
 }
 
 .w-85p {
-  width: calc(100vw - 7rem);
+  width: calc(100vw - 5rem);
   max-width: 300px;
 }
 
