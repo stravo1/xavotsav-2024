@@ -1,35 +1,35 @@
 /* Display */
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .block {
-  display: block !important;
+  display: block;
 }
 
 .inline-block {
-  display: inline-block !important;
+  display: inline-block;
 }
 
 .flex {
-  display: flex !important;
+  display: flex;
 }
 
 .grid {
-  display: grid !important;
+  display: grid;
 }
 
 /* Positioning */
 .static {
-  position: static !important;
+  position: static;
 }
 
 .fixed {
-  position: fixed !important;
+  position: fixed;
 }
 
 .absolute {
-  position: absolute !important;
+  position: absolute;
 }
 
 .relative {
@@ -38,106 +38,106 @@
 
 /* Margins, Padding, and Borders */
 .m-1rem {
-  margin: 1rem !important;
+  margin: 1rem;
 }
 
 .p-1rem {
-  padding: 1rem !important;
+  padding: 1rem;
 }
 
 /* Typography */
 .text-center {
-  text-align: center !important;
+  text-align: center;
 }
 
 .font-bold {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 
 /* Sizing */
 .w-full {
-  width: 100% !important;
+  width: 100%;
 }
 
 .h-full {
-  height: 100% !important;
+  height: 100%;
 }
 
 /* Flexbox */
 .justify-center {
-  justify-content: center !important;
+  justify-content: center;
 }
 
 .justify-between {
-  justify-content: space-between !important;
+  justify-content: space-between;
 }
 
 .justify-start {
-  justify-content: start !important;
+  justify-content: start;
 }
 
 .justify-end {
-  justify-content: end !important;
+  justify-content: end;
 }
 
 .items-center {
-  align-items: center !important;
+  align-items: center;
 }
 
 .items-start {
-  align-items: start !important;
+  align-items: start;
 }
 
 .items-end {
-  align-items: end !important;
+  align-items: end;
 }
 
 /* Flexbox */
 .flex-row {
-  flex-direction: row !important;
+  flex-direction: row;
 }
 
 .flex-col {
-  flex-direction: column !important;
+  flex-direction: column;
 }
 
 .flex-wrap {
-  flex-wrap: wrap !important;
+  flex-wrap: wrap;
 }
 
 /* Borders */
 .rounded {
-  border-radius: 0.5rem !important;
+  border-radius: 0.5rem;
 }
 
 /* Shadows */
 .shadow {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* Text */
 .text-sm {
-  font-size: 0.875rem !important;
+  font-size: 0.875rem;
 }
 .text-md {
-  font-size: 1.1rem !important;
+  font-size: 1.1rem;
 }
 
 .text-lg {
-  font-size: 1.25rem !important;
+  font-size: 1.25rem;
 }
 
 .text-xl {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
 }
 
 .text-2xl {
-  font-size: 2rem !important;
+  font-size: 2rem;
 }
 
 .text-3xl {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
 }
 
 .font-light {
@@ -146,14 +146,14 @@
 
 /* Positioning */
 .top-0 {
-  top: 0 !important;
+  top: 0;
 }
 
 .bottom-0 {
-  bottom: 0 !important;
+  bottom: 0;
 }
 .left-0 {
-  left: 0 !important;
+  left: 0;
 }
 
 .inset-0 {
@@ -161,60 +161,65 @@
 }
 /* Cursor */
 .cursor-pointer {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 /* Overflow */
 .overflow-hidden {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 .overflow-scroll {
-  overflow: scroll !important;
+  overflow: scroll;
 }
 
 /* Visibility */
 .invisible {
-  visibility: hidden !important;
+  visibility: hidden;
 }
 
 .visible {
-  visibility: visible !important;
+  visibility: visible;
 }
 
 /* Z-Index */
 .z-10 {
-  z-index: 10 !important;
+  z-index: 10;
 }
 
 .z-5 {
-  z-index: 5 !important;
+  z-index: 5;
 }
 
 .z-4 {
-  z-index: 4 !important;
+  z-index: 4;
 }
 
 .z-3 {
-  z-index: 3 !important;
+  z-index: 3;
 }
 
 .z-2 {
-  z-index: 2 !important;
+  z-index: 2;
 }
 
 .z-1 {
-  z-index: 1 !important;
+  z-index: 1;
 }
 
 .z-0 {
-  z-index: 0 !important;
+  z-index: 0;
 }
 
 /* Object Fit */
 .object-cover {
-  object-fit: cover !important;
+  object-fit: cover;
 }
+
+.object-contain {
+  object-fit: contain;
+}
+
 
 .opacity-0 {
   opacity: 0%;
@@ -241,27 +246,27 @@
 }
 
 .gap-1rem {
-  gap: 1rem !important;
+  gap: 1rem;
 }
 
 .gap-2rem {
-  gap: 2rem !important;
+  gap: 2rem;
 }
 
 .gap-3rem {
-  gap: 3rem !important;
+  gap: 3rem;
 }
 
 .p-1rem {
-  padding: 1rem !important;
+  padding: 1rem;
 }
 
 .p-075rem {
-  padding: 0.75rem !important;
+  padding: 0.75rem;
 }
 
 .p-05rem {
-  padding: 0.5rem !important;
+  padding: 0.5rem;
 }
 
 .transition-all {
