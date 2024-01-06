@@ -98,8 +98,8 @@ select {
 }
 
 .w-85p {
-  width: calc(100vw - 5rem);
-  max-width: 300px;
+  width: calc(100dvw - 6rem);
+  max-width: 350px;
 }
 
 .underline {

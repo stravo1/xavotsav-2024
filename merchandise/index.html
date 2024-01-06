@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xavotsav - 2024 | Events</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/tailwindClasses.css" />
+    <link rel="stylesheet" href="/globalStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
+    <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/modal/component.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <custom-mobile-menu />
+    <custom-modal />
+    <div class="mobile">
+      <div class="background fixed inset-0 w-full h-full">
+        <img
+          class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
+          src="/assets/images/landing/background.jpg"
+        />
+        <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
+      </div>
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
+      >
+        <img height="35px" src="/assets/logo/logo.png" />
+        <span
+          class="material-symbols-rounded cursor-pointer"
+          onclick="openMenu()"
+        >
+          menu
+        </span>
+      </div>
+      <div class="relative content w-full p-2rem box-border">
+        <div class="top-section">
+          <div class="relative display text-3xl mt-5rem z-10" id="page-header">
+            merchandise
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="page-msg"
+          >
+            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
+            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
+            mauris enim ipsum dictumst pretium convallis.
+          </div>
+        </div>
+        <div
+          class="merch-items flex flex-col gap-1rem justify-center items-center mt-2rem"
+        >
+          <div class="swiper w-full mt-2rem">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper w-full">
+              <!-- Slides -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer style="margin-top: 3rem"></footer>
+    </div>
+  </body>
+  <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/modal/script.js"></script>
+  <script src="./script.js"></script>
+</html>

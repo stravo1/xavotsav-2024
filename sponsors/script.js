@@ -73,9 +73,9 @@ window.addEventListener("scroll", function () {
 });
 
 sponsorDetails.forEach((item) => {
-    let newEventDiv = document.createElement("div");
-    newEventDiv.className = "flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded w-85p"
-    newEventDiv.innerHTML = `
+    let newSponsorDiv = document.createElement("div");
+    newSponsorDiv.className = "flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded w-85p"
+    newSponsorDiv.innerHTML = `
         <div class="picture absolute inset-0 rounded p-1rem">
             <img
             class="w-full h-full object-contain rounded"
@@ -86,5 +86,5 @@ sponsorDetails.forEach((item) => {
           <span class="sponsor-title">${item.title}</span>
         </div>
     `
-    sponsorSection.appendChild(newEventDiv)
+    sponsorSection.appendChild(newSponsorDiv)
 })

@@ -5,7 +5,7 @@ const path = window.location.pathname;
 const home = document.getElementById("home");
 const events = document.getElementById("events");
 const sponsors = document.getElementById("sponsors");
-const magazines = document.getElementById("magazines");
+const merchandise = document.getElementById("merchandise");
 const contact = document.getElementById("contact");
 const about = document.getElementById("about");
 
@@ -46,9 +46,9 @@ switch (path) {
     case "/sponsors/index.html":
         sponsors.childNodes[0].classList.add("current-route");
         break;
-    case "/magazines/":
-    case "/magazines/index.html":
-        magazines.childNodes[0].classList.add("current-route");
+    case "/merchandise/":
+    case "/merchandise/index.html":
+        merchandise.childNodes[0].classList.add("current-route");
         break;
     case "/contact/":
     case "/contact/index.html":
