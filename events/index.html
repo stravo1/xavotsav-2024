@@ -17,8 +17,10 @@
     />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
     <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
     <script src="/custom-tags/modal/component.js"></script>
+    <script src="/custom-tags/footer/component.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -43,7 +45,7 @@
           menu
         </span>
       </div>
-      <div class="screen relative content w-full p-2rem box-border">
+      <div class="relative content w-full p-2rem box-border">
         <div class="top-section">
           <div class="relative display text-3xl mt-5rem z-10" id="page-header">
             events
@@ -56,7 +58,12 @@
             diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
             mauris enim ipsum dictumst pretium convallis.
           </div>
-          <div class="mt-1rem text-lg font-bold underline cursor-pointer" onclick="openModal()">View Guidelines</div>
+          <div
+            class="mt-1rem text-lg font-bold underline cursor-pointer"
+            onclick="openModal()"
+          >
+            View Guidelines
+          </div>
           <div class="relative w-full z-5 flex mt-2rem gap-1rem">
             <select class="flex flex-basis-75">
               <option disabled selected>Skip to...</option>
@@ -73,6 +80,7 @@
           class="event-items flex flex-col gap-1rem justify-center items-center mt-2rem"
         ></div>
       </div>
+      <custom-footer />
     </div>
   </body>
   <script src="/custom-tags/mobile-menu/script.js"></script>
