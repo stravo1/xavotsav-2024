@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
 .nav-menu-mobile {
   display: flex;
   flex-direction: column;
@@ -8,7 +9,9 @@
   height: 100dvh;
   width: 100dvw;
   z-index: 101;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.816);
+  backdrop-filter: blur(5px);
+  font-family: "Fondamento", sans-serif;
 }
 .routes-mobile {
   margin-left: 3rem;
@@ -24,7 +27,7 @@
 .route-mobile > a {
   color: white;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 34px;
 }
 
 .close-button {
