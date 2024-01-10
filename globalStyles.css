@@ -24,6 +24,10 @@ body {
   height: 100dvh;
 }
 
+.fondamento {
+  font-family: 'Fondamento', sans-serif;
+}
+
 .italiana {
   line-height: 1.5;
   font-family: "Italiana", sans-serif;
