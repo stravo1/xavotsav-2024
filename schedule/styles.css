@@ -1,0 +1,81 @@
+body {
+    overflow-x: hidden;
+}
+
+main {
+    padding: 60px 10% 0;
+}
+
+header {
+    color: #322E16;
+    font-size: 2.5em;
+}
+
+.about {
+    width: 70%;
+    min-width: 700px;
+    color: #595000;
+    font-size: 1.2rem;
+}
+
+.toggler {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.2rem;
+}
+
+.day-button {
+    color: #504408;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.day-border {
+    display: block;
+    height: 4px;
+    width: 50%;
+    margin: 0 auto;
+    background: #B39551;
+    border-radius: 50px;
+}
+
+.schedules {
+    margin: 15px auto 0;
+    min-width: 600px;
+    width: 80%;
+}
+
+table {
+    margin: auto;
+}
+
+.table-headings {
+    border-bottom: 2px solid #504408;
+    font-size: 1.6rem;
+    color: #504408;
+    text-align: center;
+}
+
+.table-row {
+    color: #504408;
+    font-size: 1.2rem;
+}
+
+td {
+    border-bottom: 1px solid #504408;
+    width: 50%;
+}
+
+.timings {
+    text-wrap: nowrap;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+.events{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
