@@ -12,7 +12,7 @@ class CustomMobileMenu extends HTMLElement {
                 close
               </span>
             </div>
-            <div class="routes-mobile italiana">
+            <div class="routes-mobile">
               <li id="home" class="slides slide-out route-mobile" style="--i:0"><a href="/">home</a></li>
               <li id="events" class="route-mobile" style="--i:1"><a href="/events">events</a></li>
               <li id="sponsors" class="route-mobile"  style="--i:2"><a href="/sponsors">sponsors</a></li>
