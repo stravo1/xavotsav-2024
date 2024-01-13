@@ -1,93 +1,121 @@
-.nav-bar-desktop {
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+.nav-menu-desktop {
   display: flex;
-  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
   z-index: 101;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  font-family: "Fondamento", sans-serif;
 }
-
-.routes-desktop,
-.nav-groups {
-  display: flex;
-  gap: 1rem;
+.routes-desktop {
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
 }
-
-.routes-desktop li {
+.routes-desktop > li {
   list-style: none;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  text-align: center;
 }
 
 .route-desktop > a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.text-black > a {
-  color: black;
-}
-
-.text-white > a {
   color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.desktop-close-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.socials-desktop {
+  position: fixed;
+  margin: 1rem 0;
+  font-size: 12px;
+  display: flex;
+  width: 100dvw;
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-evenly;
+  bottom: 0;
+}
+
+.icons-group {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0.7;
+}
+
+.icons-group img {
+  width: 16px;
+  margin: 0.5rem 0;
+}
+
+.info-desktop {
+  text-align: left;
+  opacity: 0.5;
+}
+
+.smaller-icon {
+  font-size: 30px;
+}
+
+.menu-visible {
+  visibility: visible;
+  opacity: 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-invisible {
+  visibility: hidden;
+  opacity: 0%;
+  transition: all 0.75s ease-in-out;
+  transition-timing-function: cubic-bezier(1, -0.01, 0.53, 1.09);
 }
 
 .current-route {
   color: var(--primary-color-text) !important;
 }
 
-.nav-group-invisible {
-  display: none;
+.slide-in{
+  transform: translateX(0px);
+  visibility: visible;
+  opacity: 100%;
+  transition: all 0.5s ease-in-out;
 }
 
-.nav-group-visible {
-  display: flex;
+.slide-out {
+  transform: translateX(20px);
+  visibility: hidden;
+  opacity: 0%;
+  transition: all 0.25s ease-in-out;
+  transition-delay: calc(0.055s * 5);
 }
 
-.nav-group-toggle {
-  background-color: transparent;
-  font-weight: 500;
-  font-size: 20px;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  font-family: "IBM Plex Mono", monospace;
-  border: none;
+.slide-in ~ li {
+  transform: translateX(0px);
+  visibility: visible;
+  opacity: 100%;
+  transition: all 0.5s ease-in-out;
+  transition-delay: calc(0.055s * var(--i));
 }
 
-.text-black > .nav-group-toggle {
-  color: black;
-}
-
-.text-white > .nav-group-toggle {
-  color: white;
-}
-.current-route::after {
-  background-color: var(--primary-color-text) !important;
-}
-
-.text-black > .underline-on-hover::after {
-  background-color: black;
-}
-
-.text-white > .underline-on-hover::after {
-  background-color: white;
-}
-
-.underline-on-hover {
-  display: inline-block;
-  position: relative;
-}
-
-.underline-on-hover:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2.52px;
-  bottom: 0;
-  left: 0;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.underline-on-hover:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.slide-out ~ li {
+  transform: translateX(20px);
+  visibility: hidden;
+  opacity: 0%;
+  transition: all 0.25s ease-in-out;
+  transition-delay: calc(0.055s * (5 - var(--i)));
 }

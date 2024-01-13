@@ -19,37 +19,77 @@ const eventDetails = [
 
 // Code scrolling effects of the page header:
 let header = document.querySelector("#page-header");
+let desktopHeader = document.querySelector("#desktop-page-header");
 let msg = document.querySelector("#page-msg");
+let desktopMsg = document.querySelector("#desktop-page-msg");
 let topSection = document.querySelector(".top-section");
 let topBar = document.querySelector(".top-bar");
-let eventSection = this.document.querySelector(".event-items");
+let topBarDesktop = document.querySelector(".desktop .top-bar");
+let eventSection = document.querySelector(".event-items");
+let eventSectionDesktop = document.querySelector(".events-items-wrapper-desktop");
+let eventCardDesktop = document.querySelector(".first-event-card-desktop");
+let eventSectionDesktopScroller = document.querySelector(".events-items-wrapper-desktop-scroll");
+let prevHeaderText = desktopHeader.innerHTML;
 
 const resetPositions = () => {
     // console.log("resetting");
     header.style.transition = "0.1s font-size, 0.3s padding, top 0.3s linear";
     // header.style.fontSize = "2.5rem";
     header.style.position = "relative";
+    desktopHeader.style.position = "relative";
     header.style.paddingLeft = "0";
+    desktopHeader.style.paddingLeft = "0";
     header.style.marginTop = "5rem";
+    desktopHeader.style.marginTop = "5rem";
     // msg.style.opacity = "1";
     msg.style.marginTop = "1rem";
+    desktopMsg.style.marginTop = "1rem";
+    desktopHeader.innerHTML = prevHeaderText;
     // msg.style.paddingTop = initialTopPaddingForMsg;
     // topSection.style.height = "45%";
     // topSection.style.minHeight = "300px";
     // eventSection.style.paddingTop = "70px";
     // console.log("resetting end");
     topBar.classList.remove("transparent-glass-bg");
+    if (eventCardDesktop.getBoundingClientRect().top >= 70) {
+        topBarDesktop.classList.remove("transparent-glass-bg-2");
+    }
     header.classList.add("text-3xl");
+    desktopHeader.classList.add("text-3xl");
     header.classList.remove("text-2xl");
+    desktopHeader.classList.remove("text-2xl");
 }
 
 window.addEventListener("scroll", function () {
     let msgPositionFromTop = msg.getBoundingClientRect().top;
+    let desktopMsgPositionFromTop = desktopMsg.getBoundingClientRect().top;
+    console.log(desktopMsgPositionFromTop,desktopMsg.style.paddingTop);
     if (msg.style.paddingTop == "155px") {
         if (msgPositionFromTop > 0) {
             resetPositions();
             return;
         }
+    }
+    
+    if (desktopMsgPositionFromTop < 130) {
+        // desktopHeader.style.paddingLeft = "100px";
+        desktopHeader.style.transition = "0.1s font-size, 0.1s padding, top 0.3s linear, 0.3s box-shadow";
+        // if (headerPositionFromTop < 85) {
+        //     header.style.fontSize = "1.8rem";
+        //     msg.style.transition = "none";
+        // }
+        if (desktopMsgPositionFromTop <= 85) {
+            // desktopMsg.style.marginTop = "155px";
+            // desktopHeader.style.position = "fixed";
+            // desktopHeader.style.top = 0;
+            // desktopHeader.style.marginTop = "0.25rem";
+            // desktopHeader.innerHTML = ` ~ ${prevHeaderText}`;
+            // desktopHeader.style.fontFamily = "Karla";
+            topBarDesktop.classList.add("transparent-glass-bg-2");
+        }
+    } 
+    else {
+        resetPositions();
     }
     if (msgPositionFromTop < 130) {
         header.style.paddingLeft = "30px";
@@ -80,9 +120,18 @@ window.addEventListener("scroll", function () {
     }, 100)
 });
 
+eventSectionDesktopScroller.addEventListener("scroll", () => {
+    let eventCardTopPos = (eventCardDesktop.getBoundingClientRect().top);
+    if (eventCardTopPos <= 70) {
+        topBarDesktop.classList.add("transparent-glass-bg-2");
+    } else {
+        topBarDesktop.classList.remove("transparent-glass-bg-2");
+    }
+})
+
 eventDetails.forEach((item) => {
     let newEventDiv = document.createElement("div");
-    newEventDiv.className = "flex relative mt-1rem p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded w-85p"
+    newEventDiv.className = "event-card flex relative mt-1rem p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded w-85p"
     newEventDiv.innerHTML = `
         <div class="picture absolute inset-0 rounded">
             <img
@@ -101,3 +150,4 @@ eventDetails.forEach((item) => {
     `
     eventSection.appendChild(newEventDiv)
 })
+

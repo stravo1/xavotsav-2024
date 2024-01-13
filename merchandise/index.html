@@ -16,16 +16,21 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu/style.css" />
     <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
     <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu/component.js"></script>
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <custom-mobile-menu />
-    <custom-modal />
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-desktop-menu></custom-desktop-menu>
+    <custom-modal></custom-modal>
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
@@ -73,6 +78,7 @@
       <custom-footer />
     </div>
   </body>
+  <script src="/custom-tags/desktop-menu/script.js"></script>
   <script src="/custom-tags/mobile-menu/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
   <script src="./script.js"></script>

@@ -7,9 +7,9 @@ class CustomFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer class="mobile-footer">
-                <div class="footer-logo-wrapper">
+                <div class="footer-logo-wrapper p-2rem">
                     <img class="footer-logo" src="/assets/images/logo/main.png" />
-                <div>
+                </div>
                 <div class="footer-address">
                     <div class="address-header">Address</div>
                     <div class="address-content">

@@ -4,7 +4,7 @@ body {
   height: 100dvh;
   width: 100dvw;
   margin: 0px;
-  background-color: black;
+  background-color: rgb(28, 28, 28);
   color: whitesmoke;
   font-family: "Karla", monospace;
   --primary-color: #ae3444;
@@ -60,5 +60,20 @@ body {
   }
   .desktop {
     display: block;
+  }
+  /* hide scrollbar but allow scrolling */
+  .desktop::-webkit-scrollbar {
+    display: none;
+  }
+  .desktop {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  :root::-webkit-scrollbar{
+    display: none;
+  }
+  :root {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 }

@@ -1,80 +1,63 @@
-const homeDesktop = document.getElementById("home-desktop");
-const eventsDesktop = document.getElementById("events-desktop");
-const sponsorsDesktop = document.getElementById("sponsors-desktop");
-const magazinesDesktop = document.getElementById("magazines-desktop");
-const contactDesktop = document.getElementById("contact-desktop");
-const aboutDesktop = document.getElementById("about-desktop");
+const desktopMenu = document.getElementsByClassName("nav-menu-desktop")[0];
+const desktopCloseButton = document.getElementsByClassName("desktop-close-button")[0];
+const desktopPath = window.location.pathname;
 
-const navGroup1 = document.getElementsByClassName("nav-group-1")[0]
-const navGroup2 = document.getElementsByClassName("nav-group-2")[0]
-const navGroupToggleButton = document.getElementsByClassName("nav-group-toggle")[0]
+const desktopHome = document.getElementById("desktop-home");
+const desktopEvents = document.getElementById("desktop-events");
+const desktopSponsors = document.getElementById("desktop-sponsors");
+const desktopMerchandise = document.getElementById("desktop-merchandise");
+const desktopContact = document.getElementById("desktop-contact");
+const desktopAbout = document.getElementById("desktop-about");
 
-var navGroup1Visible = true;
-var navGroupToggled = false;
+var metaTag = document.querySelector('meta[name="theme-color"]');
 
-function makeNavGroup1Visible() {
-    navGroup1.classList.add("nav-group-visible");
-    navGroup1.classList.remove("nav-group-invisible");
-    navGroup2.classList.add("nav-group-invisible");
-    navGroup2.classList.remove("nav-group-visible");
+function openDesktopMenu() {
+    desktopMenu.classList.remove("menu-invisible");
+    desktopHome.classList.remove("slide-out");
+    desktopMenu.classList.add("menu-visible");
+    desktopHome.classList.add("slide-in");
+    metaTag.setAttribute('content', '#000000');
 }
 
-function makeNavGroup2Visible() {
-    navGroup1.classList.remove("nav-group-visible");
-    navGroup1.classList.add("nav-group-invisible");
-    navGroup2.classList.remove("nav-group-invisible");
-    navGroup2.classList.add("nav-group-visible");
+function closeDesktopMenu() {
+    desktopMenu.classList.add("menu-invisible");
+    desktopHome.classList.add("slide-out");
+    desktopMenu.classList.remove("menu-visible");
+    desktopHome.classList.remove("slide-in");
+    setTimeout(() => {
+        metaTag.setAttribute('content', '#ffffff');
+    }, 250);
 }
 
-navGroupToggleButton.addEventListener("click", () => {
-    if (navGroup1Visible) {
-        makeNavGroup2Visible()
-    } else {
-        makeNavGroup1Visible()
-    }
-    if (navGroupToggled) {
-        navGroupToggleButton.innerHTML = "more";
-    } else {
-        navGroupToggleButton.innerHTML = "less";
-    }
-    navGroup1Visible = !navGroup1Visible;
-    navGroupToggled = !navGroupToggled;
-})
+desktopCloseButton.addEventListener("click", closeDesktopMenu);
 
-switch (path) {
+console.log(window.location.pathname);
+
+switch (desktopPath) {
     case "/":
-        homeDesktop.childNodes[0].classList.add("current-route");
+    case "/index.html":
+        desktopHome.childNodes[0].classList.add("current-route");
         break;
     case "/events/":
-        eventsDesktop.childNodes[0].classList.add("current-route");
+    case "/events/index.html":
+        desktopEvents.childNodes[0].classList.add("current-route");
         break;
     case "/sponsors/":
-        sponsorsDesktop.childNodes[0].classList.add("current-route");
+    case "/sponsors/index.html":
+        desktopSponsors.childNodes[0].classList.add("current-route");
         break;
-    case "/magazines/":
-        magazinesDesktop.childNodes[0].classList.add("current-route");
+    case "/merchandise/":
+    case "/merchandise/index.html":
+        desktopMerchandise.childNodes[0].classList.add("current-route");
         break;
     case "/contact/":
-        contactDesktop.childNodes[0].classList.add("current-route");
+    case "/contact/index.html":
+        desktopContact.childNodes[0].classList.add("current-route");
         break;
     case "/about/":
-        aboutDesktop.childNodes[0].classList.add("current-route");
+    case "/about/index.html":
+        desktopAbout.childNodes[0].classList.add("current-route");
         break;
 }
 
-switch (path) {
-    case "/":
-    case "/events/":
-    case "/magazines/":
-        navGroup1Visible = true;
-        makeNavGroup1Visible()
-        break;
-    case "/sponsors/":
-    case "/contact/":
-    case "/about/":
-        navGroup1Visible = false;
-        makeNavGroup2Visible()
-        break;
-}
-
-var routesLinks = document.getElementsByClassName("routes-mobile")[0].childNodes
+var routesLinks = document.getElementsByClassName("routes-desktop")[0].childNodes

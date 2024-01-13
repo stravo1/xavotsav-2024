@@ -5,21 +5,20 @@ class CustomDesktopMenu extends HTMLElement {
   }
 
   connectedCallback() {
-    let textColor = this.hasAttribute("textColor") ? this.getAttribute("textColor") : "white";
     this.innerHTML = `
-          <nav class="nav-bar-desktop">
-            <div class="routes-desktop monospace text-${textColor}">
-              <div class="nav-groups nav-group-1 nav-group-visible">
-                <li id="home-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/">home</a></li>
-                <li id="events-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/events">events</a></li>
-                <li id="magazines-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/magazines">x-cryptus</a></li>
-              </div>
-              <div class="nav-groups nav-group-2 nav-group-invisible">
-                <li id="sponsors-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/sponsors">sponsors</a></li>
-                <li id="contact-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/contact">contact-us</a></li>
-                <li id="about-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/about">about-us</a></li>
-              </div>
-              <button class="nav-group-toggle underline-on-hover">more</button>
+          <nav class="nav-menu-desktop menu-invisible">
+            <div class="logo desktop-close-button link-pointer">
+              <span class="material-symbols-rounded smaller-icon">
+                close
+              </span>
+            </div>
+            <div class="routes-desktop">
+              <li id="desktop-home" class="slides slide-out route-desktop" style="--i:0"><a href="/">home</a></li>
+              <li id="desktop-events" class="route-desktop" style="--i:1"><a href="/events">events</a></li>
+              <li id="desktop-sponsors" class="route-desktop"  style="--i:2"><a href="/sponsors">sponsors</a></li>
+              <li id="desktop-merchandise" class="route-desktop" style="--i:3"><a href="/merchandise">merchandise</a></li>
+              <li id="desktop-contact" class="route-desktop" style="--i:4"><a href="/contact">contact us</a></li>
+              <li id="desktop-about" class="route-desktop" style="--i:5"><a href="/about">about us</a></li>
             </div>
           </nav>
         `

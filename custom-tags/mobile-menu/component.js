@@ -20,17 +20,6 @@ class CustomMobileMenu extends HTMLElement {
               <li id="contact" class="route-mobile" style="--i:4"><a href="/contact">contact us</a></li>
               <li id="about" class="route-mobile" style="--i:5"><a href="/about">about us</a></li>
             </div>
-            <div class="socials-mobile mono">
-              <div class="icons-group">
-                <img src="/assets/insta.svg">
-                <img src="/assets/site.svg">
-              </div>
-              <div class="info-mobile">
-                Student Council
-                <br>
-                St. Xavier's College (Autonomous), Kolkata
-              </div>
-            </div>
           </nav>
         `
   }
