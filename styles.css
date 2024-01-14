@@ -175,7 +175,7 @@ section {
 .about-desktop {
   position: relative;
   top: 0;
-  background: #290546;
+  background: #222222;
   z-index: 2;
   padding: 0 80px;
   display: flex;
@@ -251,7 +251,7 @@ section {
 .section-3 {
   position: relative;
   top: 0;
-  background: #290546;
+  background: #222222;
   padding: 0 80px;
   display: flex;
   align-items: center;
@@ -291,7 +291,7 @@ section {
 .infinite-scrolling {
   position: relative;
   z-index: 4;
-  background: #290546;
+  background: #222222;
 }
 
 .marquee {
