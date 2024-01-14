@@ -1,15 +1,37 @@
 // Code for custom cursor for mouse move over intro video element:
 // START ---
+let videoWrapper = document.querySelector('#first-desktop');
 let video = document.querySelector('#intro-video');
-video.addEventListener('click',function(){
-    if(video.paused){
+let veil = document.querySelector("#first-desktop .background");
+let timeOut;
+function pauseVideo() {
+    veil.classList.remove("animate__fadeOut");
+    veil.classList.add("animate__fadeIn");
+    video.pause();
+    videoWrapper.style.cursor = "url('/assets/images/landing/play-golden-64.png'), auto";
+}
+videoWrapper.addEventListener('click', function () {
+    if (video.paused) {
+        veil.classList.remove("animate__fadeIn");
+        veil.classList.add("animate__fadeOut");
         video.play();
-        video.style.cursor = "url('/assets/images/landing/pause-blue-64.png'), auto";
-    }else{
-        video.pause();
-        video.style.cursor = "url('/assets/images/landing/play-golden-64.png'), auto";
+        videoWrapper.style.cursor = "url('/assets/images/landing/pause-blue-64.png'), auto";
+    } else {
+        pauseVideo();
     }
-},false);
+}, false);
+
+videoWrapper.addEventListener("mousemove", () => {
+    veil.classList.add("animate__fadeIn");
+    veil.classList.remove("animate__fadeOut");
+    if (timeOut) clearTimeout(timeOut)
+    timeOut = setTimeout(() => {
+        if (!video.paused) {
+            veil.classList.remove("animate__fadeIn");
+            veil.classList.add("animate__fadeOut");
+        }
+    }, 1500)
+})
 // --- END
 
 // Code for change in styling of each section text on scrolling:

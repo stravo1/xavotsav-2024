@@ -2,7 +2,8 @@
   opacity: 40%;
 }
 
-.mobile, .desktop {
+.mobile,
+.desktop {
   height: auto !important;
 }
 
@@ -66,7 +67,7 @@ button {
 
 body {
   overflow-x: hidden;
-  cursor: url('/assets/images/landing/cursor-golden-mix-32.png'), auto;
+  cursor: url("/assets/images/landing/cursor-golden-mix-32.png"), auto;
 }
 
 /* Scroll Bar styling code: */
@@ -106,14 +107,18 @@ video {
   top: 0;
   width: 100vw;
   height: 100vh;
-  cursor: url('/assets/images/landing/play-golden-64.png'), auto;
+}
+
+#first-desktop {
+  cursor: url("/assets/images/landing/play-golden-64.png"), auto;
+  background-color: black;
 }
 
 .glitch {
   position: fixed;
   font-size: 8rem;
-  font-family: 'Rubik Glitch';
-  color: #FFFFFF;
+  font-family: "Rubik Glitch";
+  color: #ffffff;
   z-index: 1;
 }
 
@@ -129,13 +134,14 @@ video {
 
 .glitch:before {
   animation: glitch-it 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-  color: #00FFFF;
+  color: #00ffff;
   z-index: -1;
 }
 
 .glitch:after {
-  animation: glitch-it 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-  color: #FF00FF;
+  animation: glitch-it 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+    infinite;
+  color: #ff00ff;
   z-index: -2;
 }
 
@@ -160,7 +166,7 @@ video {
     transform: translate(2px, -2px);
   }
 
-100% {
+  100% {
     transform: translate(0);
   }
 }
@@ -185,7 +191,7 @@ section {
 
 .about-texts {
   position: sticky;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,8 +199,10 @@ section {
 
 .about-media {
   position: sticky;
-  width: 60%;
+  width: 50%;
   text-align: center;
+  padding: 5rem;
+  box-sizing: border-box;
 }
 
 .typing-text-wrapper {
@@ -206,7 +214,7 @@ section {
   /* color: crimson;
   text-shadow: 2px 3px 0 white, -3px -3px 0 rgb(252, 255, 58); */
   font-size: 3rem;
-  font-family: 'Yeseva One';
+  font-family: "Yeseva One";
   height: 50px;
   margin-bottom: 20px;
   transition-delay: 1s;
@@ -239,7 +247,7 @@ section {
   }
 }
 
-.section-texts>p {
+.section-texts > p {
   position: relative;
   left: -25px;
   font-size: 1.3rem;
@@ -251,7 +259,7 @@ section {
 .section-3 {
   position: relative;
   top: 0;
-  background: #222222;
+  /* background: #222222; */
   padding: 0 80px;
   display: flex;
   align-items: center;
@@ -270,7 +278,7 @@ section {
 .michelango {
   height: 600px;
   width: 300px;
-  background-image: url('/assets/images/landing/head-of-michelangelo-removebg-preview.png');
+  background-image: url("/assets/images/landing/head-of-michelangelo-removebg-preview.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -287,11 +295,10 @@ section {
   }
 }
 
-
 .infinite-scrolling {
   position: relative;
   z-index: 4;
-  background: #222222;
+  background-color: #080808;
 }
 
 .marquee {
@@ -304,6 +311,7 @@ section {
   align-items: center;
   overflow-x: hidden;
   transform: rotate(5deg);
+  background-color: #080808;
 }
 
 .track {
@@ -327,12 +335,54 @@ section {
 
 .marquee-texts {
   font-size: 3rem;
-  font-family: 'Italiana';
+  font-family: "Italiana";
   -webkit-font-smoothing: antialiased;
   transform: perspective(1px);
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.image-gallery {
+  width: 25rem;
+  height: 30rem;
+  border: 1px white solid;
+  border-radius: 10px;
+  /* background-color: #222222; */
+}
+
+.image-gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.desktop .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.w-50p {
+  width: 50%;
+}
+
+.desktop {
+  background-image: url("./assets/images/landing/gallery/5.jpg");
+  background-size: contain;
+}
+
+.background-gradient {
+  background: rgb(8, 8, 8);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 8, 8, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }

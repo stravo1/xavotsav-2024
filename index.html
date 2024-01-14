@@ -210,7 +210,21 @@
         data-scroll-section=""
         id="first-desktop"
       >
-        <!-- <div class="glitch" data-text="Xavotsav'24">Xavotsav'24</div> -->
+        <div
+          class="animate__animated animate__fadeIn z-1 background absolute inset-0 w-full h-full flex flex-col items-center justify-center transition-all"
+        >
+          <div
+            class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
+          ></div>
+          <div class="z-10 w-50p">
+            <div class="display text-3xl">Xavotsav '24</div>
+            <div class="mt-1rem text-lg">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
+              similique quidem ab voluptatibus atque ratione? Quae, atque. Quam,
+              expedita perferendis!
+            </div>
+          </div>
+        </div>
         <video
           id="intro-video"
           src="/assets/images/landing/xavotsav-2018-AfterMovie.mp4"
@@ -223,14 +237,23 @@
       </section>
 
       <section
-        class="section-2 about-desktop"
+        class="section-2 about-desktop relative"
         data-scroll-section=""
         id="second-desktop"
       >
+        <div data-scroll class="background absolute inset-0 w-full h-full">
+          <img
+            class="w-full h-full object-cover z-0"
+            src="./assets/images/landing/gallery/3.jpg"
+          />
+          <div
+            class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
+          ></div>
+        </div>
         <div
-          class="about-texts section-texts"
+          class="about-texts section-texts z-5"
           data-scroll=""
-          data-scroll-speed="2"
+          data-scroll-speed="3"
           data-scroll-repeat
           data-scroll-call="secondVisible"
         >
@@ -245,13 +268,47 @@
             Mollitia commodi dolorum facilis quos?
           </p>
         </div>
-        <div class="about-media" data-scroll="" data-scroll-speed="1">
-          <img src="/assets/images/landing/head-of-michelangelo-removebg-preview.png" alt="" />
+        <div class="about-media z-5" data-scroll="" data-scroll-speed="1">
+          <!-- Slider main container -->
+          <div class="swiper-desktop" data-scroll data-scroll-speed="3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/landing/gallery/1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/landing/gallery/2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/landing/gallery/3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/landing/gallery/6.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <div class="infinite-scrolling" data-scroll-section="">
-        <div class="marquee" data-scroll="" data-scroll-speed="3">
+        <div class="marquee" data-scroll="">
           <div class="track track-1">
             <div class="marquee-texts">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
@@ -277,6 +334,14 @@
       </div>
 
       <section class="section-3" data-scroll-section="" id="third-desktop">
+        <div
+          data-scroll-speed="1"
+          class="background absolute inset-0 w-full h-full"
+        >
+          <div
+            class="background-gradient inset-0 w-full h-full z-1"
+          ></div>
+        </div>
         <div class="section-media" data-scroll="">
           <div class="michelango"></div>
         </div>
@@ -335,6 +400,7 @@
       });
       locoScroll.on("call", (event, state) => {
         if (event == "secondVisible") {
+          pauseVideo();
           if (state == "enter" && isDesktop) {
             sectionPara[0].style.opacity = "1";
             sectionPara[0].style.left = "0";
@@ -405,6 +471,16 @@
       autoplay: {
         delay: 2500,
       },
+    });
+
+    const swiperDesktop = new Swiper(".swiper-desktop", {
+      speed: 400,
+      spaceBetween: 100,
+      autoplay: {
+        delay: 2500,
+      },
+      effect: "fade",
+      allowTouchMove: false,
     });
   </script>
 </html>
