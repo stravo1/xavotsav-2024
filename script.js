@@ -14,34 +14,34 @@ video.addEventListener('click',function(){
 
 // Code for change in styling of each section text on scrolling:
 // START ---
-const txt = ['Who we are?', 'Biggest CULTURAL fest of Kolkata!']; /* The text */
-let typeArea = document.querySelectorAll('.typing-text');
-let i = 0;
-function typeWriter(index) {
-  if (i < txt[index].length) {
-    typeArea[index].innerHTML += txt[index].charAt(i);
-    i++;
-    setTimeout(typeWriter, 100);
-  }
-}
+// const txt = ['Who we are?', 'Biggest CULTURAL fest of Kolkata!']; /* The text */
+// let typeArea = document.querySelectorAll('.typing-text');
+// let i = 0;
+// function typeWriter(index) {
+//   if (i < txt[index].length) {
+//     typeArea[index].innerHTML += txt[index].charAt(i);
+//     i++;
+//     setTimeout(typeWriter, 100);
+//   }
+// }
 
-window.addEventListener("scroll", function() {
-    let current_scroll_pos = window.pageYOffset;
-    let screen_height = screen.height;
-    let sectionPara = document.querySelectorAll(".section-texts p");
-    console.log(current_scroll_pos);
-    console.log(screen_height);
-    for(let i = 0; i < sectionPara.length; i++)
-    if(current_scroll_pos >= screen_height/2) {
-        typeWriter(i);
-        sectionPara[i].style.opacity = "1";
-        sectionPara[i].style.left = "0";
-    }
-    else {
-        sectionPara[i].style.opacity = "0";
-        sectionPara[i].style.left = "-25px";
-        // typeArea.innerHTML = "";
+// window.addEventListener("scroll", function() {
+//     let current_scroll_pos = window.pageYOffset;
+//     let screen_height = screen.height;
+//     let sectionPara = document.querySelectorAll(".section-texts p");
+//     console.log(current_scroll_pos);
+//     console.log(screen_height);
+//     for(let i = 0; i < sectionPara.length; i++)
+//     if(current_scroll_pos >= screen_height/2) {
+//         typeWriter(i);
+//         sectionPara[i].style.opacity = "1";
+//         sectionPara[i].style.left = "0";
+//     }
+//     else {
+//         sectionPara[i].style.opacity = "0";
+//         sectionPara[i].style.left = "-25px";
+//         // typeArea.innerHTML = "";
 
-    }
-})
+//     }
+// })
 // --- END

@@ -2,7 +2,7 @@
   opacity: 40%;
 }
 
-.mobile {
+.mobile, .desktop {
   height: auto !important;
 }
 
@@ -203,10 +203,10 @@ section {
 
 .typing-text {
   z-index: 3;
-  color: crimson;
-  text-shadow: 2px 3px 0 white, -3px -3px 0 rgb(252, 255, 58);
+  /* color: crimson;
+  text-shadow: 2px 3px 0 white, -3px -3px 0 rgb(252, 255, 58); */
   font-size: 3rem;
-  font-family: 'Rubik';
+  font-family: 'Yeseva One';
   height: 50px;
   margin-bottom: 20px;
   transition-delay: 1s;
@@ -327,7 +327,7 @@ section {
 
 .marquee-texts {
   font-size: 3rem;
-  font-family: 'Rubik';
+  font-family: 'Italiana';
   -webkit-font-smoothing: antialiased;
   transform: perspective(1px);
 }

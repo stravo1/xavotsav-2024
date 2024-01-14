@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="tailwindClasses.css" />
     <link rel="stylesheet" href="globalStyles.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@800&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -35,7 +38,7 @@
   </head>
   <body>
     <custom-mobile-menu />
-    <div class="mobile" data-scroll-container>
+    <div class="mobile">
       <div
         class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-4"
       >
@@ -201,76 +204,119 @@
       </div>
     </div>
 
-    <div class="desktop">
-      <section class="section-1 intro">
+    <div class="desktop" data-scroll-container>
+      <section
+        class="section-1 intro"
+        data-scroll-section=""
+        id="first-desktop"
+      >
         <!-- <div class="glitch" data-text="Xavotsav'24">Xavotsav'24</div> -->
-        <video id="intro-video" src="/assets/images/landing/xavotsav-2018-AfterMovie.mp4" autoplay loop disableremoteplayback="" preload="auto" controlslist="nodownload, noremoteplayback, nofullscreen"></video>
-     </section>
+        <video
+          id="intro-video"
+          src="/assets/images/landing/xavotsav-2018-AfterMovie.mp4"
+          autoplay
+          loop
+          disableremoteplayback=""
+          preload="auto"
+          controlslist="nodownload, noremoteplayback, nofullscreen"
+        ></video>
+      </section>
 
-     <section class="section-2 about-desktop">
-      <div class="about-texts section-texts">
-        <div class="typing-text-wrapper">
-          <header class="about-header typing-text"></header>
-          <span class="cursor"></span>
+      <section
+        class="section-2 about-desktop"
+        data-scroll-section=""
+        id="second-desktop"
+      >
+        <div
+          class="about-texts section-texts"
+          data-scroll=""
+          data-scroll-repeat
+          data-scroll-call="secondVisible"
+        >
+          <div class="typing-text-wrapper">
+            <header class="about-header typing-text">hi</header>
+            <span class="cursor"></span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+            quae, quo necessitatibus eveniet maiores fugit debitis cupiditate
+            aspernatur excepturi quis aperiam recusandae culpa praesentium.
+            Mollitia commodi dolorum facilis quos?
+          </p>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas quae, quo necessitatibus eveniet maiores fugit debitis cupiditate aspernatur excepturi quis aperiam recusandae culpa praesentium. Mollitia commodi dolorum facilis quos?</p>
-      </div>
-      <div class="about-media">
-        <img src="/assets/images/landing/cut-heads.png" alt="">
-      </div>
-     </section>
+        <div class="about-media">
+          <img src="/assets/images/landing/cut-heads.png" alt="" />
+        </div>
+      </section>
 
-     <div class="infinite-scrolling">
-       <div class="marquee">
-        <div class="track track-1">
-          <div class="marquee-texts">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum suscipit quasi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum suscipit quasi!
+      <div class="infinite-scrolling" data-scroll-section="">
+        <div class="marquee" data-scroll="">
+          <div class="track track-1">
+            <div class="marquee-texts">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum
+              suscipit quasi! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Totam quod corrupti, ullam vitae aperiam odio dolorum
+              aliquid rerum suscipit quasi!
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee" data-scroll>
+          <div class="track track-2">
+            <div class="marquee-texts">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum
+              suscipit quasi! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Totam quod corrupti, ullam vitae aperiam odio dolorum
+              aliquid rerum suscipit quasi!
+            </div>
           </div>
         </div>
       </div>
 
-       <div class="marquee">
-        <div class="track track-2">
-          <div class="marquee-texts">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum suscipit quasi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum suscipit quasi!
+      <section class="section-3" data-scroll-section="" id="third-desktop">
+        <div class="section-media" data-scroll="">
+          <div class="michelango"></div>
+        </div>
+        <div class="section-texts">
+          <div class="typing-text-wrapper">
+            <header
+              class="typing-text"
+              data-scroll
+              data-scroll-repeat
+              data-scroll-call="thirdVisible"
+            >
+              hi
+            </header>
+            <span class="cursor"></span>
           </div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatum, expedita nobis! Obcaecati veniam doloribus, et alias
+            nisi, aperiam delectus sed nihil, quas tempora eaque repellat
+            veritatis aspernatur animi soluta aut?
+          </p>
         </div>
-      </div>
-
-     </div>
-
-     <section class="section-3">
-      <div class="section-media">
-        <div class="michelango"></div>
-      </div>
-      <div class="section-texts">
-        <div class="typing-text-wrapper">
-          <header class="typing-text"></header>
-          <span class="cursor"></span>
-        </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, expedita nobis! Obcaecati veniam doloribus, et alias nisi, aperiam delectus sed nihil, quas tempora eaque repellat veritatis aspernatur animi soluta aut?</p>
-      </div>
-     </section>
-     <!-- <section class="section-4"></section> -->
-
+      </section>
+      <!-- <section class="section-4"></section> -->
     </div>
-
   </body>
   <script src="script.js"></script>
   <script src="./custom-tags/mobile-menu/script.js"></script>
   <script src="./assets/locomotive-scroll/locomotive-scroll.min.js"></script>
-  <!-- <script>
+  <script>
+    let isDesktop = screen.width > 850;
     let loaded = false;
     let secondEntered = false;
     let thirdEntered = false;
+    let sectionPara = document.querySelectorAll(".section-texts p");
     const locoScroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
+      el: document.querySelector(isDesktop ? ".desktop" : ".mobile"),
       smooth: true,
       lerp: "0.1",
       smartphone: { smooth: true },
-      touchMultiplier: 2,
+      touchMultiplier: isDesktop ? 1 : 2,
     });
     setTimeout(() => {
       locoScroll.destroy();
@@ -288,30 +334,59 @@
       });
       locoScroll.on("call", (event, state) => {
         if (event == "secondVisible") {
-          if (state == "enter") {
+          if (state == "enter" && isDesktop) {
+            sectionPara[0].style.opacity = "1";
+            sectionPara[0].style.left = "0";
+          }
+          if (state == "exit" && isDesktop) {
+            sectionPara[0].style.opacity = "0";
+            sectionPara[0].style.left = "-25px";
+            // typeArea.innerHTML = "";
+          }
+
+          if (state == "enter" && !isDesktop) {
             secondEntered = true;
             setTimeout(() => {
-              locoScroll.scrollTo(document.querySelector("#second"));
+              locoScroll.scrollTo(
+                document.querySelector(`#second-${isDesktop ? "desktop" : ""}`)
+              );
             }, 1);
-          } else {
+          }
+          if (state == "exit" && !isDesktop) {
             secondEntered = false;
             setTimeout(() => {
               if (!thirdEntered) {
-                locoScroll.scrollTo(document.querySelector("#first"));
+                locoScroll.scrollTo(
+                  document.querySelector(`#first-${isDesktop ? "desktop" : ""}`)
+                );
               }
             }, 1);
           }
         }
         if (event == "thirdVisible") {
-          if (state == "enter") {
+          if (state == "enter" && isDesktop) {
+            sectionPara[1].style.opacity = "1";
+            sectionPara[1].style.left = "0";
+          }
+          if (state == "exit" && isDesktop) {
+            sectionPara[1].style.opacity = "0";
+            sectionPara[1].style.left = "-25px";
+            // typeArea.innerHTML = "";
+          }
+          if (state == "enter" && !isDesktop) {
             thirdEntered = true;
             setTimeout(() => {
-              locoScroll.scrollTo(document.querySelector("#third"));
+              locoScroll.scrollTo(
+                document.querySelector(`#third-${isDesktop ? "desktop" : ""}`)
+              );
             }, 1);
-          } else {
+          }
+          if (state == "exit" && !isDesktop) {
             thirdEntered = false;
             setTimeout(() => {
-              locoScroll.scrollTo(document.querySelector("#second"));
+              locoScroll.scrollTo(
+                document.querySelector(`#second-${isDesktop ? "desktop" : ""}`)
+              );
             }, 1);
           }
         }
@@ -330,5 +405,5 @@
         delay: 2500,
       },
     });
-  </script> -->
+  </script>
 </html>
