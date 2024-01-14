@@ -1,0 +1,115 @@
+.desktop-footer {
+    /* position: fixed; */
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all;
+    transition-duration: 250ms;
+}
+
+.desktop-footer .footer-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.desktop-footer .footer-logo{
+    width: 12rem;
+    object-fit: contain;
+}
+
+.desktop-footer .footer-address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.desktop-footer .address-header {
+    font-family: "Yeseva One", sans-serif;
+    font-size: 20px;
+}
+
+.desktop-footer .address-content {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+.desktop-footer .contact-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-footer .contacts {
+    font-family: "Yeseva One", sans-serif;
+    font-size: 20px;
+}
+
+.desktop-footer .send-message {
+    font-family: "Yeseva One", sans-serif;
+    font-size: 20px;
+}
+
+.desktop-footer .socials {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-footer .icon-group {
+    display: flex;
+    gap: 01rem;
+}
+.desktop-footer .socials-heading {
+    font-family: "Yeseva One", sans-serif;
+    font-size: 20px;
+}
+
+.desktop-footer .link {
+    font-size: 14px;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.link > a {
+    color: white;
+}
+
+.desktop-footer .phones {
+    font-size: 14px;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.desktop-footer .emails {
+    font-size: 14px;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.desktop-footer hr {
+    color: white;
+    width: 100%;
+}
+
+.desktop-footer .credits {
+    font-size: 12px;
+    text-align: center;
+}

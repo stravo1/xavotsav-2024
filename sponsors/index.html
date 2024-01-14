@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xavotsav - 2024 | Events</title>
+    <title>Xavotsav - 2024 | sponsors</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="/tailwindClasses.css" />
     <link rel="stylesheet" href="/globalStyles.css" />
@@ -12,11 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
     <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
     <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
   </head>
   <body>
     <custom-mobile-menu />
@@ -25,7 +29,7 @@
       <div class="background fixed inset-0 w-full h-full">
         <img
           class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-          src="/assets/images/landing/background-8.jpg"
+          src="/assets/images/illustrartions/red.png"
         />
         <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
       </div>
@@ -60,8 +64,120 @@
       </div>
       <custom-footer />
     </div>
+    <div class="desktop">
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10"
+      >
+        <img width="125px" src="/assets/images/logo/main.png" />
+        <custom-desktop-menu></custom-desktop-menu>
+      </div>
+      <div class="flex w-full h-full">
+        <div class="left-section relative">
+          <div class="background absolute inset-0 w-full h-full">
+            <img
+              class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
+              src="/assets/images/illustrartions/red.png"
+            />
+            <div class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"></div>
+          </div>
+          <div
+            class="relative display text-3xl mt-5rem z-2"
+            id="desktop-page-header"
+          >
+            sponsors
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="desktop-page-msg"
+          >
+            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
+            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
+            mauris enim ipsum dictumst pretium convallis.
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
+            diam eget. Vel velit mauris nisi pharetra id.
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="overflow-scroll sponsors-items-wrapper-desktop-scroll flex flex-col items-center">
+            <div
+                class="first-sponsor-card-desktop sponsor-card-desktop mt-10rem flex relative p-1rem flex flex-col justify-end items-start rounded"
+              >
+                <div class="picture rounded p-1rem">
+                  <img
+                    class="w-full h-full object-contain rounded"
+                    src="/assets/images/sponsors/91.9-FriendsFM.png"
+                  />
+                </div>
+                <div class="flex z-5 w-full gap-05rem">
+                  <span class="sponsor-title">Title Sponsor</span>
+                </div>
+              </div>
+            <div
+              class="flex flex-wrap justify-center sponsors-items-wrapper-desktop"
+            >
+              <div
+                class="flex relative p-1rem flex flex-col justify-end items-start rounded w-85p sponsor-card"
+              >
+                <div class="picture rounded p-2rem">
+                  <img
+                    class="w-full h-full object-contain rounded"
+                    src="/assets/images/sponsors/91.9-FriendsFM.png"
+                  />
+                </div>
+                <div class="flex z-5 w-full gap-05rem">
+                  <span class="sponsor-title">Title Sponsor</span>
+                </div>
+              </div>
+              <div
+                class="flex relative p-1rem flex flex-col justify-end items-start rounded w-85p sponsor-card"
+              >
+                <div class="picture rounded p-2rem">
+                  <img
+                    class="w-full h-full object-contain rounded"
+                    src="/assets/images/sponsors/91.9-FriendsFM.png"
+                  />
+                </div>
+                <div class="flex z-5 w-full gap-05rem">
+                  <span class="sponsor-title">Title Sponsor</span>
+                </div>
+              </div>
+              <div
+                class="flex relative p-1rem flex flex-col justify-end items-start rounded w-85p sponsor-card"
+              >
+                <div class="picture rounded p-2rem">
+                  <img
+                    class="w-full h-full object-contain rounded"
+                    src="/assets/images/sponsors/91.9-FriendsFM.png"
+                  />
+                </div>
+                <div class="flex z-5 w-full gap-05rem">
+                  <span class="sponsor-title">Title Sponsor</span>
+                </div>
+              </div>
+              <div
+                class="flex relative p-1rem flex flex-col justify-end items-start rounded w-85p sponsor-card"
+              >
+                <div class="picture rounded p-2rem">
+                  <img
+                    class="w-full h-full object-contain rounded"
+                    src="/assets/images/sponsors/91.9-FriendsFM.png"
+                  />
+                </div>
+                <div class="flex z-5 w-full gap-05rem">
+                  <span class="sponsor-title">Title Sponsor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <custom-desktop-footer></custom-desktop-footer>
+    </div>
   </body>
   <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
   <script src="./script.js"></script>
 </html>

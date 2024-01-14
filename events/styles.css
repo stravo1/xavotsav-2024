@@ -56,7 +56,7 @@ select {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     0deg,
-    rgba(2, 0, 36, 1) 0%,
+    rgb(2, 0, 36) 0%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -76,7 +76,7 @@ select {
   gap: 0.5rem;
 }
 
-.swiper {
+.mobile .swiper {
   max-width: 20rem;
 }
 
@@ -91,7 +91,7 @@ select {
 
 .transparent-glass-bg-2 {
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1px);
   transition: all;
@@ -105,4 +105,68 @@ select {
 .underline {
   border-bottom: 2px white solid;
   width: fit-content;
+}
+
+.desktop .swiper {
+  max-width: 55rem;
+}
+.desktop .top-bar {
+  transition: all;
+  transition-duration: 250ms;
+}
+.left-section {
+  padding: 3rem;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section {
+  position: absolute;
+  width: 57vw;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+
+.desktop .event-card {
+  max-width:15rem;
+  margin: 2rem;
+  height: 20rem !important;
+}
+
+.mt-10rem{
+  margin-top: 25vh;
+}
+
+.desktop .event-card .picture {
+  filter: grayscale(0.2);
+}
+
+.mobile .event-card .picture {
+  filter: grayscale(0.7);
+}
+
+.event-card {
+  border:  1px white solid;
+}
+
+.events-items-wrapper-desktop-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.events-items-wrapper-desktop-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile .background {
+  filter: saturate(0.75);
 }

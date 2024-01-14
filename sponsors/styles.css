@@ -1,108 +1,206 @@
 .opacity-40 {
-    opacity: 40%;
-  }
-  .screen {
-    height: 100vh;
-  }
-  .p-2rem {
-    padding: 2rem;
-  }
-  .mt-1rem {
-    margin-top: 1rem;
-  }
-  .mt-2rem {
-    margin-top: 2rem;
-  }
-  
-  .mt-5rem {
-    margin-top: 5rem;
-  }
-  .mb-15p {
-    margin-bottom: 15%;
-  }
-  .flex-basis-15 {
-    flex-basis: 35%;
-  }
-  
-  .flex-basis-75 {
-    flex-basis: 75%;
-  }
-  .h-15rem {
-    min-height: 15rem;
-    height: 40vh;
-  }
-  select {
-    padding: 5px;
-    color: white;
-    font-size: 16px;
-    font-family: "Karla", sans-serif;
-    padding: 1rem;
-    border-radius: 5px;
-    background: transparent;
-    width: 100%;
-    -webkit-appearance: none;
-    border: 2px rgba(255, 255, 255, 0.5) solid;
-  }
-  
-  .select-button {
-    width: 4rem;
-    height: 4rem;
-    color: white;
-    background: rgba(255, 255, 255, 0.35);
-    border: none;
-    border-radius: 5px;
-  }
-  .gradient {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      0deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  .sponsor-title {
-    width: 100%;
-    border: none;
-    background-color: rgba(245, 222, 179, 0.21);
-    border-radius: 5px;
-    padding: 0.75rem;
-    font-family: "Karla";
-    font-size: large;
-    color: white;
-    text-align: center;
-  }
-  
-  .gap-05rem {
-    gap: 0.5rem;
-  }
-  
-  .swiper {
-    max-width: 20rem;
-  }
-  
-  .transparent-glass-bg {
-    /* From https://css.glass */
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    transition: all;
-  }
-  
-  .transparent-glass-bg-2 {
-    /* From https://css.glass */
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1px);
-    transition: all;
-  }
-  
-  .w-85p {
-    width: calc(100vw - 5rem);
-    max-width: 300px;
-  }
-  
-  .underline {
-    border-bottom: 2px white solid;
-    width: fit-content;
-  }
+  opacity: 40%;
+}
+.screen {
+  height: 100vh;
+}
+.p-2rem {
+  padding: 2rem;
+}
+.mt-1rem {
+  margin-top: 1rem;
+}
+.mt-2rem {
+  margin-top: 2rem;
+}
+
+.mt-5rem {
+  margin-top: 5rem;
+}
+.mb-15p {
+  margin-bottom: 15%;
+}
+.flex-basis-15 {
+  flex-basis: 35%;
+}
+
+.flex-basis-75 {
+  flex-basis: 75%;
+}
+.h-15rem {
+  min-height: 15rem;
+  height: 40vh;
+}
+select {
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+  background: transparent;
+  width: 100%;
+  -webkit-appearance: none;
+  border: 2px rgba(255, 255, 255, 0.5) solid;
+}
+
+.select-button {
+  width: 4rem;
+  height: 4rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  border-radius: 5px;
+}
+.gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.sponsor-title {
+  width: 100%;
+  border: none;
+  background-color: rgba(245, 179, 179, 0.21);
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-family: "Karla";
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.gap-05rem {
+  gap: 0.5rem;
+}
+
+.swiper {
+  max-width: 20rem;
+}
+
+.transparent-glass-bg {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: all;
+}
+
+.transparent-glass-bg-2 {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1px);
+  transition: all;
+}
+
+.w-85p {
+  width: calc(100vw - 5rem);
+  max-width: 300px;
+}
+
+.underline {
+  border-bottom: 2px white solid;
+  width: fit-content;
+}
+
+.desktop .top-bar {
+  transition: all;
+  transition-duration: 250ms;
+}
+.left-section {
+  padding: 3rem;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section {
+  position: absolute;
+  width: 57vw;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+.desktop .first-sponsor-card-desktop {
+  /* max-width: 19rem; */
+}
+.desktop .first-sponsor-card-desktop .picture {
+  border: 1px white solid;
+  padding: 3rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.desktop .first-sponsor-card-desktop .sponsor-title {
+  font-family: "Italiana";
+  background-color: transparent;
+  font-size: 2rem;
+  border: 1px white solid;
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.desktop .sponsor-card {
+  max-width: 17rem;
+  margin: 2rem;
+  height: 20rem !important;
+}
+
+.desktop .sponsor-card .picture {
+  border: 1px white solid;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.desktop .sponsor-card .sponsor-title {
+  font-family: "Italiana";
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 1px white solid;
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.mt-10rem {
+  margin-top: 25vh;
+}
+.register-button,
+.info-button {
+  width: 100%;
+  border: none;
+  background-color: rgba(245, 222, 179, 0.21);
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-family: "Karla";
+  font-size: large;
+  color: white;
+}
+
+.first-sponsor-card-desktop {
+  width: 25rem;
+  height: 20rem !important;
+}
+
+.sponsors-items-wrapper-desktop-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.sponsors-items-wrapper-desktop-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile .background {
+  filter: saturate(0.75);
+}

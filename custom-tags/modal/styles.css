@@ -72,3 +72,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 850px) {
+  .modal-wrapper {
+    padding: 3rem 25%;
+  }
+}
