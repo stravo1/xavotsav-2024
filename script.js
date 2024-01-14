@@ -4,10 +4,10 @@ let video = document.querySelector('#intro-video');
 video.addEventListener('click',function(){
     if(video.paused){
         video.play();
-        video.style.cursor = "url('/assets/images/landing/pause-blue-64.png'), auto";
+        video.style.cursor = "url('/assets/images/interface/pause-blue-64.png'), auto";
     }else{
         video.pause();
-        video.style.cursor = "url('/assets/images/landing/play-golden-64.png'), auto";
+        video.style.cursor = "url('/assets/images/interface/play-golden-64.png'), auto";
     }
 },false);
 // --- END
