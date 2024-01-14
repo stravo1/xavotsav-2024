@@ -35,6 +35,9 @@
     <link rel="stylesheet" href="./custom-tags/mobile-menu/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./custom-tags/mobile-menu/component.js"></script>
+
+    <link rel="stylesheet" href="./custom-tags/desktop-menu/style.css" />
+    <script src="./custom-tags/desktop-menu/component.js"></script>
   </head>
   <body>
     <custom-mobile-menu />
@@ -205,9 +208,19 @@
     </div>
 
     <div class="desktop" data-scroll-container>
+      <div class="menu-holder display link-pointer fixed right-0 z-10 width-63 flex items-center justify-end transparent-glass-bg">
+        <custom-desktop-menu/>
+      </div>
+      <div class="logo-holder flex items-center justify-center fixed top-0 z-10">
+        <a class="flex items-center justify-center" href="/"><img src="/assets/logo/logo.png" alt="" srcset="" /></a>
+      </div>
       <section
         class="section-1 intro"
         data-scroll-section=""
+        data-scroll=""
+          data-scroll-speed="2"
+        data-scroll-repeat
+        data-scroll-call="firstVisible"
         id="first-desktop"
       >
         <!-- <div class="glitch" data-text="Xavotsav'24">Xavotsav'24</div> -->
@@ -305,6 +318,7 @@
   </body>
   <script src="script.js"></script>
   <script src="./custom-tags/mobile-menu/script.js"></script>
+  <script src="./custom-tags/desktop-menu/script.js"></script>
   <script src="./assets/locomotive-scroll/locomotive-scroll.min.js"></script>
   <script>
     let isDesktop = screen.width > 850;
@@ -312,6 +326,9 @@
     let secondEntered = false;
     let thirdEntered = false;
     let sectionPara = document.querySelectorAll(".section-texts p");
+    let logo = document.querySelector('.logo-holder');
+    let navMenus = document.querySelector('.menu-holder');
+    let introVideo = document.querySelector('#intro-video');
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector(isDesktop ? ".desktop" : ".mobile"),
       smooth: true,
@@ -334,6 +351,16 @@
         }
       });
       locoScroll.on("call", (event, state) => {
+        if(event == "firstVisible") {
+          if (state == "enter" && isDesktop) {
+            logo.style.transform = "scale(0)";
+            navMenus.style.top = "-60px";
+          }
+          if (state == "exit" && isDesktop) {
+            logo.style.transform = "scale(1)";
+            navMenus.style.top = "0";
+          }
+        }
         if (event == "secondVisible") {
           if (state == "enter" && isDesktop) {
             sectionPara[0].style.opacity = "1";
@@ -372,7 +399,6 @@
           if (state == "exit" && isDesktop) {
             sectionPara[1].style.opacity = "0";
             sectionPara[1].style.left = "-25px";
-            // typeArea.innerHTML = "";
           }
           if (state == "enter" && !isDesktop) {
             thirdEntered = true;

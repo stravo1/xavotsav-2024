@@ -61,12 +61,34 @@ button {
 /* Desktop Mode: */
 
 * {
-  transform: perspective(1.1);
+  transform: perspective(1);
 }
 
 body {
   overflow-x: hidden;
-  cursor: url('/assets/images/landing/cursor-golden-mix-32.png'), auto;
+  cursor: url('/assets/images/interface/icons8-navigation-48.png'), auto;
+}
+
+a, button {
+  cursor: url('/assets/images/interface/finger-up-50.png'), auto !important;
+}
+
+.menu-holder, .logo-holder {
+  height: 60px;
+  transition: 0.6s;
+}
+.logo-holder {
+  transform: scale(0);
+  padding-left: 28px;
+}
+.menu-holder {
+  top: -60px;
+  padding-right: 40px;
+}
+
+.transparent-glass-bg {
+  backdrop-filter: blur(10px);
+  width: 100%;
 }
 
 /* Scroll Bar styling code: */
@@ -106,7 +128,7 @@ video {
   top: 0;
   width: 100vw;
   height: 100vh;
-  cursor: url('/assets/images/landing/play-golden-64.png'), auto;
+  cursor: url('/assets/images/interface/play-golden-64.png'), auto;
 }
 
 .glitch {
