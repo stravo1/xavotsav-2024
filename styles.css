@@ -333,7 +333,7 @@ section {
   align-items: center;
   overflow-x: hidden;
   transform: rotate(5deg);
-  background-color: #080808;
+  /* background-color: #080808; */
 }
 
 .track {

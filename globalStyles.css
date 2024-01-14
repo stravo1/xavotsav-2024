@@ -4,7 +4,7 @@ body {
   height: 100dvh;
   width: 100dvw;
   margin: 0px;
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(0, 0, 0);
   color: whitesmoke;
   font-family: "Karla", monospace;
   --primary-color: #ae3444;

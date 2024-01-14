@@ -1,111 +1,136 @@
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 main {
-    padding: 60px 10% 100px;
+  padding: 60px 10% 100px;
 }
 
 header {
-    color: #322E16;
-    font-size: 2.5em;
+  color: #322E16;
+  font-size: 2.5em;
 }
 
 .about {
-    width: 70%;
-    min-width: 700px;
-    color: #595000;
-    font-size: 1.2rem;
+  width: 70%;
+  min-width: 700px;
+  color: #595000;
+  font-size: 1.2rem;
 }
 
 .toggler {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1.2rem;
 }
 
 .day-button {
-    color: #504408;
-    font-size: 1.6rem;
-    cursor: pointer;
-    user-select: none;
+  color: #504408;
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 .day-border {
-    display: block;
-    height: 4px;
-    width: 0;
-    margin: 0 auto;
-    border-radius: 50px;
-    transition: 0.4s;
+  display: block;
+  height: 4px;
+  width: 0;
+  margin: 0 auto;
+  border-radius: 50px;
+  transition: 0.4s;
 }
 
 .active {
-    width: 50%;
-    background: #B39551;
+  width: 50%;
+  background: #B39551;
 }
 
 .schedules {
-    margin: 15px auto;
-    min-width: 600px;
-    width: 80% !important;
-    position: relative;
+  margin: 15px auto;
+  min-width: 600px;
+  width: 80% !important;
+  position: relative;
 }
 
 .table-headings {
-    margin: 0 auto;
-    padding: 0 10%;
-    border-bottom: 2px solid #504408;
-    font-size: 1.6rem;
-    color: #504408;
-    display: flex;
-    justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 10%;
+  border-bottom: 2px solid #504408;
+  font-size: 1.6rem;
+  color: #504408;
+  display: flex;
+  justify-content: space-between;
 }
 
 .schedule-table {
-    padding-bottom: 50px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    visibility: collapse;
-    transition: 1s ease opacity;
-    transition-delay: 0.1s;
+  padding-bottom: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: collapse;
+  transition: 1s ease opacity;
+  transition-delay: 0.1s;
 }
 
 
 .visible {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
 }
 
 .table-row {
-    color: #504408;
-    font-size: 1.2rem;
+  color: #504408;
+  font-size: 1.2rem;
 }
 
 td {
-    border-bottom: 1px solid #504408;
-    width: 3%;
+  border-bottom: 1px solid #504408;
+  width: 3%;
 }
 
 .timings, .events, .venues {
-    text-wrap: nowrap;
+  text-wrap: nowrap;
 }
 
 .timings {
-    padding-top: 20px;
-    vertical-align: text-top;
-    text-align: center;
+  padding-top: 20px;
+  vertical-align: text-top;
+  text-align: center;
 }
 
 .events, .venues{
-    padding-left: 10%;
+  padding-left: 10%;
 }
 
 .event-name, .venue-name {
-    display: block;
-    margin: 10px 0;
+  display: block;
+  margin: 10px 0;
+}
+
+.mt-5rem {
+  margin-top: 5rem;
+}
+
+.transparent-glass-bg-2 {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1px);
+  transition: all;
+}
+.desktop a {
+  font-weight: bold !important;
+}
+
+.desktop .current-route {
+  color: rgb(134, 95, 12) !important;
+}
+.desktop .nav-group-toggle {
+  font-weight: bold !important;
+}
+.desktop .current-route::after {
+  background-color: rgb(134, 95, 12) !important;
 }

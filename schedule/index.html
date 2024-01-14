@@ -1,246 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xavotsav - 2024 | Events</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="/tailwindClasses.css" />
     <link rel="stylesheet" href="/globalStyles.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/custom-tags/mobile-menu/component.js"></script>
-</head>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
+  </head>
 
-<body>
-    <custom-mobile-menu />
+  <body>
+    <custom-mobile-menu></custom-mobile-menu>
     <div class="mobile">
-        <div class="background fixed inset-0 w-full h-full">
-            <img class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-                src="/assets/images/schedule/background.png" />
-            <div class="fixed inset-0 w-full h-full transparent-glass-bg-2 z-1"></div>
-        </div>
-        <div class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border transparent-glass-bg z-10">
-            <img height="35px" src="/assets/logo/logo.png" />
-            <span class="material-symbols-rounded cursor-pointer" onclick="openMenu()">
-                menu
-            </span>
-        </div>
+      <div class="background fixed inset-0 w-full h-full">
+        <img class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
+          src="/assets/images/schedule/background.png" />
+        <div class="fixed inset-0 w-full h-full transparent-glass-bg-2 z-1"></div>
+      </div>
+      <div class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border transparent-glass-bg z-10">
+        <img height="35px" src="/assets/logo/logo.png" />
+        <span class="material-symbols-rounded cursor-pointer" onclick="openMenu()">
+          menu
+        </span>
+      </div>
     </div>
 
     <div class="desktop">
-        <div class="background fixed inset-0 w-full h-full">
-            <img class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-                src="/assets/images/schedule/background.png" />
-            <div class="fixed inset-0 w-full h-full transparent-glass-bg-2 z-1"></div>
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10 transparent-glass-bg-2"
+      >
+        <img width="125px" src="/assets/images/logo/main-dark.png" />
+        <custom-desktop-menu textColor="black"></custom-desktop-menu>
+      </div>
+      <div class="background fixed inset-0 w-full h-full">
+        <img
+          class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
+          src="/assets/images/schedule/background.png"
+        />
+        <div
+          class="fixed inset-0 w-full h-full z-1"
+        ></div>
+      </div>
+
+      <main class="relative mt-5rem">
+        <header class="display">schedule</header>
+        <div class="about">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste accusantium dolores corporis error doloremque fuga ab in ratione debitis eveniet provident, repellendus nostrum enim molestiae obcaecati laboriosam earum facere ad!
         </div>
-        <div class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border transparent-glass-bg z-10">
-            <img height="50px" src="/assets/logo/logo.png" />
-            <span class="material-symbols-rounded cursor-pointer" onclick="openMenu()">
-                menu
-            </span>
+
+        <div class="toggler display">
+          <div class="day-button day-1" onclick="changeDay(0)">day 1 <span class="day-border active"></span></div>
+          <div class="day-button day-2" onclick="changeDay(1)">day 2 <span class="day-border"></span></div>
+          <div class="day-button day-3" onclick="changeDay(2)">day 3 <span class="day-border"></span></div>
         </div>
 
-        <main class="relative">
-            <header class="display">schedule</header>
-            <div class="about">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste accusantium dolores corporis error doloremque fuga ab in ratione debitis eveniet provident, repellendus nostrum enim molestiae obcaecati laboriosam earum facere ad!
-            </div>
-            
-            <div class="toggler display">
-                <div class="day-button day-1" onclick="changeDay(0)">day 1 <span class="day-border active"></span></div>
-                <div class="day-button day-2" onclick="changeDay(1)">day 2 <span class="day-border"></span></div>
-                <div class="day-button day-3" onclick="changeDay(2)">day 3 <span class="day-border"></span></div>
-            </div>
+        <div class="schedules">
+          <div class="table-headings">
+            <span class="table-heading-name display">time</span>
+            <span class="table-heading-name display">event</span>
+            <span class="table-heading-name display">venue</span>
+          </div>
 
-            <div class="schedules">
-                <div class="table-headings">
-                    <span class="table-heading-name display">time</span>
-                    <span class="table-heading-name display">event</span>
-                    <span class="table-heading-name display">venue</span>
-                </div>
-                
-                <table class="schedule-table schedule-1 visible" cellpadding="10px" cellspacing="0">
-                    <tr class="table-row">
-                        <td class="timings">10:00 am</td>
-                        <td class="events">
-                            <span class="event-name">Opening Ceremoney</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Deplichin Auditorium</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">11:00 am</td>
-                        <td class="events">
-                            <span class="event-name">Street Battle</span>
-                            <span class="event-name">Mela Quiz</span>
-                            <span class="event-name">Poetry Slam</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Street Stage</span>
-                            <span class="venue-name">Xavier Hall</span>
-                            <span class="venue-name">RK Hall</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">12:00 pm</td>
-                        <td class="events">
-                            <span class="event-name">Stage Play</span>
-                            <span class="event-name">Fashion Show</span>
-                            <span class="event-name">Extempore</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Deplichin Auditorium</span>
-                            <span class="venue-name">Main Stage</span>
-                            <span class="venue-name">Street Stage</span>
-                        </td>
-                    </tr>
-                </table>
+          <table class="schedule-table schedule-1 visible" cellpadding="10px" cellspacing="0">
+            <tr class="table-row">
+              <td class="timings">10:00 am</td>
+              <td class="events">
+                <span class="event-name">Opening Ceremoney</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Deplichin Auditorium</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">11:00 am</td>
+              <td class="events">
+                <span class="event-name">Street Battle</span>
+                <span class="event-name">Mela Quiz</span>
+                <span class="event-name">Poetry Slam</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Street Stage</span>
+                <span class="venue-name">Xavier Hall</span>
+                <span class="venue-name">RK Hall</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">12:00 pm</td>
+              <td class="events">
+                <span class="event-name">Stage Play</span>
+                <span class="event-name">Fashion Show</span>
+                <span class="event-name">Extempore</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Deplichin Auditorium</span>
+                <span class="venue-name">Main Stage</span>
+                <span class="venue-name">Street Stage</span>
+              </td>
+            </tr>
+          </table>
 
-                <table class="schedule-table schedule-2" cellpadding="10px" cellspacing="0">
-                    <tr class="table-row">
-                        <td class="timings">08:30 am</td>
-                        <td class="events">
-                            <span class="event-name">Basketball Womens</span>
-                            <span class="event-name">Mens Table Tennis</span>
-                            <span class="event-name">Creative Writing</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Basketball Court</span>
-                            <span class="venue-name">T.T. Room</span>
-                            <span class="venue-name">Classroom 10</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">09:45 am</td>
-                        <td class="events">
-                            <span class="event-name">Doodle Art</span>
-                            <span class="event-name">Charcoal Painting</span>
-                            <span class="event-name">Poetry Slam</span>
-                            <span class="event-name">Sports Quiz</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Grounds</span>
-                            <span class="venue-name">Grounds</span>
-                            <span class="venue-name">Jubilee Hall</span>
-                            <span class="venue-name">RK Hall</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">12:00 pm</td>
-                        <td class="events">
-                            <span class="event-name">Water colour painting</span>
-                            <span class="event-name">Theme walk</span>
-                            <span class="event-name">Solo Vocals</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Grounds</span>
-                            <span class="venue-name">Main Stage</span>
-                            <span class="venue-name">Auditorium</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">01:30 pm</td>
-                        <td class="events">
-                            <span class="event-name">RJ Hunt</span>
-                            <span class="event-name">Nail Art</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Arupe Hall</span>
-                            <span class="venue-name">Grounds</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">02:00 pm</td>
-                        <td class="events">
-                            <span class="event-name">Comic Strip Making</span>
-                            <span class="event-name">90 seconds to dance</span>
-                            <span class="event-name">Speed Art</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Grounds</span>
-                            <span class="venue-name">Jubilee Hall</span>
-                            <span class="venue-name">Grounds</span>
-                        </td>
-                    </tr>
-                </table>
+          <table class="schedule-table schedule-2" cellpadding="10px" cellspacing="0">
+            <tr class="table-row">
+              <td class="timings">08:30 am</td>
+              <td class="events">
+                <span class="event-name">Basketball Womens</span>
+                <span class="event-name">Mens Table Tennis</span>
+                <span class="event-name">Creative Writing</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Basketball Court</span>
+                <span class="venue-name">T.T. Room</span>
+                <span class="venue-name">Classroom 10</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">09:45 am</td>
+              <td class="events">
+                <span class="event-name">Doodle Art</span>
+                <span class="event-name">Charcoal Painting</span>
+                <span class="event-name">Poetry Slam</span>
+                <span class="event-name">Sports Quiz</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Grounds</span>
+                <span class="venue-name">Grounds</span>
+                <span class="venue-name">Jubilee Hall</span>
+                <span class="venue-name">RK Hall</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">12:00 pm</td>
+              <td class="events">
+                <span class="event-name">Water colour painting</span>
+                <span class="event-name">Theme walk</span>
+                <span class="event-name">Solo Vocals</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Grounds</span>
+                <span class="venue-name">Main Stage</span>
+                <span class="venue-name">Auditorium</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">01:30 pm</td>
+              <td class="events">
+                <span class="event-name">RJ Hunt</span>
+                <span class="event-name">Nail Art</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Arupe Hall</span>
+                <span class="venue-name">Grounds</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">02:00 pm</td>
+              <td class="events">
+                <span class="event-name">Comic Strip Making</span>
+                <span class="event-name">90 seconds to dance</span>
+                <span class="event-name">Speed Art</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Grounds</span>
+                <span class="venue-name">Jubilee Hall</span>
+                <span class="venue-name">Grounds</span>
+              </td>
+            </tr>
+          </table>
 
-                <table class="schedule-table schedule-3" cellpadding="10px" cellspacing="0">
-                    <tr class="table-row">
-                        <td class="timings">09:30 am</td>
-                        <td class="events">
-                            <span class="event-name">Tabble Tennis</span>
-                            <span class="event-name">Solo instrumental</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">T.T. Room</span>
-                            <span class="venue-name">Auditorium</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">11:00 am</td>
-                        <td class="events">
-                            <span class="event-name">Bollywood Group Dance</span>
-                            <span class="event-name">Street Play</span>
-                            <span class="event-name">General Quiz</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Main Stage</span>
-                            <span class="venue-name">Street Stage</span>
-                            <span class="venue-name">RK Hall</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">12:00 pm</td>
-                        <td class="events">
-                            <span class="event-name">Spell Bee</span>
-                            <span class="event-name">Book Charades</span>
-                            <span class="event-name">Chess</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Classroom 10</span>
-                            <span class="venue-name">Jubilee Hall</span>
-                            <span class="venue-name">Xavier Hall</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">04:00 pm</td>
-                        <td class="events">
-                            <span class="event-name">Beatboxing and Rapping</span>
-                            <span class="event-name">Hairstyling and Makeup</span>
-                            <span class="event-name">Canvas Painting</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Main Stage</span>
-                            <span class="venue-name">Grounds</span>
-                            <span class="venue-name">Grounds</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="timings">06:00 pm</td>
-                        <td class="events">
-                            <span class="event-name">Closing Ceremoney</span>
-                            <span class="event-name">Fusion Band</span>
-                            <span class="event-name">Friends FM Noght</span>
-                        </td>
-                        <td class="venues">
-                            <span class="venue-name">Main Stage</span>
-                            <span class="venue-name">Main Stage</span>
-                            <span class="venue-name">Main Stage</span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </main>
+          <table class="schedule-table schedule-3" cellpadding="10px" cellspacing="0">
+            <tr class="table-row">
+              <td class="timings">09:30 am</td>
+              <td class="events">
+                <span class="event-name">Tabble Tennis</span>
+                <span class="event-name">Solo instrumental</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">T.T. Room</span>
+                <span class="venue-name">Auditorium</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">11:00 am</td>
+              <td class="events">
+                <span class="event-name">Bollywood Group Dance</span>
+                <span class="event-name">Street Play</span>
+                <span class="event-name">General Quiz</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Main Stage</span>
+                <span class="venue-name">Street Stage</span>
+                <span class="venue-name">RK Hall</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">12:00 pm</td>
+              <td class="events">
+                <span class="event-name">Spell Bee</span>
+                <span class="event-name">Book Charades</span>
+                <span class="event-name">Chess</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Classroom 10</span>
+                <span class="venue-name">Jubilee Hall</span>
+                <span class="venue-name">Xavier Hall</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">04:00 pm</td>
+              <td class="events">
+                <span class="event-name">Beatboxing and Rapping</span>
+                <span class="event-name">Hairstyling and Makeup</span>
+                <span class="event-name">Canvas Painting</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Main Stage</span>
+                <span class="venue-name">Grounds</span>
+                <span class="venue-name">Grounds</span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="timings">06:00 pm</td>
+              <td class="events">
+                <span class="event-name">Closing Ceremoney</span>
+                <span class="event-name">Fusion Band</span>
+                <span class="event-name">Friends FM Noght</span>
+              </td>
+              <td class="venues">
+                <span class="venue-name">Main Stage</span>
+                <span class="venue-name">Main Stage</span>
+                <span class="venue-name">Main Stage</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </main>
     </div>
-
-</body>
-<script src="/custom-tags/mobile-menu/script.js"></script>
-<script src="./script.js"></script>
+  </body>
+  <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
+  <script src="./script.js"></script>
 
 </html>
