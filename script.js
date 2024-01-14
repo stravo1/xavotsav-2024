@@ -8,14 +8,14 @@ function pauseVideo() {
     veil.classList.remove("animate__fadeOut");
     veil.classList.add("animate__fadeIn");
     video.pause();
-    videoWrapper.style.cursor = "url('/assets/images/landing/play-golden-64.png'), auto";
+    videoWrapper.style.cursor = "url('/assets/images/interface/play-golden-64.png'), auto";
 }
 videoWrapper.addEventListener('click', function () {
     if (video.paused) {
         veil.classList.remove("animate__fadeIn");
         veil.classList.add("animate__fadeOut");
         video.play();
-        videoWrapper.style.cursor = "url('/assets/images/landing/pause-blue-64.png'), auto";
+        videoWrapper.style.cursor = "url('/assets/images/interface/pause-blue-64.png'), auto";
     } else {
         pauseVideo();
     }
