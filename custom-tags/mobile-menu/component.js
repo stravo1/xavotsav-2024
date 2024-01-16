@@ -17,7 +17,7 @@ class CustomMobileMenu extends HTMLElement {
               <li id="events" class="route-mobile" style="--i:1"><a href="/events">events</a></li>
               <li id="schedule" class="route-mobile" style="--i:2"><a href="/schedule">schedule</a></li>
               <li id="sponsors" class="route-mobile"  style="--i:3"><a href="/sponsors">sponsors</a></li>
-              <li id="merchandise" class="route-mobile" style="--i:4"><a href="/merch">merchandise</a></li>
+              <li id="merch" class="route-mobile" style="--i:4"><a href="/merch">merch</a></li>
               <li id="contact" class="route-mobile" style="--i:5"><a href="/contact">contact us</a></li>
               <li id="about" class="route-mobile" style="--i:6"><a href="/about">about us</a></li>
             </div>
