@@ -7,16 +7,9 @@ class CustomPageTransition extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
             <div class="transition-wrapper transition-visible">
-              <div class="domino">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <div class="loader-nature"> 	
               </div>
-              <div class="pixelated bottom-text">
+              <div class="italiana bottom-text">
                 eXabyte' 24
               </div>
             </div>

@@ -1,4 +1,4 @@
-@import url("./domino.css");
+@import url("./spinner.css");
 
 .transition-wrapper {
   display: flex;
@@ -32,15 +32,15 @@
   transition: none;
 }
 
-.bottom-text{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-    opacity: 75%;
+.bottom-text {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 75%;
 }
 
-.domino{
-    opacity: 75%;
+.spinner {
+  opacity: 75%;
 }

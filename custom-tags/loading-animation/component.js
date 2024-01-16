@@ -5,17 +5,13 @@ class CustomLoader extends HTMLElement {
       }
     
       connectedCallback() {
-        this.innerHTML = `<div class="loader">
-        <div class="dynamic hidden-no-anim">
-          <div>kilo</div>
-          <div>mega</div>
-          <div>giga</div>
-          <div>tera</div>
-          <div>peta</div>
-          <div>eXa</div>
-        </div>
-        <div class="static hidden-no-anim">byte</div>
-      </div>`
+        this.innerHTML = `
+        <div class="loader">
+          <div class="loader-nature"> 	
+          </div>
+          <div class="loader-text">Xavotsav '24</div>
+      </div>
+      `
       }
     
       disconnectedCallback() {

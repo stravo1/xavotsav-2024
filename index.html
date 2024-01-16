@@ -33,14 +33,24 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="./custom-tags/loading-animation/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./custom-tags/mobile-menu/component.js"></script>
-
+    <script src="./custom-tags/loading-animation/component.js"></script>
     <link rel="stylesheet" href="./custom-tags/desktop-menu/style.css" />
     <script src="./custom-tags/desktop-menu/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+    
   </head>
   <body>
-    <custom-mobile-menu />
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
     <div class="mobile">
       <div
         class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-4"
@@ -384,6 +394,8 @@
   <script src="script.js"></script>
   <script src="./custom-tags/mobile-menu/script.js"></script>
   <script src="./custom-tags/desktop-menu/script.js"></script>
+  <script src="./custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./assets/locomotive-scroll/locomotive-scroll.min.js"></script>
   <script>
     let isDesktop = screen.width > 850;

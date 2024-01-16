@@ -34,22 +34,10 @@ let prevHeaderText = desktopHeader.innerHTML;
 const resetPositions = () => {
     // console.log("resetting");
     header.style.transition = "0.1s font-size, 0.3s padding, top 0.3s linear";
-    // header.style.fontSize = "2.5rem";
     header.style.position = "relative";
-    desktopHeader.style.position = "relative";
     header.style.paddingLeft = "0";
-    desktopHeader.style.paddingLeft = "0";
     header.style.marginTop = "5rem";
-    desktopHeader.style.marginTop = "5rem";
-    // msg.style.opacity = "1";
     msg.style.marginTop = "1rem";
-    desktopMsg.style.marginTop = "1rem";
-    desktopHeader.innerHTML = prevHeaderText;
-    // msg.style.paddingTop = initialTopPaddingForMsg;
-    // topSection.style.height = "45%";
-    // topSection.style.minHeight = "300px";
-    // eventSection.style.paddingTop = "70px";
-    // console.log("resetting end");
     topBar.classList.remove("transparent-glass-bg");
     if (eventCardDesktop.getBoundingClientRect().top >= 70) {
         topBarDesktop.classList.remove("transparent-glass-bg-2");
@@ -72,19 +60,8 @@ window.addEventListener("scroll", function () {
     }
     
     if (desktopMsgPositionFromTop < 130) {
-        // desktopHeader.style.paddingLeft = "100px";
         desktopHeader.style.transition = "0.1s font-size, 0.1s padding, top 0.3s linear, 0.3s box-shadow";
-        // if (headerPositionFromTop < 85) {
-        //     header.style.fontSize = "1.8rem";
-        //     msg.style.transition = "none";
-        // }
         if (desktopMsgPositionFromTop <= 85) {
-            // desktopMsg.style.marginTop = "155px";
-            // desktopHeader.style.position = "fixed";
-            // desktopHeader.style.top = 0;
-            // desktopHeader.style.marginTop = "0.25rem";
-            // desktopHeader.innerHTML = ` ~ ${prevHeaderText}`;
-            // desktopHeader.style.fontFamily = "Karla";
             topBarDesktop.classList.add("transparent-glass-bg-2");
         }
     } 
@@ -94,10 +71,6 @@ window.addEventListener("scroll", function () {
     if (msgPositionFromTop < 130) {
         header.style.paddingLeft = "30px";
         header.style.transition = "0.1s font-size, 0.1s padding, top 0.3s linear, 0.3s box-shadow";
-        // if (headerPositionFromTop < 85) {
-        //     header.style.fontSize = "1.8rem";
-        //     msg.style.transition = "none";
-        // }
         if (msgPositionFromTop <= 75) {
             msg.style.marginTop = "155px";
             header.style.position = "fixed";

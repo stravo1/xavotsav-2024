@@ -6,6 +6,7 @@ const home = document.getElementById("home");
 const events = document.getElementById("events");
 const sponsors = document.getElementById("sponsors");
 const merchandise = document.getElementById("merchandise");
+const schedule = document.getElementById("schedule");
 const contact = document.getElementById("contact");
 const about = document.getElementById("about");
 
@@ -49,6 +50,10 @@ switch (path) {
     case "/merchandise/":
     case "/merchandise/index.html":
         merchandise.childNodes[0].classList.add("current-route");
+        break;
+    case "/schedule/":
+    case "/schedule/index.html":
+        schedule.childNodes[0].classList.add("current-route");
         break;
     case "/contact/":
     case "/contact/index.html":

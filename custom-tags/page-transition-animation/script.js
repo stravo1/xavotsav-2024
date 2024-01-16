@@ -24,10 +24,13 @@ routesLinks.forEach((node) => {
 
 if (localStorage.getItem("playTransitionAnimation")) {
     localStorage.removeItem("playTransitionAnimation");
-    setTimeout(() => {
-        transitionWrapper.classList.add("transition-invisible");
-        transitionWrapper.classList.remove("transition-visible");
-    }, 250)
+    window.addEventListener("load", () => {
+        console.log("loaded transition...");
+        setTimeout(() => {
+            transitionWrapper.classList.add("transition-invisible");
+            transitionWrapper.classList.remove("transition-visible");
+        }, 1000)
+    })
 } else {
     transitionWrapper.classList.add("transition-invisible-no-anim");
 }

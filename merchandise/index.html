@@ -16,26 +16,38 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
-    <link rel="stylesheet" href="/custom-tags/desktop-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
     <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
     <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
     <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
-    <script src="/custom-tags/desktop-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
     <script src="/custom-tags/footer-desktop/component.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
+    
   </head>
   <body>
     <custom-mobile-menu></custom-mobile-menu>
-    <custom-desktop-menu></custom-desktop-menu>
     <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
+    
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
           class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-          src="/assets/images/landing/background-6.jpg"
+          src="/assets/images/illustrartions/red.png"
         />
         <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
       </div>
@@ -75,11 +87,115 @@
           </div>
         </div>
       </div>
-      <custom-footer />
+      <custom-footer></custom-footer>
+    </div>
+    <div class="desktop">
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10"
+      >
+        <img width="125px" src="/assets/images/logo/main.png" />
+        <custom-desktop-menu></custom-desktop-menu>
+      </div>
+      <div class="flex w-full h-full">
+        <div class="left-section relative">
+          <div class="background absolute inset-0 w-full h-full">
+            <img
+              class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
+              src="/assets/images/illustrartions/red.png"
+            />
+            <div
+              class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"
+            ></div>
+          </div>
+          <div
+            class="relative display text-3xl mt-5rem z-2"
+            id="desktop-page-header"
+          >
+            merchandise
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="desktop-page-msg"
+          >
+            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
+            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
+            mauris enim ipsum dictumst pretium convallis.
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="overflow-scroll merch-items-wrapper-desktop-scroll">
+            <div
+              class="mt-7rem flex flex-wrap justify-center merch-items-wrapper-desktop"
+            >
+              <div
+                class="merch-items flex flex-col gap-1rem justify-center items-center mt-2rem"
+              >
+                <div class="swiper-desktop w-full mt-2rem">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper w-full">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div
+                        class="first-merch-card-desktop flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded event-card"
+                      >
+                        <div class="picture absolute inset-0 rounded">
+                          <img
+                            class="w-full h-full object-cover rounded"
+                            src="/assets/images/landing/background.jpg"
+                          />
+                        </div>
+                        <div class="gradient absolute inset-0 rounded"></div>
+                        <div class="display text-lg z-5">Merch 2</div>
+                        <div class="text-sm z-5">
+                          Lorem ipsum dolor sit amet consectetur. Odio enim
+                          commodo dignissim diam eget. Vel velit mauris nisi
+                          pharetra id.
+                        </div>
+                        <div
+                          class="flex z-5 event-button-group w-full gap-05rem"
+                        >
+                          <button class="purchase-button">Buy Now</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div
+                        class="first-event-card-desktop flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded event-card"
+                      >
+                        <div class="picture absolute inset-0 rounded">
+                          <img
+                            class="w-full h-full object-cover rounded"
+                            src="/assets/images/landing/background-3.jpg"
+                          />
+                        </div>
+                        <div class="gradient absolute inset-0 rounded"></div>
+                        <div class="display text-lg z-5">Merch 1</div>
+                        <div class="text-sm z-5">
+                          Lorem ipsum dolor sit amet consectetur. Odio enim
+                          commodo dignissim diam eget. Vel velit mauris nisi
+                          pharetra id.
+                        </div>
+                        <div
+                          class="flex z-5 event-button-group w-full gap-05rem"
+                        >
+                          <button class="purchase-button">Buy Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <custom-desktop-footer></custom-desktop-footer>
     </div>
   </body>
-  <script src="/custom-tags/desktop-menu/script.js"></script>
   <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./script.js"></script>
 </html>

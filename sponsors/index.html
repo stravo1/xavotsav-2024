@@ -21,10 +21,22 @@
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
     <script src="/custom-tags/footer-desktop/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
   </head>
   <body>
-    <custom-mobile-menu />
-    <custom-modal />
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
+
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
@@ -78,7 +90,9 @@
               class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
               src="/assets/images/illustrartions/red.png"
             />
-            <div class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"></div>
+            <div
+              class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"
+            ></div>
           </div>
           <div
             class="relative display text-3xl mt-5rem z-2"
@@ -100,20 +114,22 @@
           </div>
         </div>
         <div class="right-section">
-          <div class="overflow-scroll sponsors-items-wrapper-desktop-scroll flex flex-col items-center">
+          <div
+            class="overflow-scroll sponsors-items-wrapper-desktop-scroll flex flex-col items-center"
+          >
             <div
-                class="first-sponsor-card-desktop sponsor-card-desktop mt-10rem flex relative p-1rem flex flex-col justify-end items-start rounded"
-              >
-                <div class="picture rounded p-1rem">
-                  <img
-                    class="w-full h-full object-contain rounded"
-                    src="/assets/images/sponsors/91.9-FriendsFM.png"
-                  />
-                </div>
-                <div class="flex z-5 w-full gap-05rem">
-                  <span class="sponsor-title">Title Sponsor</span>
-                </div>
+              class="first-sponsor-card-desktop sponsor-card-desktop mt-10rem flex relative p-1rem flex flex-col justify-end items-start rounded"
+            >
+              <div class="picture rounded p-1rem">
+                <img
+                  class="w-full h-full object-contain rounded"
+                  src="/assets/images/sponsors/91.9-FriendsFM.png"
+                />
               </div>
+              <div class="flex z-5 w-full gap-05rem">
+                <span class="sponsor-title">Title Sponsor</span>
+              </div>
+            </div>
             <div
               class="flex flex-wrap justify-center sponsors-items-wrapper-desktop"
             >
@@ -179,5 +195,7 @@
   <script src="/custom-tags/mobile-menu/script.js"></script>
   <script src="/custom-tags/desktop-menu-1/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./script.js"></script>
 </html>

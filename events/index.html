@@ -21,10 +21,24 @@
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
     <script src="/custom-tags/footer-desktop/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
+
+    
   </head>
   <body>
     <custom-mobile-menu></custom-mobile-menu>
     <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
+
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
@@ -194,6 +208,7 @@
                 </div>
               </div>
               <div
+                id="scrollTest"
                 class="flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded event-card"
               >
                 <div class="picture absolute inset-0 rounded">
@@ -223,5 +238,7 @@
   <script src="/custom-tags/desktop-menu-1/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
   <script src="/custom-tags/footer-desktop/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./script.js"></script>
 </html>

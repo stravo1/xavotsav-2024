@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 .loader {
   position: fixed;
+  top: 0;
   z-index: 200;
   width: 100dvw;
   height: 100dvh;
   margin: 0px;
-  font-family: "DotGothic16", monospace;
+  font-family: "Italiana", monospace;
   font-weight: 800;
   font-size: 24px;
   background-color: black;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -42,4 +44,35 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s ease-in-out;
+}
+
+.loader-text {
+  position: fixed;
+  bottom: 2rem;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-nature {
+  width: 80px;
+  height: 40px;
+  border-radius: 100px 100px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.loader-nature:before {
+  content: "";
+  position: absolute;
+  inset: 0 0 -100%;
+  background: 
+    radial-gradient(farthest-side,#ffd738 80%,#0000) left 70% top    20%/15px 15px,
+    radial-gradient(farthest-side,#020308 92%,#0000) left 65% bottom 19%/12px 12px,
+    radial-gradient(farthest-side,#ecfefe 92%,#0000) left 70% bottom 20%/15px 15px,
+    linear-gradient(#9eddfe 50%,#020308 0);
+  background-repeat: no-repeat;
+  animation: l5 2s infinite;
+}
+@keyframes l5 {
+  0%,20%   {transform: rotate(0)}
+  40%,60%  {transform: rotate(.5turn)}
+  80%,100% {transform: rotate(1turn)}
 }

@@ -117,7 +117,6 @@ select {
 }
 .left-section {
   padding: 3rem;
-  margin-bottom: 5%;
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -126,7 +125,7 @@ select {
 
 .right-section {
   position: absolute;
-  width: 65vw;
+  width: 57vw;
   top: 0;
   right: 0;
   display: flex;
@@ -140,11 +139,28 @@ select {
 }
 
 .desktop .event-card {
-  max-width: 15rem;
+  max-width: 20rem;
   margin: 2rem;
-  height: 20rem !important;
+  height: 25rem !important;
 }
 
 .mt-10rem {
   margin-top: 25vh;
+}
+
+.mt-7rem {
+  margin-top: 7rem;
+}
+
+.swiper-desktop {
+  max-width: 40vw;
+}
+
+.desktop .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile .background {
+  filter: saturate(0.75);
 }
