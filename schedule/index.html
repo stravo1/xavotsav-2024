@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -49,6 +50,387 @@
           menu
         </span>
       </div>
+
+      <div class="relative content w-full p-2rem box-border">
+        <section class="top-section">
+          <header class="relative display text-3xl mt-5rem z-10" id="page-header">
+            schedule
+          </header>
+          <div
+            class="relative text-lg w-full mt-1rem font-light z-5"
+            id="page-msg"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus amet repellat saepe labore sapiente voluptas numquam neque qui minus nemo?
+          </div>
+        </section>
+
+        <section class="middle-section">
+          <div class="toggler display">
+            <div class="day-button day-1" onclick="changeDay(0)">day 1 <span class="day-border active"></span></div>
+            <div class="day-button day-2" onclick="changeDay(1)">day 2 <span class="day-border"></span></div>
+            <div class="day-button day-3" onclick="changeDay(2)">day 3 <span class="day-border"></span></div>
+          </div>
+
+          <div id="schedule" class="schedules-mobile">
+            <div class="schedule-table schedule-1 visible absolute left-0 right-0">
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">1</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">Opening Ceremoney</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        10:00 am - 10:45 am
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      Deplichin Auditorium
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">2</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">3</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">4</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="schedule-table schedule-2 absolute left-0 right-0">
+              <div class="event-wrapper flex items-center justify-center infinite-pos">
+                <div class="event-number display flex justify-center items-center">1</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">Basketball Women</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        08:30 am onwards
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      Basketball Court
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center infinite-pos">
+                <div class="event-number display flex justify-center items-center">2</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">Mens Table Tennis</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        09:00 am onwards
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      T.T. Room
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">3</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">4</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">5</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">6</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">7</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="schedule-table schedule-3 absolute left-0 right-0">
+              <div class="event-wrapper flex items-center justify-center infinite-pos">
+                <div class="event-number display flex justify-center items-center">1</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">Solo Instrumental</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        09:30 am - 10:30 am
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      Deplichin Auditorium
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center infinite-pos">
+                <div class="event-number display flex justify-center items-center">2</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">Table Tennis</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        09:30 am onwards
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      T.T. Room
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">3</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-wrapper flex items-center justify-center">
+                <div class="event-number display flex justify-center items-center">4</div>
+                <div class="event-details flex flex-col justify-center w-full">
+                  <div class="event-name-desktop">TBD</div>
+                  <div class="time-venue-wrapper flex flex-col">
+                    <div class="timings-mobile flex items-center">
+                      <span class="clock-icon material-symbols-outlined">
+                        schedule
+                      </span>
+                      <span class="time">
+                        11:00 am - 12:30 pm
+                      </span>
+                    </div>
+                    <div class="venue-mobile flex items-center">
+                      <span class="location-icon material-symbols-outlined">
+                        location_on
+                      </span>
+                      To Be Confirmed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
     <div class="desktop">
@@ -75,9 +457,9 @@
         </div>
 
         <div class="toggler display">
-          <div class="day-button day-1" onclick="changeDay(0)">day 1 <span class="day-border active"></span></div>
-          <div class="day-button day-2" onclick="changeDay(1)">day 2 <span class="day-border"></span></div>
-          <div class="day-button day-3" onclick="changeDay(2)">day 3 <span class="day-border"></span></div>
+          <div class="day-button day-1" onclick="changeDay(3)">day 1 <span class="day-border active"></span></div>
+          <div class="day-button day-2" onclick="changeDay(4)">day 2 <span class="day-border"></span></div>
+          <div class="day-button day-3" onclick="changeDay(5)">day 3 <span class="day-border"></span></div>
         </div>
 
         <div class="schedules">
@@ -87,7 +469,7 @@
             <span class="table-heading-name display">venue</span>
           </div>
 
-          <table class="schedule-table schedule-1 visible" cellpadding="10px" cellspacing="0">
+          <table class="schedule-table schedule-1 visible absolute left-0 right-0" cellpadding="10px" cellspacing="0">
             <tr class="table-row">
               <td class="timings">10:00 am</td>
               <td class="events">
@@ -125,7 +507,7 @@
             </tr>
           </table>
 
-          <table class="schedule-table schedule-2" cellpadding="10px" cellspacing="0">
+          <table class="schedule-table schedule-2 absolute left-0 right-0" cellpadding="10px" cellspacing="0">
             <tr class="table-row">
               <td class="timings">08:30 am</td>
               <td class="events">
@@ -193,7 +575,7 @@
             </tr>
           </table>
 
-          <table class="schedule-table schedule-3" cellpadding="10px" cellspacing="0">
+          <table class="schedule-table schedule-3 absolute left-0 right-0" cellpadding="10px" cellspacing="0">
             <tr class="table-row">
               <td class="timings">09:30 am</td>
               <td class="events">
