@@ -47,8 +47,8 @@ switch (path) {
     case "/sponsors/index.html":
         sponsors.childNodes[0].classList.add("current-route");
         break;
-    case "/merchandise/":
-    case "/merchandise/index.html":
+    case "/merch/":
+    case "/merch/index.html":
         merchandise.childNodes[0].classList.add("current-route");
         break;
     case "/schedule/":

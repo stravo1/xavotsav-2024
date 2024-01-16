@@ -53,7 +53,7 @@ switch (path) {
     case "/sponsors/":
         sponsorsDesktop.childNodes[0].classList.add("current-route");
         break;
-    case "/merchandise/":
+    case "/merch/":
         merchDesktop.childNodes[0].classList.add("current-route");
         break;
     case "/scores/":
