@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xavotsav - 2024 | Contact Us</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/tailwindClasses.css" />
+    <link rel="stylesheet" href="/globalStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
+    <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
+    <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
+    <script src="/custom-tags/modal/component.js"></script>
+    <script src="/custom-tags/footer/component.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
+  </head>
+  <body>
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
+
+    <div class="mobile">
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
+      >
+        <img height="35px" src="/assets/logo/logo.png" />
+        <span
+          class="material-symbols-rounded cursor-pointer"
+          onclick="openMenu()"
+        >
+          menu
+        </span>
+      </div>
+      <div
+        class="relative content w-full h-full flex justify-center items-center p-2rem box-border"
+      >
+        <div class="flex w-full h-full justify-center items-center">
+          <div class="text-3xl italiana">Coming Soon</div>
+        </div>
+      </div>
+      <custom-footer></custom-footer>
+    </div>
+    <div class="desktop">
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10"
+      >
+        <img width="125px" src="/assets/images/logo/main.png" />
+        <custom-desktop-menu></custom-desktop-menu>
+      </div>
+      <div class="flex w-full h-full justify-center items-center">
+        <div class="text-3xl italiana">Coming Soon</div>
+      </div>
+      <custom-desktop-footer></custom-desktop-footer>
+    </div>
+  </body>
+  <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
+  <script src="/custom-tags/modal/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
+</html>
