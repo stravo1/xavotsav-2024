@@ -480,7 +480,6 @@
   <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./assets/locomotive-scroll/locomotive-scroll.min.js"></script>
   <script>
-    let isDesktop = screen.width > 850;
     let loaded = false;
     let secondEntered = false;
     let thirdEntered = false;
@@ -552,7 +551,7 @@
             setTimeout(() => {
               if (!thirdEntered) {
                 setTimeout(() => {
-                  playVideoMobile();
+                  isDesktop ? playVideo() : playVideoMobile();
                 }, 250);
                 locoScroll.scrollTo(
                   document.querySelector(`#first${isDesktop ? "-desktop" : ""}`)
