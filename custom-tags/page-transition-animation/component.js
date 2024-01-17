@@ -10,7 +10,7 @@ class CustomPageTransition extends HTMLElement {
               <div class="loader-nature"> 	
               </div>
               <div class="italiana bottom-text">
-                eXabyte' 24
+                Xavotsav '24
               </div>
             </div>
           `
