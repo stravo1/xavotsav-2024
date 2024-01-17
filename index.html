@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#7B4125" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Xavotsav - 2024</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="tailwindClasses.css" />
@@ -32,20 +32,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./custom-tags/mobile-menu/style.css" />
-    <link rel="stylesheet" href="./custom-tags/loading-animation/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./custom-tags/mobile-menu/component.js"></script>
-    <script src="./custom-tags/loading-animation/component.js"></script>
-    <link rel="stylesheet" href="./custom-tags/desktop-menu/style.css" />
-    <script src="./custom-tags/desktop-menu/component.js"></script>
-
-    <script src="/custom-tags/page-transition-animation/component.js"></script>
     <link
       rel="stylesheet"
       href="/custom-tags/page-transition-animation/styles.css"
     />
-    
+    <link rel="stylesheet" href="./custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="./custom-tags/desktop-menu/style.css" />
+    <link rel="stylesheet" href="./custom-tags/loading-animation/styles.css" />
+    <link rel="stylesheet" href="./custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="./custom-tags/footer-desktop/styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./custom-tags/mobile-menu/component.js"></script>
+    <script src="./custom-tags/loading-animation/component.js"></script>
+    <script src="./custom-tags/desktop-menu/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
+    <script src="/custom-tags/footer/component.js"></script>
   </head>
   <body>
     <custom-mobile-menu></custom-mobile-menu>
@@ -66,40 +70,31 @@
       <div
         data-scroll-section
         id="first"
-        class="screen relative content flex flex-col justify-center items-start w-full p-3rem box-border"
+        class="screen relative content flex flex-col justify-end items-center w-full p-3rem box-border"
       >
         <div
           data-scroll-speed="1"
           class="background absolute inset-0 w-full h-full"
         >
-          <img
-            class="w-full h-full object-cover z-0"
-            src="./assets/images/landing/background-3.jpg"
-          />
           <div
-            class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
+            class="tint absolute transition-all inset-0 black-bg w-full h-full opacity-25 z-1"
           ></div>
+          <video class="mobile-video w-full h-full object-cover z-0" muted>
+            <source src="/assets/videos/teaser-1.mp4" type="video/mp4" />
+          </video>
         </div>
         <span
-          class="display text-2xl mt-2rem z-5"
+          class="section-1-text transition-all text-md italiana font-bold z-5 text-center mb-45p opacity-0"
           data-scroll
-          data-scroll-speed="3"
-          >Xavotsav '24</span
+          data-scroll-repeat
+          data-scroll-call="firstVisible"
         >
-        <span
-          class="about text-lg font-light z-5"
-          data-scroll
-          data-scroll-speed="3"
-        >
-          Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-          diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-          mauris enim ipsum dictumst pretium convallis.
+          Thrills Await -
+          <br />
+          Xavotsav Unveils the Extraordinary!
         </span>
-        <button class="z-5" data-scroll="" data-scroll-speed="2.5">
-          Call To Action
-        </button>
         <div
-          class="absolute infinite-anim bottom-0 z-5 mb-15p flex justify-center animate__animated animate__bounce animate__infinite animate__slower"
+          class="absolute infinite-anim opacity-0 bottom-0 z-5 mb-15p flex justify-center animate__animated animate__bounce animate__infinite animate__slower"
         >
           <span class="material-symbols-rounded">
             keyboard_double_arrow_down
@@ -107,91 +102,20 @@
         </div>
       </div>
       <div
+        data-scroll-section
         id="second"
         class="screen relative content flex flex-col gap-1rem justify-center items-start w-full p-3rem box-border"
-        data-scroll-section=""
       >
-        <div
-          data-scroll-speed="1"
-          class="background absolute inset-0 w-full h-full"
-        >
+        <div class="background absolute inset-0 w-full h-full">
           <img
-            class="w-full h-full object-cover z-0"
-            src="./assets/images/landing/star-night.jpg"
+            id="image-1"
+            class="w-full absolute inset-0 h-full object-cover z-0 fade"
+            src="./assets/images/previous-images/1.JPG"
           />
-          <div
-            class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
-          ></div>
-        </div>
-        <div
-          data-scroll
-          data-scroll-repeat
-          data-scroll-call="secondVisible"
-          class="z-5 w-full"
-        >
-          <!-- Slider main container -->
-          <div class="swiper w-full" data-scroll data-scroll-speed="3">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper w-full">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div
-                  class="flex p-1rem w-full flex flex-col justify-center items-start gap-1rem"
-                >
-                  <div class="holder"></div>
-                  <div class="display text-2xl">Star Night</div>
-                  <div class="text-md">
-                    Lorem ipsum dolor sit amet consectetur. Odio enim commodo
-                    dignissim diam eget. Vel velit mauris nisi pharetra id. In
-                    fusce feugiat nunc mauris enim ipsum dictumst pretium
-                    convallis.
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="flex p-1rem w-full flex flex-col justify-center items-start gap-1rem"
-                >
-                  <div class="holder"></div>
-                  <div class="display text-2xl">Star Night</div>
-                  <div class="text-md">
-                    Lorem ipsum dolor sit amet consectetur. Odio enim commodo
-                    dignissim diam eget. Vel velit mauris nisi pharetra id. In
-                    fusce feugiat nunc mauris enim ipsum dictumst pretium
-                    convallis.
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="flex p-1rem w-full flex flex-col justify-center items-start gap-1rem"
-                >
-                  <div class="holder"></div>
-                  <div class="display text-2xl">Star Night</div>
-                  <div class="text-md">
-                    Lorem ipsum dolor sit amet consectetur. Odio enim commodo
-                    dignissim diam eget. Vel velit mauris nisi pharetra id. In
-                    fusce feugiat nunc mauris enim ipsum dictumst pretium
-                    convallis.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        data-scroll-section
-        id="third"
-        class="screen relative content flex flex-col gap-1rem justify-center items-start w-full p-3rem box-border"
-      >
-        <div
-          data-scroll-speed="1"
-          class="background absolute inset-0 w-full h-full"
-        >
           <img
-            class="w-full h-full object-cover z-0"
-            src="./assets/images/landing/background.jpg"
+            id="image-2"
+            class="w-full absolute inset-0 h-full object-cover z-0 fade"
+            src="./assets/images/previous-images/1.JPG"
           />
           <div
             class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
@@ -200,58 +124,160 @@
         <span
           class="display text-2xl mt-2rem z-5"
           data-scroll
-          data-scroll-speed="3"
+          data-scroll-speed="2"
           data-scroll-repeat
-          data-scroll-call="thirdVisible"
-          >Lorem Ipsum</span
+          data-scroll-call="secondVisible"
+          >Xavotsav '24</span
         >
         <span
           class="about text-lg font-light z-5"
           data-scroll
-          data-scroll-speed="3"
+          data-scroll-speed="2"
         >
-          Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-          diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-          mauris enim ipsum dictumst pretium convallis.
+          In the yearly rhythm of St. Xavier's College (Autonomous), Kolkata,
+          joy takes center stage once more. Xavotsav season graces the campus,
+          casting a spell of celebration, making every corner resonate with
+          happiness and cheer.
         </span>
+      </div>
+      <div
+        id="third"
+        class="screen relative content flex flex-col gap-1rem justify-center items-start w-full p-1rem box-border"
+        data-scroll-section=""
+      >
+        <div
+          data-scroll-speed="1"
+          class="background absolute inset-0 w-full h-full"
+        >
+          <img
+            class="w-full h-full object-cover z-0"
+            src="./assets/images/previous-images/8.jpg"
+          />
+          <div
+            class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
+          ></div>
+        </div>
+        <div
+          data-scroll
+          data-scroll-repeat
+          data-scroll-call="thirdVisible"
+          class="z-5 w-full"
+        >
+          <div class="display text-2xl p-1rem">Star Studded</div>
+          <!-- Slider main container -->
+          <div class="swiper w-full" data-scroll data-scroll-speed="3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper w-full">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem w-full flex flex-col justify-center items-start gap-1rem box-border"
+                >
+                  <div class="holder">
+                    <img
+                      class="w-full h-full object-cover rounded"
+                      src="/assets/images/celebrities/shilpa-rao.jpg"
+                    />
+                  </div>
+                  <div class="italiana text-xl">Shilpa Rao</div>
+                  <div class="text-md">
+                    Immerse yourself in the Astral panorama of Xavotsav as the
+                    ethereal voice of Shilpa Rao promises to guide you through a
+                    musical galaxy to the constellation of melodies, making it a
+                    radiant highlight of our cultural cosmos.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem w-full flex flex-col justify-center items-start gap-1rem box-border"
+                >
+                  <div class="holder">
+                    <img
+                      class="w-full h-full object-cover rounded"
+                      src="/assets/images/celebrities/ritviz.jpg"
+                    />
+                  </div>
+                  <div class="italiana text-xl">Ritviz</div>
+                  <div class="text-md">
+                    In the rhythmic echoes of the past, Xavotsav proudly hosted
+                    the electrifying beats of Ritviz, the "Sage" who graced our
+                    stage and set the night ablaze with his musical prowess.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem w-full flex flex-col justify-center items-start gap-1rem box-border"
+                >
+                  <div class="holder">
+                    <img
+                      class="w-full h-full object-cover rounded"
+                      src="/assets/images/celebrities/biswa-kalyan-rath.jpg"
+                    />
+                  </div>
+                  <div class="italiana text-xl">Biswa Kalyan Rath</div>
+                  <div class="text-md">
+                    Laughter echoed through Xavotsav's corridors as the renowned
+                    comedian and stand-up artist Biswa Kalyan Rath took center
+                    stage, leaving the audience in splits and creating
+                    unforgettable moments in the comedy realm.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fourth" class="screen flex items-end" data-scroll-section="">
+        <custom-footer
+          class="mb-15p"
+          data-scroll
+          data-scroll-repeat
+          data-scroll-call="fourthVisible"
+        ></custom-footer>
       </div>
     </div>
 
     <div class="desktop" data-scroll-container>
-      <div class="menu-holder display link-pointer fixed right-0 z-10 width-63 flex items-center justify-end transparent-glass-bg">
-        <custom-desktop-menu/>
+      <div
+        class="menu-holder display link-pointer fixed right-0 z-10 width-63 flex items-center justify-end transparent-glass-bg"
+      >
+        <custom-desktop-menu></custom-desktop-menu>
       </div>
-      <div class="logo-holder flex items-center justify-center fixed top-0 z-10">
-        <a class="flex items-center justify-center" href="/"><img src="/assets/logo/logo.png" alt="" srcset="" /></a>
+      <div
+        class="logo-holder flex items-center justify-center fixed top-0 z-10"
+      >
+        <a class="flex items-center justify-center" href="/"
+          ><img src="/assets/logo/logo.png" alt="" srcset=""
+        /></a>
       </div>
       <section
         class="section-1 intro"
         data-scroll-section=""
         data-scroll=""
-          data-scroll-speed="2"
+        data-scroll-speed="2"
         data-scroll-repeat
         data-scroll-call="firstVisible"
         id="first-desktop"
       >
         <div
-          class="animate__animated animate__fadeIn z-1 background absolute inset-0 w-full h-full flex flex-col items-center justify-center transition-all"
+          class="animate__animated animate__fadeIn z-1 background absolute inset-0 w-full h-full flex flex-col items-center justify-end transition-all"
         >
           <div
             class="absolute inset-0 black-bg w-full h-full opacity-40 z-1"
           ></div>
-          <div class="z-10 w-50p">
-            <div class="display text-3xl">Xavotsav '24</div>
+          <div class="z-10 w-50p mb-15p">
+            <div class="italiana font-bold text-3xl">Xavotsav '24</div>
             <div class="mt-1rem text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-              similique quidem ab voluptatibus atque ratione? Quae, atque. Quam,
-              expedita perferendis!
+              Thrills Await - Xavotsav Unveils the Extraordinary!
             </div>
           </div>
         </div>
         <video
           id="intro-video"
-          src="/assets/images/landing/xavotsav-2018-AfterMovie.mp4"
-          autoplay
+          src="/assets/videos/aftermovie-23.mp4"
+          muted
           loop
           disableremoteplayback=""
           preload="auto"
@@ -281,14 +307,18 @@
           data-scroll-call="secondVisible"
         >
           <div class="typing-text-wrapper">
-            <header class="about-header typing-text">Lorem Ipsum</header>
+            <header class="about-header typing-text">Who are we?</header>
             <span class="cursor"></span>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
-            quae, quo necessitatibus eveniet maiores fugit debitis cupiditate
-            aspernatur excepturi quis aperiam recusandae culpa praesentium.
-            Mollitia commodi dolorum facilis quos?
+            Xavotsav is a national annual cultural extravaganza with events
+            spread across various spectrums such as performing arts, fine arts,
+            literature, sports and management.
+            <br />
+            In the yearly rhythm of St. Xavier's College (Autonomous), Kolkata,
+            joy takes center stage once more. Xavotsav season graces the campus,
+            casting a spell of celebration, making every corner resonate with
+            happiness and cheer.
           </p>
         </div>
         <div class="about-media z-5" data-scroll="" data-scroll-speed="1">
@@ -301,28 +331,56 @@
                 <div
                   class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
                 >
-                  <img src="/assets/images/landing/gallery/1.jpg" alt="" />
+                  <img src="/assets/images/previous-images/1.JPG" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div
                   class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
                 >
-                  <img src="/assets/images/landing/gallery/2.jpg" alt="" />
+                  <img src="/assets/images/previous-images/2.JPG" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div
                   class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
                 >
-                  <img src="/assets/images/landing/gallery/3.jpg" alt="" />
+                  <img src="/assets/images/previous-images/3.JPG" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div
                   class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
                 >
-                  <img src="/assets/images/landing/gallery/6.jpg" alt="" />
+                  <img src="/assets/images/previous-images/4.JPG" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/previous-images/5.JPG" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/previous-images/6.JPG" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/previous-images/7.JPG" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/previous-images/8.JPG" alt="" />
                 </div>
               </div>
             </div>
@@ -334,11 +392,9 @@
         <div class="marquee" data-scroll="">
           <div class="track track-1">
             <div class="marquee-texts">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum
-              suscipit quasi! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Totam quod corrupti, ullam vitae aperiam odio dolorum
-              aliquid rerum suscipit quasi!
+              In the symphony of existence, greatness chimes across time. The
+              past held its splendor, the present resonates with magnificence,
+              and the future holds the promise of enduring greatness.
             </div>
           </div>
         </div>
@@ -346,11 +402,11 @@
         <div class="marquee" data-scroll data-scroll-speed="3">
           <div class="track track-2">
             <div class="marquee-texts">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              quod corrupti, ullam vitae aperiam odio dolorum aliquid rerum
-              suscipit quasi! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Totam quod corrupti, ullam vitae aperiam odio dolorum
-              aliquid rerum suscipit quasi!
+              Each moment, a testament to the evolution of excellence - the
+              current, a crescendo of perfection, reaching its peak form.
+              Embrace the continuous journey of brilliance, where every note
+              played, every stroke drawn, and every creation crafted is a
+              celebration of timeless greatness.
             </div>
           </div>
         </div>
@@ -361,34 +417,60 @@
           data-scroll-speed="1"
           class="background absolute inset-0 w-full h-full"
         >
-          <div
-            class="background-gradient inset-0 w-full h-full z-1"
-          ></div>
+          <div class="background-gradient inset-0 w-full h-full z-1"></div>
         </div>
         <div class="section-media" data-scroll="">
-          <div class="michelango"></div>
+          <div class="swiper-desktop-2" data-scroll data-scroll-speed="3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/celebrities/shilpa-rao.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img src="/assets/images/celebrities/ritviz.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
+                >
+                  <img
+                    src="/assets/images/celebrities/biswa-kalyan-rath.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="section-texts">
+        <div class="section-texts m-3rem">
           <div class="typing-text-wrapper">
-            <header
-              class="typing-text"
-              data-scroll
-              data-scroll-repeat
-              data-scroll-call="thirdVisible"
-            >
-              Lorem Ipsum
-            </header>
+            <header class="typing-text" data-scroll>Star Studded</header>
             <span class="cursor"></span>
           </div>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Voluptatum, expedita nobis! Obcaecati veniam doloribus, et alias
-            nisi, aperiam delectus sed nihil, quas tempora eaque repellat
-            veritatis aspernatur animi soluta aut?
+          <p data-scroll data-scroll-repeat data-scroll-call="thirdVisible">
+            Immerse yourself in the Astral panorama of Xavotsav as the ethereal
+            voice of Shilpa Rao promises to guide you through a musical galaxy
+            to the constellation of melodies, making it a radiant highlight of
+            our cultural cosmos.
+            <br />
+            In the rhythmic echoes of the past, Xavotsav proudly hosted the
+            electrifying beats of Ritviz, the "Sage" who graced our stage and
+            set the night ablaze with his musical prowess.
           </p>
         </div>
       </section>
-      <!-- <section class="section-4"></section> -->
+      <div data-scroll-section="">
+        <custom-desktop-footer></custom-desktop-footer>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>
@@ -402,10 +484,11 @@
     let loaded = false;
     let secondEntered = false;
     let thirdEntered = false;
+    let fourthEntered = false;
     let sectionPara = document.querySelectorAll(".section-texts p");
-    let logo = document.querySelector('.logo-holder');
-    let navMenus = document.querySelector('.menu-holder');
-    let introVideo = document.querySelector('#intro-video');
+    let logo = document.querySelector(".logo-holder");
+    let navMenus = document.querySelector(".menu-holder");
+    let introVideo = document.querySelector("#intro-video");
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector(isDesktop ? ".desktop" : ".mobile"),
       smooth: true,
@@ -419,16 +502,17 @@
     setTimeout(() => {
       locoScroll.init();
       locoScroll.on("scroll", () => {
-        if (loaded) {
-          setTimeout(() => {
-            document.querySelector(".infinite-anim").classList.add("opacity-0");
-          }, 500);
-        } else {
-          loaded = true;
-        }
+        // if (loaded) {
+        //   setTimeout(() => {
+        //     document.querySelector(".infinite-anim").classList.remove("opacity-100");
+        //     document.querySelector(".infinite-anim").classList.add("opacity-0");
+        //   }, 500);
+        // } else {
+        //   loaded = true;
+        // }
       });
       locoScroll.on("call", (event, state) => {
-        if(event == "firstVisible") {
+        if (event == "firstVisible") {
           if (state == "enter" && isDesktop) {
             logo.style.transform = "scale(0)";
             navMenus.style.top = "-60px";
@@ -439,7 +523,12 @@
           }
         }
         if (event == "secondVisible") {
-          pauseVideo();
+          if (state == "enter") {
+            setTimeout(() => {
+              pauseVideo();
+              pauseVideoMobile();
+            }, 500);
+          }
           if (state == "enter" && isDesktop) {
             sectionPara[0].style.opacity = "1";
             sectionPara[0].style.left = "0";
@@ -454,7 +543,7 @@
             secondEntered = true;
             setTimeout(() => {
               locoScroll.scrollTo(
-                document.querySelector(`#second-${isDesktop ? "desktop" : ""}`)
+                document.querySelector(`#second${isDesktop ? "-desktop" : ""}`)
               );
             }, 1);
           }
@@ -462,8 +551,11 @@
             secondEntered = false;
             setTimeout(() => {
               if (!thirdEntered) {
+                setTimeout(() => {
+                  playVideoMobile();
+                }, 250);
                 locoScroll.scrollTo(
-                  document.querySelector(`#first-${isDesktop ? "desktop" : ""}`)
+                  document.querySelector(`#first${isDesktop ? "-desktop" : ""}`)
                 );
               }
             }, 1);
@@ -482,15 +574,36 @@
             thirdEntered = true;
             setTimeout(() => {
               locoScroll.scrollTo(
-                document.querySelector(`#third-${isDesktop ? "desktop" : ""}`)
+                document.querySelector(`#third${isDesktop ? "-desktop" : ""}`)
               );
             }, 1);
           }
           if (state == "exit" && !isDesktop) {
             thirdEntered = false;
             setTimeout(() => {
+              if (!fourthEntered) {
+                locoScroll.scrollTo(
+                  document.querySelector(
+                    `#second${isDesktop ? "-desktop" : ""}`
+                  )
+                );
+              }
+            }, 1);
+          }
+        }
+        if (event == "fourthVisible" && !isDesktop) {
+          if (state == "enter") {
+            fourthEntered = true;
+            setTimeout(() => {
               locoScroll.scrollTo(
-                document.querySelector(`#second-${isDesktop ? "desktop" : ""}`)
+                document.querySelector(`#fourth${isDesktop ? "-desktop" : ""}`)
+              );
+            }, 1);
+          } else {
+            fourthEntered = false;
+            setTimeout(() => {
+              locoScroll.scrollTo(
+                document.querySelector(`#third${isDesktop ? "-desktop" : ""}`)
               );
             }, 1);
           }
@@ -509,11 +622,22 @@
       autoplay: {
         delay: 2500,
       },
+      allowTouchMove: false,
     });
 
     const swiperDesktop = new Swiper(".swiper-desktop", {
       speed: 400,
-      spaceBetween: 100,
+      spaceBetween: 50,
+      autoplay: {
+        delay: 2500,
+      },
+      effect: "fade",
+      allowTouchMove: false,
+    });
+
+    const swiperDesktop2 = new Swiper(".swiper-desktop-2", {
+      speed: 400,
+      spaceBetween: 50,
       autoplay: {
         delay: 2500,
       },

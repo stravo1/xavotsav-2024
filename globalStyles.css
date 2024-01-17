@@ -31,7 +31,7 @@ body {
 .italiana {
   line-height: 1.5;
   font-family: "Italiana", sans-serif;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .display {
