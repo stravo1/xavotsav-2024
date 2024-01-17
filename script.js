@@ -126,6 +126,28 @@ mobileVideo.addEventListener("timeupdate", (e) => {
     }
 })
 
+video.addEventListener("loadstart", () => {
+    document.querySelector(".loader").classList.add("hidden")
+
+})
+
+video.addEventListener("canplay", () => {
+    console.log("desktop video can be played...");
+    document.querySelector(".loader").classList.remove("hidden")
+
+})
+
+mobileVideo.addEventListener("loadstart", () => {
+    document.querySelector(".loader").classList.add("hidden")
+
+})
+
+mobileVideo.addEventListener("canplay", () => {
+    console.log("mobile video can be played...");
+    document.querySelector(".loader").classList.remove("hidden")
+
+})
+
 
 const image1 = document.getElementById('image-1');
 const image2 = document.getElementById('image-2');
