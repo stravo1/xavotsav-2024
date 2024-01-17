@@ -7,11 +7,10 @@ setTimeout(() => {
     minimumTimePassed = true;
 }, 3000)
 
-
 if (localStorage.getItem("playTransitionAnimation") && window.location.pathname != "/") {
     console.log("not showing inital loading animation...");
-    loader.classList.add("hidden");
 } else {
+    loader.classList.remove("hidden");
     window.addEventListener("load", () => {
         if (!localStorage.getItem("fontsCached")) {
             localStorage.setItem("fontsCached", true);

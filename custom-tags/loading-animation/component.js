@@ -6,7 +6,7 @@ class CustomLoader extends HTMLElement {
     
       connectedCallback() {
         this.innerHTML = `
-        <div class="loader">
+        <div class="loader hidden">
           <div class="loader-nature"> 	
           </div>
           <div class="loader-text">Xavotsav '24</div>
