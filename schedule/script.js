@@ -40,7 +40,7 @@ function initDelays(num) {
     }
 }
 initDelays(0);  // initializing delay for day-1 schedule event cards
-
+let topSection = document.querySelector('.top-section');
 let middleSection = document.querySelector('.middle-section');
 function changeDay(dayNumber) {
     // function to change day tabs for viewing schedules of each day
@@ -50,7 +50,7 @@ function changeDay(dayNumber) {
             scheduleCardAll[j].classList.add('infinite-pos');
     }
     if(toggleSection.style.position === "fixed")
-    middleSection.scrollIntoView({
+    topSection.scrollIntoView({
         behavior: "smooth",
         block: "start",
         inline: "nearest"
