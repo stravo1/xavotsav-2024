@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.opacity-40 {
+  opacity: 40%;
+}
+.screen {
+  height: 100vh;
+}
+.p-2rem {
+  padding: 2rem;
+}
+.mt-1rem {
+  margin-top: 1rem;
+}
+.mt-2rem {
+  margin-top: 2rem;
+}
+
+.mt-5rem {
+  margin-top: 5rem;
+}
+.mb-15p {
+  margin-bottom: 15%;
+}
+.flex-basis-15 {
+  flex-basis: 35%;
+}
+
+.flex-basis-75 {
+  flex-basis: 75%;
+}
+.h-15rem {
+  min-height: 15rem;
+  height: 40vh;
+}
+
+.menu-holder {
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.logo-holder {
+  left: 0;
+  padding: 0.5rem 1rem;
+}
+
+.width-33 {
+  width: 33%;
+}
+
+.width-63 {
+  width: 63%;
+}
+
+.width-67 {
+  width: 67%;
+}
+
+.link-pointer {
+  cursor: pointer;
+}
+
+.padding-bottom-16 {
+  padding-bottom: 16px;
+}
+
+.initial {
+  position: initial;
+}
+
+.bg-black {
+  background: black;
+}
+
+.transparent-glass-bg {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: all;
+}
+
+.transparent-glass-bg-2 {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: all;
+}
+
+/* Mobile mode */
+
+.top-section {
+  transition: 0.1s ease-in-out;
+}
+
+.top-section header {
+  height: 60px;
+  font-size: 2.5rem;
+  padding: 0 0 0 40px;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 black;
+  transition: 0.2s font-size, 0.1s padding, box-shadow 1s linear;
+}
+.top-section p {
+  margin: 0;
+  padding: 10px 40px;
+  transition: 0.8s;
+}
+
+.middle-section {
+  gap: 2rem;
+  padding: 70px 0px 40px;
+}
+.middle-section header {
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px 2rem 10px;
+}
+
+.team-members {
+  gap: 2.2rem;
+  padding: 0 2rem;
+}
+
+.profile-card {
+  width: 290px;
+  border-radius: 20px;
+  padding: 3px 3px 0;
+  background: rgb(255, 255, 255);
+  position: relative;
+  bottom: 0;
+  transition: 0.3s ease, 0.35s bottom;
+  transform: perspective(1px);
+}
+
+.card-wrapper-1 {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 18px;
+}
+
+.profile-picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  user-select: none;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  display: flex;
+  align-items: end;
+  background: linear-gradient(transparent 60%, black);
+}
+
+.card-wrapper-2 {
+  color: rgba(0, 0, 0, 0.8);
+  padding: 5px 15px;
+  height: 50px;
+  gap: 1rem;
+  position: relative;
+}
+
+.role {
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.profile-icons-group {
+  gap: 5px;
+  /* position: relative; */
+}
+
+.profile-icons-group > a, .plus-icon {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (hover: hover), (-ms-high-contrast:none) {
+  .material-symbols-outlined:hover {
+    color: var(--primary-color);
+  }
+}
+
+#call {
+  margin-right: 34px;
+}
+
+.more-items {
+  height: 45px;
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: 4px solid transparent;
+  border-radius: 50px;
+  transition: 0.35s, 0.2s box-shadow;
+}
+
+.more-items > a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5px;
+  transition: .35s ease;
+  transition-delay: .21s;
+}
+
+.more-items > a > img {
+  height: 22px;
+  width: 22px;
+}
+
+
+.plus-icon-wrapper {
+  height: 35px;
+  width: 35px;
+  background: rgb(255, 255, 255);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: .3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Desktop mode (desktop + mobile mode css is combined): */
+
+/* Scroll Bar styling code: */
+@media screen and (min-width: 850px) {
+  ::-webkit-scrollbar {
+    background: rgb(0, 0, 0);
+    width: 18px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(59, 60, 61);
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(71, 74, 77);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: rgb(42, 47, 49);
+  }
+}
+
+/* Body elements styling */
+
+.left-section {
+  padding: 3rem;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section {
+  position: relative;
+  width: 65%;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 2rem 2.5rem;
+}
+
+.gradient-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(black, transparent, black);
+  /* z-index: 1; */
+}
+
+.profile-cards-wrapper {
+  padding: 20% 0 2rem;
+}
+
+.events-items-wrapper-desktop-scroll {
+  gap: 3rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.events-items-wrapper-desktop-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.socials-desktop {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.plus-icon-wrapper {
+  z-index: 3;
+}
+
+.plus-icon-desktop {
+  width: 25px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.plus-icon-desktop-hover:hover {
+  filter: sepia(1) saturate(100) hue-rotate(40deg);
+}
+
+.phone-number-box {
+  font-size: 1.12rem;
+  position: absolute;
+  bottom: 54px;
+  right: 4px;
+  text-wrap: nowrap;
+  background: wheat;
+  padding: 10px 15px;
+  border: 4px solid goldenrod;
+  box-shadow: 0 0 10px 2px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.show-number {
+  opacity: 1;
+  z-index: 0;
+}
+.hide-number {
+  opacity: 0;
+  z-index: -1;
+}
+
+.copy-icon {
+  opacity: 0.8;
+}
