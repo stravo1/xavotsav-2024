@@ -39,6 +39,8 @@
   text-align: center;
   margin-bottom: 1rem;
   opacity: 75%;
+  font-weight: 800;
+  font-size: 24px;
 }
 
 .spinner {
