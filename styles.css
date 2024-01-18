@@ -76,10 +76,14 @@ button {
 body {
   overflow-x: hidden;
   /* cursor: url('/assets/images/interface/icons8-navigation-48.png'), auto; */
+  /* cursor: url('/assets/images/interface/cursor-gradient-outline-normal-32.png'), auto !important; */
+  cursor: url('/assets/images/interface/cursor-alt-svgrepo-com.svg'), auto !important;
 }
 
 a, button {
-  /* cursor: url('/assets/images/interface/finger-up-50.png'), auto !important; */
+  cursor: url('/assets/images/interface/cursor-alt-svgrepo-com.svg'), auto !important;
+  /* cursor: url('/assets/images/interface/cursor-feather-emoji-40.png'), auto !important; */
+  /* cursor: url('/assets/images/interface/cursor-gradient-outline-32.png'), auto !important; */
 }
 
 .menu-holder, .logo-holder {
