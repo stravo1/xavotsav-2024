@@ -277,7 +277,6 @@
         <video
           id="intro-video"
           src="/assets/videos/aftermovie-23.mp4"
-          muted
           loop
           disableremoteplayback=""
           preload="auto"
@@ -380,7 +379,7 @@
                 <div
                   class="flex p-1rem flex flex-col justify-center items-start gap-1rem image-gallery"
                 >
-                  <img src="/assets/images/previous-images/8.JPG" alt="" />
+                  <img src="/assets/images/previous-images/8.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -512,7 +511,7 @@
       });
       locoScroll.on("call", (event, state) => {
         if (event == "firstVisible") {
-          if (state == "enter" && isDesktop) {
+          if (state == "enter" && isDesktop && !video.paused) {
             logo.style.transform = "scale(0)";
             navMenus.style.top = "-60px";
           }
