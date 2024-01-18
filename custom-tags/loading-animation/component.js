@@ -9,6 +9,7 @@ class CustomLoader extends HTMLElement {
         <div class="loader hidden">
           <div class="loader-nature"> 	
           </div>
+          <div class="loading-percentage">0%</div>
           <div class="loader-text">Xavotsav '24</div>
       </div>
       `

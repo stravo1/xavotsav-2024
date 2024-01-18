@@ -56,7 +56,7 @@ const resetPositions = () => {
 window.addEventListener("scroll", function () {
     let msgPositionFromTop = msg.getBoundingClientRect().top;
     let desktopMsgPositionFromTop = desktopMsg.getBoundingClientRect().top;
-    console.log(desktopMsgPositionFromTop, desktopMsg.style.paddingTop);
+    // console.log(desktopMsgPositionFromTop, desktopMsg.style.paddingTop);
     if (msg.style.paddingTop == "155px") {
         if (msgPositionFromTop > 0) {
             resetPositions();
@@ -106,7 +106,7 @@ window.addEventListener("scroll", function () {
     }
     setTimeout(() => {
         let msgPositionFromTop = msg.getBoundingClientRect().top;
-        console.log(msgPositionFromTop);
+        // console.log(msgPositionFromTop);
         if (msgPositionFromTop > 130) {
             resetPositions()
         }
@@ -118,13 +118,7 @@ window.addEventListener("scroll", function () {
         }
     }, 100)
 });
-// let countScroll = 0;
-// setInterval(() => {
-//     sponsorSectionDesktopScroller.scrollTo({
-//         top: countScroll = countScroll + 10,
-//         behavior: "smooth"
-//     })
-// }, 100)
+
 
 sponsorSectionDesktopScroller.addEventListener("scroll", () => {
     let sponsorCardTopPos = (sponsorCardDesktop.getBoundingClientRect().top);
@@ -151,3 +145,69 @@ sponsorDetails.forEach((item) => {
     `
     sponsorSection.appendChild(newSponsorDiv)
 })
+
+sponsorDetails.slice(1,).forEach((item, index) => {
+    let newSponsorDivDesktop = document.createElement("div");
+    newSponsorDivDesktop.className = "flex relative p-1rem flex flex-col justify-end items-start rounded w-85p sponsor-card" + (index + 1 == sponsorDetails.length - 1 ? " last-card" : "")
+    newSponsorDivDesktop.innerHTML = `
+        <div class="picture rounded p-2rem">
+            <img
+              class="w-full h-full object-contain rounded"
+              src="/assets/images/sponsors/${item.imageName}"
+            />
+        </div>
+        <div class="flex z-5 w-full gap-05rem">
+          <span class="sponsor-title">${item.title}</span>
+        </div>
+    `
+    sponsorSectionDesktop.appendChild(newSponsorDivDesktop);
+})
+
+let options = {
+    rootMargin: "0px",
+    threshold: 0.15,
+};
+let footerInViewport = false;
+let lastCardInViewport = false;
+
+let observerForLastCard = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (screen.width <= 850) {
+            return;
+        }
+        if (entry.isIntersecting) {
+            lastCardInViewport = true;
+            console.log('last card entered viewport');
+            document.body.style.overflow = "auto"
+        } else {
+            lastCardInViewport = false;
+            console.log('last card left viewport');
+            if (!footerInViewport) {
+                document.body.style.overflow = "hidden";
+                console.log(99);
+            }
+        }
+    });
+}, options);
+
+let observerForDesktopFooter = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (screen.width <= 850) {
+            return;
+        }
+        if (entry.isIntersecting) {
+            footerInViewport = true;
+            console.log('footer entered viewport');
+            document.body.style.overflow = "auto";
+        } else {
+            footerInViewport = false;
+            console.log('footer left viewport');
+            if (!lastCardInViewport)
+                document.body.style.overflow = "hidden"
+        }
+    });
+}, options);
+
+let target = document.querySelector(".last-card");
+observerForLastCard.observe(document.querySelector(".last-card"));
+observerForDesktopFooter.observe(document.querySelector(".desktop-footer"));

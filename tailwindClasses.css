@@ -180,6 +180,7 @@
 
 .overflow-scroll {
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 /* Visibility */
@@ -232,7 +233,6 @@
 .object-contain {
   object-fit: contain;
 }
-
 
 .opacity-0 {
   opacity: 0%;

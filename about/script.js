@@ -9,7 +9,7 @@ let topBar = document.querySelector(".top-bar");
 let topBarDesktop = document.querySelector(".desktop .top-bar");
 let eventSection = document.querySelector(".event-items");
 let eventSectionDesktop = document.querySelector(".events-items-wrapper-desktop");
-let eventCardDesktop = document.querySelector(".first-event-card-desktop");
+let eventCardDesktop = document.querySelector(".first-contact-card-desktop");
 let eventSectionDesktopScroller = document.querySelector(".events-items-wrapper-desktop-scroll");
 let prevHeaderText = desktopHeader.innerHTML;
 
@@ -214,3 +214,51 @@ function copyNumber(card_number) {
     copy_icon[card_number].innerHTML = "check_box";
     copy_icon[card_number].style.color = "green";
 }
+
+let options = {
+    rootMargin: "0px",
+    threshold: 0.15,
+};
+let footerInViewport = false;
+let lastCardInViewport = false;
+
+let observerForLastCard = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (screen.width <= 850) {
+            return;
+        }
+        if (entry.isIntersecting) {
+            lastCardInViewport = true;
+            console.log('last card entered viewport');
+            document.body.style.overflow = "auto"
+        } else {
+            lastCardInViewport = false;
+            console.log('last card left viewport');
+            if (!footerInViewport) {
+                document.body.style.overflow = "hidden";
+                console.log(99);
+            }
+        }
+    });
+}, options);
+
+let observerForDesktopFooter = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (screen.width <= 850) {
+            return;
+        }
+        if (entry.isIntersecting) {
+            footerInViewport = true;
+            console.log('footer entered viewport');
+            document.body.style.overflow = "auto";
+        } else {
+            footerInViewport = false;
+            console.log('footer left viewport');
+            if (!lastCardInViewport)
+                document.body.style.overflow = "hidden"
+        }
+    });
+}, options);
+
+observerForLastCard.observe(document.querySelector(".last-card"));
+observerForDesktopFooter.observe(document.querySelector(".desktop-footer"));

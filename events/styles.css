@@ -43,7 +43,10 @@ select {
   -webkit-appearance: none;
   border: 2px rgba(255, 255, 255, 0.5) solid;
 }
-
+option {
+  background-color: white;
+  color: black;
+}
 .select-button {
   width: 4rem;
   height: 4rem;
@@ -138,12 +141,12 @@ select {
 }
 
 .desktop .event-card {
-  max-width:15rem;
+  width: 15rem;
   margin: 2rem;
   height: 20rem !important;
 }
 
-.mt-10rem{
+.mt-10rem {
   margin-top: 25vh;
 }
 
@@ -156,7 +159,7 @@ select {
 }
 
 .event-card {
-  border:  1px white solid;
+  border: 1px white solid;
 }
 
 .events-items-wrapper-desktop-scroll {

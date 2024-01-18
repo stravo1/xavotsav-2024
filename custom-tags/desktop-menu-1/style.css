@@ -17,7 +17,8 @@
 
 .route-desktop > a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 1.25px;
   font-size: 24px;
 }
 
