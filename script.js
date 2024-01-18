@@ -12,18 +12,22 @@ let isDesktop = screen.width > 850;
 let videoPaused = false;
 
 let timeOut;
-
+let nav_menus = document.querySelector(".menu-holder");
 function pauseVideo() {
     veil.classList.remove("animate__fadeOut");
     veil.classList.add("animate__fadeIn");
+    logo.style.transform = "scale(1)";
+    nav_menus.style.top = "0";
     video.pause();
-    videoWrapper.style.cursor = "url('/assets/images/interface/play-golden-64.png'), auto";
+    videoWrapper.style.cursor = "url('/assets/images/interface/icons8-circled-play-50.png'), auto";
 }
 function playVideo() {
     veil.classList.remove("animate__fadeIn");
     veil.classList.add("animate__fadeOut");
+    logo.style.transform = "scale(0)";
+    nav_menus.style.top = "-60px";
     video.play();
-    videoWrapper.style.cursor = "url('/assets/images/interface/pause-blue-64.png'), auto";
+    videoWrapper.style.cursor = "url('/assets/images/interface/icons8-pause-50.png'), auto";
 }
 
 function pauseVideoMobile() {
@@ -117,6 +121,10 @@ videoWrapper.addEventListener("mousemove", () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
         !isDesktop ? playVideoMobile() : playVideo();
+        nav_menus.style.top = "0";
+        setTimeout(() => {
+            nav_menus.style.top = "-60px";
+        }, 2000);
     }, 3000)
 });
 
@@ -174,4 +182,3 @@ function toggleImages() {
 
 // Call the function every 3 seconds (adjust the interval as needed)
 setInterval(toggleImages, 2500);
-
