@@ -17,7 +17,21 @@ if (localStorage.getItem("playTransitionAnimation") && window.location.pathname 
             // metaTag.setAttribute('content', '#000000');
         }
         setTimeout(() => {
-            loader.classList.add("hidden");
+            if (!(screen.width > 850) && window.location.pathname == "/") {
+                console.log(99);
+                let mobileVideo = document.querySelector(".mobile video");
+                let mobileVideoSrc = document.querySelector(".mobile-video source");
+                console.log(mobileVideo);
+                // mobileVideoSrc.src = "/assets/videos/teaser-1.mp4"
+                mobileVideo.addEventListener("canplaythrough", () => {
+                    console.log("mobile video can be played...");
+                    loader.classList.add("hidden");
+                    playVideoMobile()
+                })
+                mobileVideo.load()
+            } else {
+                loader.classList.add("hidden");
+            }
             console.log("loaded...");
             setTimeout(() => {
                 // metaTag.setAttribute('content', '#ffffff');

@@ -137,16 +137,14 @@ mobileVideo.addEventListener("timeupdate", (e) => {
 
 // })
 
-mobileVideo.addEventListener("loadstart", () => {
-    document.querySelector(".loader").classList.add("hidden")
+// mobileVideo.addEventListener("loadstart", () => {
+//     document.querySelector(".loader").classList.add("hidden")
 
-})
-
-mobileVideo.addEventListener("canplaythrough", () => {
-    console.log("mobile video can be played...");
-    document.querySelector(".loader").classList.remove("hidden")
-
-})
+// })
+// mobileVideo.addEventListener("canplaythrough", () => {
+//     console.log("mobile video can be played...");
+//     loader.classList.remove("hidden")
+// })
 
 
 const image1 = document.getElementById('image-1');
