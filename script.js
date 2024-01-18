@@ -126,23 +126,23 @@ mobileVideo.addEventListener("timeupdate", (e) => {
     }
 })
 
-video.addEventListener("loadstart", () => {
-    document.querySelector(".loader").classList.add("hidden")
+// video.addEventListener("loadstart", () => {
+//     document.querySelector(".loader").classList.add("hidden")
 
-})
+// })
 
-video.addEventListener("canplay", () => {
-    console.log("desktop video can be played...");
-    document.querySelector(".loader").classList.remove("hidden")
+// video.addEventListener("canplay", () => {
+//     console.log("desktop video can be played...");
+//     document.querySelector(".loader").classList.remove("hidden")
 
-})
+// })
 
 mobileVideo.addEventListener("loadstart", () => {
     document.querySelector(".loader").classList.add("hidden")
 
 })
 
-mobileVideo.addEventListener("canplay", () => {
+mobileVideo.addEventListener("canplaythrough", () => {
     console.log("mobile video can be played...");
     document.querySelector(".loader").classList.remove("hidden")
 
