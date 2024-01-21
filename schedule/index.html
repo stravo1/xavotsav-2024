@@ -450,12 +450,20 @@
         ></div>
       </div>
 
-      <main class="relative mt-5rem">
-        <header class="display">schedule</header>
-        <div class="about">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste accusantium dolores corporis error doloremque fuga ab in ratione debitis eveniet provident, repellendus nostrum enim molestiae obcaecati laboriosam earum facere ad!
-        </div>
+      <main class="relative content w-full p-2rem box-border">
+        <section class="top-section">
+          <header class="relative display" id="desktop-page-header">
+            schedule
+          </header>
+          <div
+            class="about relative"
+            id="desktop-page-msg"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus amet repellat saepe labore sapiente voluptas numquam neque qui minus nemo?
+          </div>
+        </section>
 
+        <section class="middle-section">
         <div class="toggler display">
           <div class="day-button day-1" onclick="changeDay(3)">day 1 <span class="day-border active"></span></div>
           <div class="day-button day-2" onclick="changeDay(4)">day 2 <span class="day-border"></span></div>
@@ -641,6 +649,7 @@
             </tr>
           </table>
         </div>
+      </section>
       </main>
     </div>
   </body>
