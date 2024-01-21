@@ -38,22 +38,53 @@ select {
   font-family: "Karla", sans-serif;
   padding: 1rem;
   border-radius: 5px;
-  background: transparent;
+  outline: none;
+  backdrop-filter: blur(2px);
+  background: rgba(36, 35, 35, 0.3);
   width: 100%;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   border: 2px rgba(255, 255, 255, 0.5) solid;
+  cursor: pointer;
 }
 option {
-  background-color: white;
-  color: black;
+  font-size: 1rem;
+  /* color: rgb(33, 172, 107); */
+  background: rgb(22, 22, 22);
+  cursor: pointer;
 }
 .select-button {
   width: 4rem;
   height: 4rem;
   color: white;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+.select-button-icon {
+  transition: 0.3s;
+  position: relative;
+}
+.select-button:hover > .select-button-icon {
+  animation: move-to-fro 0.7s linear infinite;
+}
+@keyframes move-to-fro {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 1.5px;
+  }
+  50% {
+    left: 0;
+  }
+  75% {
+    left: -1.5px;
+  }
+  100% {
+    left: 0;
+  }
 }
 .gradient {
   background: rgb(2, 0, 36);
@@ -73,6 +104,7 @@ option {
   font-family: "Karla";
   font-size: large;
   color: white;
+  cursor: pointer;
 }
 
 .gap-05rem {
