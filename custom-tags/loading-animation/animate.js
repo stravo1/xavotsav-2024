@@ -88,6 +88,7 @@ function storeArrayBuffer(arrayBuffer) {
 }
 
 function fetchAndStoreData() {
+    console.log("fetching and storing...");
     loader.classList.remove("hidden");
     let percentLoadedText = document.querySelector(".loading-percentage");
     percentLoadedText.style.display = "block";
@@ -125,6 +126,7 @@ function fetchAndStoreData() {
 }
 
 function fetchStoredData() {
+    console.log("fetching stored data...");
     const dbName = 'myDatabase';
     const objectStoreName = 'myObjectStore';
 
@@ -149,7 +151,7 @@ function fetchStoredData() {
 
             getDataRequest.onsuccess = function (event) {
                 const storedData = event.target.result;
-
+                
                 if (storedData.length > 0) {
                     // Access the ArrayBuffer from the first stored item
                     const retrievedArrayBuffer = storedData[0].data;
@@ -188,7 +190,7 @@ if (localStorage.getItem("playTransitionAnimation") && window.location.pathname 
     loader.classList.remove("hidden");
 }
 
-if (!(screen.width > 850) && window.location.pathname == "/") {
+if (!(window.innerWidth > 850) && window.location.pathname == "/") {
     fetchStoredData();
 }
 window.addEventListener("load", () => {
@@ -197,7 +199,7 @@ window.addEventListener("load", () => {
         // metaTag.setAttribute('content', '#000000');
     }
 
-    if (!(screen.width > 850) && window.location.pathname == "/") {
+    if (!(window.innerWidth > 850) && window.location.pathname == "/") {
         imagesLoaded = true
         if (videoLoaded) {
             setTimeout(() => {
@@ -206,6 +208,7 @@ window.addEventListener("load", () => {
             }, 1500)
         }
     } else {
+        console.log("else", (window.innerWidth));
         setTimeout(() => {
             loader.classList.add("hidden");
         }, minimumTimePassed ? 100 : 3000)

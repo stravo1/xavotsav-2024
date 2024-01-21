@@ -7,7 +7,7 @@ let veil = document.querySelector("#first-desktop .background");
 let veilMobile = document.querySelector(".mobile .tint");
 let section1TextMobile = document.querySelector(".mobile .section-1-text");
 let infiniteAnimMobile = document.querySelector(".mobile .infinite-anim");
-let isDesktop = screen.width > 850;
+let isDesktop = window.innerWidth > 850;
 
 let videoPaused = false;
 

@@ -227,7 +227,7 @@ let lastCardInViewport = false;
 
 let observerForLastCard = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (screen.width <= 850) {
+        if (window.innerWidth <= 850) {
             return;
         }
         if (entry.isIntersecting) {
@@ -247,7 +247,7 @@ let observerForLastCard = new IntersectionObserver((entries) => {
 
 let observerForDesktopFooter = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (screen.width <= 850) {
+        if (window.innerWidth <= 850) {
             return;
         }
         if (entry.isIntersecting) {
