@@ -2,13 +2,30 @@
 // START ---
 let day_border = document.querySelectorAll(".day-border");
 let schedule_table = document.querySelectorAll(".schedule-table");
+let topSection = document.querySelectorAll('.top-section');
+let middleSection = document.querySelectorAll('.middle-section');
+let toggleSection = document.querySelectorAll('.toggler');
+function changeVarIndices() {
+    if (screen.width <= 850) {
+        console.log("small screen")
+        topSection = topSection[0];
+        middleSection = middleSection[0];
+        toggleSection = toggleSection[0];
+    } else {
+        console.log("big screen")
+        topSection = topSection[1];
+        middleSection = middleSection[1];
+        toggleSection = toggleSection[1];
+    }
+}
+window.onresize = changeVarIndices();
 
 function removeActiveTables(num) {
     // function to remove visibility of active tables nad also active indicator for day tabs
-    if(num >= 3) num -= 3;
+    if (num >= 3) num -= 3;
     else num += 3;
-    for(let i = 0; i < day_border.length; i++) {
-        if(i != num) {
+    for (let i = 0; i < day_border.length; i++) {
+        if (i != num) {
             day_border[i].classList.remove('active');
             schedule_table[i].classList.remove('visible');
         }
@@ -18,7 +35,7 @@ function removeActiveTables(num) {
 function addActiveTables(num) {
     // function to make currently clicked day tab's respective schedules visible
     let i = num;
-    if(num >= 3) i -= 3;
+    if (num >= 3) i -= 3;
     else i += 3;
     day_border[i].classList.add('active');
     schedule_table[i].classList.add('visible');
@@ -26,35 +43,35 @@ function addActiveTables(num) {
     schedule_table[num].classList.add('visible');
 
     // For mobile mode: code below is to make the schedule event cards visible
-    if(num >= 3) num -= 3;
-    let scheduleCard = document.querySelectorAll('.schedule-' + (num+1) + ' .event-wrapper');
-    for(let j = 0; j < scheduleCard.length; j++) {
+    if (num >= 3) num -= 3;
+    let scheduleCard = document.querySelectorAll('.schedule-' + (num + 1) + ' .event-wrapper');
+    for (let j = 0; j < scheduleCard.length; j++) {
         scheduleCard[j].classList.remove('infinite-pos');
     }
 }
 
 function initDelays(num) {
-    let scheduleCard = document.querySelectorAll('.schedule-' + (num+1) + ' .event-wrapper');
-    for(let j = 0; j < scheduleCard.length; j++) {
-        scheduleCard[j].style.transitionDelay = (j+1)*2 + "00ms";
+    let scheduleCard = document.querySelectorAll('.schedule-' + (num + 1) + ' .event-wrapper');
+    for (let j = 0; j < scheduleCard.length; j++) {
+        scheduleCard[j].style.transitionDelay = (j + 1) * 2 + "00ms";
     }
 }
 initDelays(0);  // initializing delay for day-1 schedule event cards
-let topSection = document.querySelector('.top-section');
-let middleSection = document.querySelector('.middle-section');
+
 function changeDay(dayNumber) {
     // function to change day tabs for viewing schedules of each day
     initDelays(dayNumber);
     let scheduleCardAll = document.querySelectorAll('.event-wrapper');
-    for(let j = 0; j < scheduleCardAll.length; j++) {
-            scheduleCardAll[j].classList.add('infinite-pos');
+    for (let j = 0; j < scheduleCardAll.length; j++) {
+        scheduleCardAll[j].classList.add('infinite-pos');
     }
-    if(toggleSection.style.position === "fixed")
-    topSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
+    if (toggleSection.style.position === "fixed") {
+        topSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+        });
+    }
     removeActiveTables(dayNumber);
     addActiveTables(dayNumber);
 }
@@ -62,14 +79,14 @@ function changeDay(dayNumber) {
 
 // Code for making toggler section fixed when scrolled down further:
 // START ---
-let toggleSection = document.querySelector('.toggler');
-let scheduleSection = document.querySelector('#schedule');
-window.addEventListener('scroll', function() {
-    let togglerPositionFromTop = toggleSection.pageYOffSet;
+// let scheduleSection = document.querySelectorAll('#schedule');
+
+window.addEventListener('scroll', function () {
+    let togglerPositionFromTop = toggleSection.getBoundingClientRect();
     let currentScrollPos = window.pageYOffset;
     console.log(currentScrollPos)
     console.log(togglerPositionFromTop)
-    if(currentScrollPos > 200) {
+    if (currentScrollPos > 200) {
         toggleSection.style.position = "fixed";
         toggleSection.style.bottom = "15px";
         toggleSection.style.backdropFilter = "blur(10px)";
@@ -98,7 +115,7 @@ let date3 = "4-2-2024";
 
 const currentDate = new Date();
 const current_DD = currentDate.getDate();
-const current_MM = currentDate.getMonth()+1;
+const current_MM = currentDate.getMonth() + 1;
 const current_YY = currentDate.getFullYear();
 const date = current_DD + "-" + current_MM + "-" + current_YY;
 console.log(date);

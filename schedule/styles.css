@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 .opacity-40 {
@@ -13,7 +13,6 @@ body {
 }
 
 /* Mobile mode: */
-
 
 .top-bar {
   color: #504408;
@@ -44,16 +43,18 @@ body {
   .toggler {
     gap: 2rem !important;
   }
-
   .day-button {
     font-size: 1.5rem !important;
+  }
+  .schedule-table {
+    padding: 0 20px 78px !important;
   }
 }
 
 .event-wrapper {
   position: relative;
   left: 0;
-  transform: scale(1);
+  transform: scale(1) perspective(1px);
   transition: 0.6s ease;
   max-width: 600px;
   margin: 20px auto;
@@ -65,7 +66,6 @@ body {
 }
 
 .infinite-pos {
-  /* left: -200vw; */
   transform: scale(0);
 }
 
@@ -75,15 +75,15 @@ body {
   width: 25%;
   min-width: 80px;
   height: 100px;
-  /* text-shadow: 0 0 7px rgba(0, 0, 0, 0.2); */
 }
+
 .event-details {
-  height: 115px;
-  /* width: 100%; */
+  height: 120px;
   padding: 20px 0 25px 15px;
   border-left: 1.5px solid ;
   border-image: linear-gradient(transparent, #f0d8a2, transparent) 1;
 }
+
 .event-name-desktop {
   color: #595000;
   color: #5e5233;
@@ -91,21 +91,35 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .time-venue-wrapper {
-  /* padding: 0 10px; */
   color: #504408;
   font-size: 0.96rem;
   padding-left: 7px;
   gap: 0.2rem;
 }
-.timings-mobile, .venue-mobile {
+
+.timings-mobile {
+  gap: 0.6rem;
+} 
+
+.venue-mobile {
   gap: 0.5rem;
 }
+
+.event-mode-mobile {
+  gap: 0.68rem;
+  padding-left: 1px;
+}
+
 .venue-mobile {
   position: relative;
   left: -1.25px;
 }
 
+.mode-icon {
+  font-size: 1.1rem !important;
+}
 .clock-icon {
   font-size: 1.2rem !important;
 }
@@ -123,12 +137,14 @@ body {
 }
 
 main {
-  padding: 60px 10% 100px;
+  /* margin-top: 60px; */
+  padding: 0 10% 100px;
 }
 
 header {
   color: #322E16;
   font-size: 2.5em;
+  padding-top: 8rem;
 }
 
 .about {
@@ -193,9 +209,10 @@ header {
 }
 
 .schedule-table {
-  padding: 0 20px 50px;
+  padding: 0 0 100px;
   opacity: 0;
   visibility: collapse;
+  /* display: none; */
   transition: 0.8s ease opacity;
   transition-delay: 0.1s;
 }
@@ -203,6 +220,7 @@ header {
 
 .visible {
   visibility: visible;
+  display: block;
   opacity: 1;
   z-index: 1;
 }
