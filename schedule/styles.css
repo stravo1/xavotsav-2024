@@ -43,13 +43,11 @@ body {
   .toggler {
     gap: 2rem !important;
   }
-
   .day-button {
     font-size: 1.5rem !important;
   }
-
   .schedule-table {
-    padding: 0 20px 50px !important;
+    padding: 0 20px 78px !important;
   }
 }
 
@@ -68,7 +66,6 @@ body {
 }
 
 .infinite-pos {
-  /* left: -200vw; */
   transform: scale(0);
 }
 
@@ -78,15 +75,15 @@ body {
   width: 25%;
   min-width: 80px;
   height: 100px;
-  /* text-shadow: 0 0 7px rgba(0, 0, 0, 0.2); */
 }
+
 .event-details {
-  height: 115px;
-  /* width: 100%; */
+  height: 120px;
   padding: 20px 0 25px 15px;
   border-left: 1.5px solid ;
   border-image: linear-gradient(transparent, #f0d8a2, transparent) 1;
 }
+
 .event-name-desktop {
   color: #595000;
   color: #5e5233;
@@ -94,21 +91,35 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .time-venue-wrapper {
-  /* padding: 0 10px; */
   color: #504408;
   font-size: 0.96rem;
   padding-left: 7px;
   gap: 0.2rem;
 }
-.timings-mobile, .venue-mobile {
+
+.timings-mobile {
+  gap: 0.6rem;
+} 
+
+.venue-mobile {
   gap: 0.5rem;
 }
+
+.event-mode-mobile {
+  gap: 0.68rem;
+  padding-left: 1px;
+}
+
 .venue-mobile {
   position: relative;
   left: -1.25px;
 }
 
+.mode-icon {
+  font-size: 1.1rem !important;
+}
 .clock-icon {
   font-size: 1.2rem !important;
 }
