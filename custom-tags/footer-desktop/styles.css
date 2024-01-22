@@ -1,7 +1,7 @@
 .desktop-footer {
     /* position: fixed; */
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     z-index: 10;
     padding: 5rem 2rem;
     display: flex;
@@ -112,4 +112,8 @@
 .desktop-footer .credits {
     font-size: 12px;
     text-align: center;
+}
+
+.desktop-footer a {
+    color: white;
 }

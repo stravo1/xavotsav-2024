@@ -26,30 +26,28 @@ class CustomFooter extends HTMLElement {
                         <div class="phones">
                             <div class="icon"><span class="material-symbols-rounded"> call </div>
                             <div class="numbers">
-                                <div>+91 1234567890</div>
-                                <div>+91 1234567890</div>
-                                <div>+91 1234567890</div>
+                                <a href="tel:+919903123557">+91 9903123557</a>
                             </div>
                         </div>
                         <div class="emails">
                             <div class="icon"><span class="material-symbols-rounded"> mail </div>
                             <div class="mailids">
-                                <div>test@abc.com</div>
+                                <a href="mailto:gsec@sxccal.edu">gsec@sxccal.edu</a>
                             </div>
                         </div>
                     </div>
                     <div class="send-message">
                         Need Help?
                         <div class="link">
-                            <a href="">Send us a message</a>
+                            <a href="/contact">Send us a message</a>
                         </div>
                     </div>
                 </div>
                 <div class="socials">
                     <div class="socials-heading">Connect With Us</div>
                     <div class="icon-group">
-                        <a href=""><img src="/assets/images/logo/fb.png" alt="facebook" /></a>
-                        <a href=""><img src="/assets/images/logo/insta.png" alt="instagram" /></a>
+                        <a target="_blank" href="https://www.facebook.com/xavotsav/"><img src="/assets/images/logo/fb.png" alt="facebook" /></a>
+                        <a target="_blank" href="https://www.instagram.com/sxcsc/"><img src="/assets/images/logo/insta.png" alt="instagram" /></a>
                     </div>
                 </div>
                 <hr>
