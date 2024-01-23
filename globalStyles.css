@@ -11,6 +11,11 @@ body {
   --primary-color-text: #ff5f74;
   --primary-color-text-dark: #611a23;
   --accent-color: rgb(255, 151, 165);
+  /* cursor: url("/assets/images/interface/cursor-alt-svgrepo-com.svg"), auto !important; */
+}
+
+a, button {
+  /* cursor: url("/assets/images/interface/cursor-alt-svgrepo-com.svg"), auto !important; */
 }
 
 .material-symbols-outlined {

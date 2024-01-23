@@ -164,3 +164,7 @@ select {
 .mobile .background {
   filter: saturate(0.75);
 }
+
+.top-50 {
+  top: 50%;
+}

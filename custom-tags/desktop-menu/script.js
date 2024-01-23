@@ -1,7 +1,7 @@
 const homeDesktop = document.getElementById("home-desktop");
 const eventsDesktop = document.getElementById("events-desktop");
 const sponsorsDesktop = document.getElementById("sponsors-desktop");
-const magazinesDesktop = document.getElementById("magazines-desktop");
+const merchDesktop = document.getElementById("merch-desktop");
 const contactDesktop = document.getElementById("contact-desktop");
 const aboutDesktop = document.getElementById("about-desktop");
 
@@ -51,8 +51,8 @@ switch (path) {
     case "/sponsors/":
         sponsorsDesktop.childNodes[0].classList.add("current-route");
         break;
-    case "/magazines/":
-        magazinesDesktop.childNodes[0].classList.add("current-route");
+    case "/merch/":
+        merchDesktop.childNodes[0].classList.add("current-route");
         break;
     case "/contact/":
         contactDesktop.childNodes[0].classList.add("current-route");
@@ -65,7 +65,7 @@ switch (path) {
 switch (path) {
     case "/":
     case "/events/":
-    case "/magazines/":
+    case "/merch/":
         navGroup1Visible = true;
         makeNavGroup1Visible()
         break;

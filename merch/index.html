@@ -35,14 +35,13 @@
 
     <script src="/custom-tags/loading-animation/component.js"></script>
     <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
-    
   </head>
   <body>
     <custom-mobile-menu></custom-mobile-menu>
     <custom-modal></custom-modal>
     <custom-loader></custom-loader>
     <custom-page-transition></custom-page-transition>
-    
+
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
@@ -71,9 +70,9 @@
             class="relative text-lg about mt-1rem font-light z-5"
             id="page-msg"
           >
-            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-            mauris enim ipsum dictumst pretium convallis.
+            Take a piece of Xavotsav with you! Explore our exclusive
+            merchandise, curated to capture the essence of this cultural
+            celebration. Embrace the spirit of Xavotsav, wherever you go!
           </div>
         </div>
         <div
@@ -83,8 +82,65 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper w-full">
               <!-- Slides -->
+              <div class="swiper-slide">
+                <div
+                  class="flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded w-85p"
+                >
+                  <div class="picture absolute inset-0 rounded">
+                    <img
+                      class="w-full h-full object-cover rounded"
+                      src="/assets/images/events/holder.jpg"
+                    />
+                  </div>
+                  <div class="gradient absolute inset-0 rounded"></div>
+                  <div class="display text-xl z-5">Merch 1</div>
+                  <div class="z-5">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Obcaecati, dignissimos!
+                  </div>
+                  <div class="flex z-5 merch-button-group w-full gap-05rem">
+                    <button
+                      disabled
+                      style="cursor: not-allowed"
+                      href="${item.formLink}"
+                      target="_blank"
+                      class="text-md font-bold purchase-button event-1"
+                    >
+                      First Come First Serve
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded w-85p"
+                >
+                  <div class="picture absolute inset-0 rounded">
+                    <img
+                      class="w-full h-full object-cover rounded"
+                      src="/assets/images/events/holder.jpg"
+                    />
+                  </div>
+                  <div class="gradient absolute inset-0 rounded"></div>
+                  <div class="display text-xl z-5">Merch 2</div>
+                  <div class="z-5">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Obcaecati, dignissimos!
+                  </div>
+                  <div class="flex z-5 merch-button-group w-full gap-05rem">
+                    <a
+                      href="${item.formLink}"
+                      target="_blank"
+                      class="text-md font-bold purchase-button event-1"
+                    >
+                      Buy Now
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
       <custom-footer></custom-footer>
@@ -117,9 +173,9 @@
             class="relative text-lg about mt-1rem font-light z-5"
             id="desktop-page-msg"
           >
-            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-            mauris enim ipsum dictumst pretium convallis.
+            Take a piece of Xavotsav with you! Explore our exclusive
+            merchandise, curated to capture the essence of this cultural
+            celebration. Embrace the spirit of Xavotsav, wherever you go!
           </div>
         </div>
         <div class="right-section">
@@ -130,11 +186,11 @@
               <div
                 class="merch-items flex flex-col gap-1rem justify-center items-center mt-2rem"
               >
-                <div class="swiper-desktop w-full mt-2rem">
+                <div class="swiper-desktop mt-2rem" style="overflow: hidden">
                   <!-- Additional required wrapper -->
                   <div class="swiper-wrapper w-full">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" onclick="stopAutoplayDesktop()">
                       <div
                         class="first-merch-card-desktop flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded event-card"
                       >
@@ -142,30 +198,6 @@
                           <img
                             class="w-full h-full object-cover rounded"
                             src="/assets/images/landing/background.jpg"
-                          />
-                        </div>
-                        <div class="gradient absolute inset-0 rounded"></div>
-                        <div class="display text-lg z-5">Merch 2</div>
-                        <div class="text-sm z-5">
-                          Lorem ipsum dolor sit amet consectetur. Odio enim
-                          commodo dignissim diam eget. Vel velit mauris nisi
-                          pharetra id.
-                        </div>
-                        <div
-                          class="flex z-5 event-button-group w-full gap-05rem"
-                        >
-                          <button class="purchase-button">Buy Now</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div
-                        class="first-event-card-desktop flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded event-card"
-                      >
-                        <div class="picture absolute inset-0 rounded">
-                          <img
-                            class="w-full h-full object-cover rounded"
-                            src="/assets/images/landing/background-3.jpg"
                           />
                         </div>
                         <div class="gradient absolute inset-0 rounded"></div>
@@ -182,8 +214,36 @@
                         </div>
                       </div>
                     </div>
+                    <div class="swiper-slide" onclick="stopAutoplayDesktop()">
+                      <div
+                        class="first-event-card-desktop flex relative p-1rem flex flex-col justify-end items-start gap-1rem h-15rem rounded event-card"
+                      >
+                        <div class="picture absolute inset-0 rounded">
+                          <img
+                            class="w-full h-full object-cover rounded"
+                            src="/assets/images/landing/background-3.jpg"
+                          />
+                        </div>
+                        <div class="gradient absolute inset-0 rounded"></div>
+                        <div class="display text-lg z-5">Merch 2</div>
+                        <div class="text-sm z-5">
+                          Lorem ipsum dolor sit amet consectetur. Odio enim
+                          commodo dignissim diam eget. Vel velit mauris nisi
+                          pharetra id.
+                        </div>
+                        <div
+                          class="flex z-5 event-button-group w-full gap-05rem"
+                        >
+                          <button class="purchase-button">Buy Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div
+                  class="swiper-pagination-desktop"
+                  style="text-align: center"
+                ></div>
               </div>
             </div>
           </div>

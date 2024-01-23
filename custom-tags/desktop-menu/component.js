@@ -12,12 +12,15 @@ class CustomDesktopMenu extends HTMLElement {
               <div class="nav-groups nav-group-1 nav-group-visible">
                 <li id="home-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/">home</a></li>
                 <li id="events-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/events">events</a></li>
-                <li id="schedule-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/schedule">schedule</a></li>
-              </div>
-              <div class="nav-groups nav-group-2 nav-group-invisible">
                 <li id="sponsors-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/sponsors">sponsors</a></li>
+                <li id="merch-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/merch">merch</a></li>
+                <!--
+                <li id="schedule-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/schedule">schedule</a></li>
+                -->
+                </div>
+              <div class="nav-groups nav-group-2 nav-group-invisible">
                 <li id="contact-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/contact">contact-us</a></li>
-                <li id="about-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/about">about-us</a></li>
+                <li id="about-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/about">meet-the-team</a></li>
               </div>
               <button class="nav-group-toggle underline-on-hover">more</button>
             </div>

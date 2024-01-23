@@ -16,21 +16,21 @@ const eventDetails = [
     {
         name: "Lifestyle",
         description: "Immerse in style and substance at Xavotsav 2024's lifestyle events — a vibrant celebration of contemporary living.",
-        modalDescription: " Whether you are a trendsetter, a connoisseur, or simply intrigued by diverse lifestyles, Xavotsav’s lifestyle events promise an immersive experience that transcends the ordinary. This vibrant canvas is where personal expression meets innovation, showcasing the latest trends in fashion, design, and arts. Join us in celebrating the art of living with style and substance at Xavotsav 2024, where each moment becomes a brushstroke on the canvas of contemporary life.",
+        modalDescription: " Whether you are a trendsetter, a connoisseur, or simply intrigued by diverse lifestyles, Xavotsav’s lifestyle events promise an immersive experience that transcends the ordinary. This vibrant canvas is where personal expression meets innovation, showcasing the latest trends in fashion, design, and arts. Join us in celebrating the art of living with style and substance at Xavotsav 2024, where each moment becomes a brushstroke on the canvas of contemporary life.<ul><li>Mr and Mr Xavotsav</li><li>Fashion Show (Offline)</li><li>Hair Styling And Makeup + Trashion (Online)</li><li>Fashion Designing (Online)</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Quiz",
         description: "Immerse in knowledge's thrill at Xavotsav quizzes—a captivating blend of intellect and excitement for curious minds.",
-        modalDescription: "Plunge into knowledge❜s thrill at Xavotsav 2024❜s quizzes! Explore an exciting blend of intellect with fast-paced, brain-teasing challenges.<br><br>From general knowledge showdowns to specialized quizzes, Xavotsav promises a stimulating journey for curious minds. Join us for a pulse-quickening experience where wit, wisdom, and quick thinking converge.<br><br>Don❜t miss the chance to test your knowledge and triumph in the captivating world of quizzes at Xavotsav 2024!",
+        modalDescription: "Plunge into knowledge’s thrill at Xavotsav 2024’s quizzes! Explore an exciting blend of intellect with fast-paced, brain-teasing challenges.<br><br>From general knowledge showdowns to specialized quizzes, Xavotsav promises a stimulating journey for curious minds. Join us for a pulse-quickening experience where wit, wisdom, and quick thinking converge.<br><br>Don’t miss the chance to test your knowledge and triumph in the captivating world of quizzes at Xavotsav 2024!<ul><li>General Quiz</li><li>MELA Quiz</li><li>Biz Sci Tech</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Literary Arts",
-        description: "Don❜t miss the chance to celebrate the art of language where creativity knows no bounds!",
-        modalDescription: "Immerse in Xavotsav 2024❜s literary arts! Explore a tapestry of intellect and imagination as participants navigate diverse literary realms.<br><br>From thought-provoking discussions to creative writing showcases, Xavotsav promises an inspiring journey for avid readers and wordsmiths alike. Join us where words come alive, ideas flourish, and literary expressions paint vibrant stories.<br><br>Don❜t miss the chance to celebrate the art of language where creativity knows no bounds!<ul><li>Creative Writing</li><li>Word Games</li><li>Microfiction</li><li>Book Charades</li><li>Blackout Poetry</li><li>Script Writing</li><li>Movie Review</li><li>Book Cover Making With A Song</li></ul>",
+        description: "Don’t miss the chance to celebrate the art of language where creativity knows no bounds!",
+        modalDescription: "Immerse in Xavotsav 2024’s literary arts! Explore a tapestry of intellect and imagination as participants navigate diverse literary realms.<br><br>From thought-provoking discussions to creative writing showcases, Xavotsav promises an inspiring journey for avid readers and wordsmiths alike. Join us where words come alive, ideas flourish, and literary expressions paint vibrant stories.<br><br>Don’t miss the chance to celebrate the art of language where creativity knows no bounds!<ul><li>Creative Writing</li><li>Word Games</li><li>Microfiction</li><li>Book Charades</li><li>Blackout Poetry</li><li>Script Writing</li><li>Movie Review</li><li>Book Cover Making With A Song</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
@@ -44,42 +44,42 @@ const eventDetails = [
     {
         name: "Fine Arts",
         description: "Don't miss the chance to immerse yourself in the boundless world of fine arts at Xavotsav 2024!",
-        modalDescription: "Embark on a journey into the enchanting realm of fine arts at Xavotsav 2024! Immerse yourself in a visual symphony as participants unveil their artistic prowess across various mediums. <br><br>From captivating paintings to diverse artworks, Xavotsav❜s fine arts events promise a mesmerizing experience for art enthusiasts. Join us for an event where creativity knows no bounds, and each stroke and creation weaves a unique narrative. <br><br>Don❜t miss the chance to immerse yourself in the boundless world of fine arts at Xavotsav 2024 – where every masterpiece tells a captivating story!<ul><li>Charcoal Painting</li><li>Face Painting</li><li>Mandala Arts</li><li>Nail Arts</li><li>Mixed Media Art</li><li>Doodle Art</li><li>Comic Strip Painting</li><li>Merchandise Painting</li><li>Mehendi Art</li><li>Jewellery Making</li></ul>",
+        modalDescription: "Embark on a journey into the enchanting realm of fine arts at Xavotsav 2024! Immerse yourself in a visual symphony as participants unveil their artistic prowess across various mediums. <br><br>From captivating paintings to diverse artworks, Xavotsav’s fine arts events promise a mesmerizing experience for art enthusiasts. Join us for an event where creativity knows no bounds, and each stroke and creation weaves a unique narrative. <br><br>Don’t miss the chance to immerse yourself in the boundless world of fine arts at Xavotsav 2024 – where every masterpiece tells a captivating story!<ul><li>Charcoal Painting</li><li>Face Painting</li><li>Mandala Arts</li><li>Nail Arts</li><li>Mixed Media Art</li><li>Doodle Art</li><li>Comic Strip Painting</li><li>Merchandise Painting</li><li>Mehendi Art</li><li>Jewellery Making</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Music",
-        description: "Don❜t miss the chance to revel in the universal language of melodies and be part of the musical celebration!",
-        modalDescription: "Embark on a melodic journey at Xavotsav 2024❜s music events! Immerse yourself in a harmonious tapestry as participants showcase their musical prowess across diverse genres. <br><br>From soulful melodies to energetic beats, Xavotsav❜s music events promise an enchanting experience for music enthusiasts. Join us for a symphony where every note resonates, spotlighting the diverse and vibrant world of music. <br><br>Don❜t miss the chance to revel in the universal language of melodies and be part of the musical celebration!<ul><li>Battle of Band</li><li>Solo Vocals</li><li>War Of DJs</li><li>Beat Boxing</li><li>Rapping</li></ul>",
+        description: "Don’t miss the chance to revel in the universal language of melodies and be part of the musical celebration!",
+        modalDescription: "Embark on a melodic journey at Xavotsav 2024’s music events! Immerse yourself in a harmonious tapestry as participants showcase their musical prowess across diverse genres. <br><br>From soulful melodies to energetic beats, Xavotsav’s music events promise an enchanting experience for music enthusiasts. Join us for a symphony where every note resonates, spotlighting the diverse and vibrant world of music. <br><br>Don’t miss the chance to revel in the universal language of melodies and be part of the musical celebration!<ul><li>Battle of Band</li><li>Solo Vocals</li><li>War Of DJs</li><li>Beat Boxing</li><li>Rapping</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Business",
         description: "Seize the chance to immerse yourself in the festivities that honour the dynamic and constantly evolving realm of business!",
-        modalDescription: "Step into the dynamic world of business at Xavotsav 2024! Engage in a symphony of strategies as participants navigate diverse entrepreneurial challenges. <br><br>From innovative pitches to strategic insights, Xavotsav❜s business events promise a stimulating experience for aspiring entrepreneurs and business enthusiasts. Participate in an occasion where innovation claims the spotlight, artistic ingenuity converges with commerce, and the entrepreneurial spirit flourishes. <br><br>Seize the chance to immerse yourself in the festivities that honour the dynamic and constantly evolving realm of business!<ul><li>Best Manager</li><li>Auction</li><li>Finance</li><li>Entrepreneurship</li></ul>",
+        modalDescription: "Step into the dynamic world of business at Xavotsav 2024! Engage in a symphony of strategies as participants navigate diverse entrepreneurial challenges. <br><br>From innovative pitches to strategic insights, Xavotsav’s business events promise a stimulating experience for aspiring entrepreneurs and business enthusiasts. Participate in an occasion where innovation claims the spotlight, artistic ingenuity converges with commerce, and the entrepreneurial spirit flourishes. <br><br>Seize the chance to immerse yourself in the festivities that honour the dynamic and constantly evolving realm of business!<ul><li>Best Manager</li><li>Auction</li><li>Finance</li><li>Entrepreneurship</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Design & Digital Events",
         description: "Join us for an event where creativity and innovation converge, and every digital creation is a masterpiece.",
-        modalDescription: "Step into the world of innovation at Xavotsav 2024❜s design and digital events! Explore a digital canvas where participants unveil their creative designs and technological breakthroughs. <br><br>From interactive user experiences to avant-garde digital art, Xavotsav promises an inspiring journey for those passionate about design and technology. Join us for an event where creativity and innovation converge, and every digital creation is a masterpiece. <br><br>Don❜t miss the chance to celebrate the cutting-edge world of design and digital at Xavotsav 2024!<ul><li>Photography</li><li>Videography</li><li>Meme Making</li><li>Reel Making</li><li>Short Film Competition (Online Submission but best three will be shown)</li><li>Treasure Hunt</li><li>Poster Making</li></ul>",
+        modalDescription: "Step into the world of innovation at Xavotsav 2024’s design and digital events! Explore a digital canvas where participants unveil their creative designs and technological breakthroughs. <br><br>From interactive user experiences to avant-garde digital art, Xavotsav promises an inspiring journey for those passionate about design and technology. Join us for an event where creativity and innovation converge, and every digital creation is a masterpiece. <br><br>Don’t miss the chance to celebrate the cutting-edge world of design and digital at Xavotsav 2024!<ul><li>Photography</li><li>Videography</li><li>Meme Making</li><li>Reel Making</li><li>Short Film Competition (Online Submission but best three will be shown)</li><li>Treasure Hunt</li><li>Poster Making</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Dramatics",
         description: "Join us for an experience where emotions take center stage, and every act is a masterpiece",
-        modalDescription: "Ignite the dramatic spirit at Xavotsav 2024❜s theatrical events! Immerse yourself in the world of storytelling as participants bring narratives to life through captivating performances. <br><br>From intense dramas to comedic brilliance, Xavotsav❜s dramatics events promise a spellbinding journey for theatre enthusiasts. Join us for an experience where emotions take center stage, and every act is a masterpiece. Immerse in the celebration of the art of dramatic expression!<ul><li>Stage Play</li><li>Street Play</li><li>Character Representation</li></ul>",
+        modalDescription: "Ignite the dramatic spirit at Xavotsav 2024’s theatrical events! Immerse yourself in the world of storytelling as participants bring narratives to life through captivating performances. <br><br>From intense dramas to comedic brilliance, Xavotsav’s dramatics events promise a spellbinding journey for theatre enthusiasts. Join us for an experience where emotions take center stage, and every act is a masterpiece. Immerse in the celebration of the art of dramatic expression!<ul><li>Stage Play</li><li>Street Play</li><li>Character Representation</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },
     {
         name: "Sports",
         description: " Join us for a dynamic event where passion meets performance, and every play is a testament to the spirit of sportsmanship",
-        modalDescription: "Feel the pulse quicken as you enter the heart of Xavotsav 2024❜s sports events, where the atmosphere is charged with adrenaline, promising an exhilarating experience like no other! <br><br>Immerse yourself in the world of athleticism as participants showcase their prowess across various disciplines. From intense competitions to displays of skill, Xavotsav❜s sports events promise an exhilarating experience for sports enthusiasts. <br><br>Join us for a dynamic event where passion meets performance, and every play is a testament to the spirit of sportsmanship. Seize the chance to celebrate the thrill of sports, creating lasting memories beyond the confines of any calendar year!<ul><li>TT</li><li>Basketball</li><li>Chess</li><li>Esports</li></ul>",
+        modalDescription: "Feel the pulse quicken as you enter the heart of Xavotsav 2024’s sports events, where the atmosphere is charged with adrenaline, promising an exhilarating experience like no other! <br><br>Immerse yourself in the world of athleticism as participants showcase their prowess across various disciplines. From intense competitions to displays of skill, Xavotsav’s sports events promise an exhilarating experience for sports enthusiasts. <br><br>Join us for a dynamic event where passion meets performance, and every play is a testament to the spirit of sportsmanship. Seize the chance to celebrate the thrill of sports, creating lasting memories beyond the confines of any calendar year!<ul><li>TT</li><li>Basketball</li><li>Chess</li><li>Esports</li></ul>",
         formLink: "https://google.com",
         imageName: "holder.jpg"
     },

@@ -19,7 +19,7 @@ function pauseVideo() {
     logo.style.transform = "scale(1)";
     nav_menus.style.top = "0";
     video.pause();
-    videoWrapper.style.cursor = "url('/assets/images/interface/icons8-circled-play-50.png'), auto";
+    // videoWrapper.style.cursor = "url('/assets/images/interface/icons8-circled-play-50.png'), auto";
 }
 function playVideo() {
     veil.classList.remove("animate__fadeIn");
@@ -27,7 +27,7 @@ function playVideo() {
     logo.style.transform = "scale(0)";
     nav_menus.style.top = "-60px";
     video.play();
-    videoWrapper.style.cursor = "url('/assets/images/interface/icons8-pause-50.png'), auto";
+    // videoWrapper.style.cursor = "url('/assets/images/interface/icons8-pause-50.png'), auto";
 }
 
 function pauseVideoMobile() {
