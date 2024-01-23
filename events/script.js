@@ -39,7 +39,7 @@ const eventDetails = [
         description: "Embrace the opportunity to revel in the art of speaking at Xavotsav, where every utterance claims its own spotlight",
         modalDescription: "Step into the vibrant universe of spoken arts at Xavotsav 2024! Immerse yourself in the eloquent dance of words as participants traverse a spectrum of spoken forms, from persuasive debates to impactful oratory. <br><br>The speaking arts events at Xavotsav offer an enthralling journey for those enamored by the art of effective communication. Engage with us in an experience where words evolve into powerful instruments, ideas soar, and voices echo with resonance. <br><br>Embrace the opportunity to revel in the art of speaking at Xavotsav 2024—where every utterance claims its own spotlight!<ul><li>Relay Storytelling</li><li>Poetry Slam</li><li>Standup Comedy</li><li>HAM (Have A Minute)</li><li>English Debate</li></ul>",
         formLink: "SA.pdf",
-        imageName: "sa.jpg"
+        imageName: "sa.png"
     },
     {
         name: "Fine Arts",
@@ -67,7 +67,7 @@ const eventDetails = [
         description: "Join us for an event where creativity and innovation converge, and every digital creation is a masterpiece.",
         modalDescription: "Step into the world of innovation at Xavotsav 2024’s design and digital events! Explore a digital canvas where participants unveil their creative designs and technological breakthroughs. <br><br>From interactive user experiences to avant-garde digital art, Xavotsav promises an inspiring journey for those passionate about design and technology. Join us for an event where creativity and innovation converge, and every digital creation is a masterpiece. <br><br>Don’t miss the chance to celebrate the cutting-edge world of design and digital at Xavotsav 2024!<ul><li>Photography</li><li>Videography</li><li>Meme Making</li><li>Reel Making</li><li>Short Film Competition (Online Submission but best three will be shown)</li><li>Treasure Hunt</li><li>Poster Making</li></ul>",
         formLink: "Design.pdf",
-        imageName: "design.png"
+        imageName: "digital.jpg"
     },
     {
         name: "Dramatics",
@@ -81,7 +81,7 @@ const eventDetails = [
         description: " Join us for a dynamic event where passion meets performance, and every play is a testament to the spirit of sportsmanship",
         modalDescription: "Feel the pulse quicken as you enter the heart of Xavotsav 2024’s sports events, where the atmosphere is charged with adrenaline, promising an exhilarating experience like no other! <br><br>Immerse yourself in the world of athleticism as participants showcase their prowess across various disciplines. From intense competitions to displays of skill, Xavotsav’s sports events promise an exhilarating experience for sports enthusiasts. <br><br>Join us for a dynamic event where passion meets performance, and every play is a testament to the spirit of sportsmanship. Seize the chance to celebrate the thrill of sports, creating lasting memories beyond the confines of any calendar year!<ul><li>TT</li><li>Basketball</li><li>Chess</li><li>Esports</li></ul>",
         formLink: "Sports.pdf",
-        imageName: "sports.png"
+        imageName: "sports.jpg"
     },
     
 ]
@@ -207,9 +207,11 @@ eventDetails.forEach((item, index) => {
             />
         </div>
         <div class="gradient absolute inset-0 rounded"></div>
-        <div class="display text-xl z-5">${item.name}</div>
-        <div class="z-5">
-          ${item.description}
+        <div class="flex flex-col gap-1rem p-025rem">
+            <div class="display text-xl z-5">${item.name}</div>
+            <div class="z-5">
+                ${item.description}
+            </div>
         </div>
         <div class="flex z-5 event-button-group w-full gap-05rem">
           <button class="register-button" onclick="openModal('${item.name}','${item.modalDescription}','${item.formLink}')">View Details</button>

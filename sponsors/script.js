@@ -1,12 +1,24 @@
 const sponsorDetails = [
+    // {
+    //     title: "Title Sponsor",
+    //     imageName: "91.9-FriendsFM.png"
+    // },
     {
-        title: "Title Sponsor",
-        imageName: "91.9-FriendsFM.png"
+        title: "Co-Sponsor",
+        imageName: "TWISTED TRUTHS.png"
     },
     {
-        title: "Another Type",
-        imageName: "91.9-FriendsFM.png"
-    }
+        title: "Powered By",
+        imageName: "India restaurant.png"
+    },
+    {
+        title: "Digital Marketing Partner",
+        imageName: "SM.png"
+    },
+    {
+        title: "Food Partner",
+        imageName: "India Eats.png"
+    },
 ]
 
 

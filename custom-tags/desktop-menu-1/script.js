@@ -83,10 +83,10 @@ switch (path) {
   case "/merchandise/":
   case "/schedule/":
   case "/scores/":
+  case "/sponsors/":
     navGroup1Visible = true;
     makeNavGroup1Visible();
     break;
-  case "/sponsors/":
   case "/contact/":
   case "/about/":
     navGroup1Visible = false;

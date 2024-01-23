@@ -132,6 +132,18 @@ option {
   transition: all;
 }
 
+.transparent-glass-bg-text {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(0.5px);
+  transition: all;
+}
+
+
+.p-025rem {
+  padding: 0.25rem;
+}
 .w-85p {
   width: calc(100dvw - 6rem);
   max-width: 350px;
@@ -183,11 +195,11 @@ option {
 }
 
 .desktop .event-card .picture {
-  filter: grayscale(0.2);
+  /* filter: grayscale(0.2); */
 }
 
 .mobile .event-card .picture {
-  filter: grayscale(0.7);
+  /* filter: grayscale(0.7); */
 }
 
 .event-card {

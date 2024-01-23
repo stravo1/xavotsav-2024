@@ -31,6 +31,10 @@
   min-height: 15rem;
   height: 40vh;
 }
+.mobile .h-15rem {
+  min-height: 15rem;
+  height: fit-content !important;
+}
 select {
   padding: 5px;
   color: white;
@@ -138,7 +142,7 @@ select {
 }
 .desktop .first-sponsor-card-desktop .picture {
   border: 1px white solid;
-  padding: 3rem;
+  padding: 2rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -161,6 +165,7 @@ select {
   border: 1px white solid;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  height: 18rem;
 }
 
 .desktop .sponsor-card .sponsor-title {
@@ -190,7 +195,7 @@ select {
 
 .first-sponsor-card-desktop {
   width: 25rem;
-  height: 20rem !important;
+  /* height: 20rem !important; */
 }
 
 .sponsors-items-wrapper-desktop-scroll {
