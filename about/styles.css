@@ -131,6 +131,10 @@ body {
   padding: 0 2rem;
 }
 
+.profile-cards-wrapper {
+  overflow-y: scroll;
+}
+
 .profile-card {
   width: 290px;
   border-radius: 20px;
@@ -185,12 +189,7 @@ body {
   padding-bottom: 3px;
 }
 
-.profile-icons-group {
-  gap: 5px;
-  /* position: relative; */
-}
-
-.profile-icons-group > a, .plus-icon {
+.profile-icons-group > a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -201,60 +200,6 @@ body {
   font-size: 1.6rem;
   cursor: pointer;
   transition: 0.3s;
-}
-
-@media (hover: hover), (-ms-high-contrast:none) {
-  .material-symbols-outlined:hover {
-    color: var(--primary-color);
-  }
-}
-
-#call {
-  margin-right: 34px;
-}
-
-.more-items {
-  height: 45px;
-  position: absolute;
-  bottom: 5px;
-  right: 8px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  border: 4px solid transparent;
-  border-radius: 50px;
-  transition: 0.35s, 0.2s box-shadow;
-}
-
-.more-items > a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 5px;
-  transition: .35s ease;
-  transition-delay: .21s;
-}
-
-.more-items > a > img {
-  height: 22px;
-  width: 22px;
-}
-
-
-.plus-icon-wrapper {
-  height: 35px;
-  width: 35px;
-  background: rgb(255, 255, 255);
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  transition: .3s;
-  -webkit-tap-highlight-color: transparent;
 }
 
 /* Desktop mode (desktop + mobile mode css is combined): */
@@ -311,35 +256,17 @@ body {
   padding: 20% 0 2rem;
 }
 
-.events-items-wrapper-desktop-scroll {
+.profile-cards-wrapper-desktop-scroll {
   gap: 3rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.events-items-wrapper-desktop-scroll::-webkit-scrollbar {
+.profile-cards-wrapper-desktop-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.socials-desktop {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-  font-weight: bold;
-  padding-bottom: 30px;
-}
-
-.plus-icon-wrapper {
-  z-index: 3;
-}
-
-.plus-icon-desktop {
-  width: 25px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.plus-icon-desktop-hover:hover {
-  filter: sepia(1) saturate(100) hue-rotate(40deg);
+.call-icon:hover {
+  color: rgb(24, 92, 50);
 }
 
 .phone-number-box {
@@ -348,9 +275,9 @@ body {
   bottom: 54px;
   right: 4px;
   text-wrap: nowrap;
-  background: wheat;
+  background: rgb(177, 255, 181);
   padding: 10px 15px;
-  border: 4px solid goldenrod;
+  border: 4px solid rgb(54, 156, 93);
   box-shadow: 0 0 10px 2px;
   border-radius: 16px;
   display: flex;
