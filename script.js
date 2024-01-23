@@ -175,7 +175,7 @@ function toggleImages() {
 
     toggledImage = !toggledImage; // Toggle between 0 and 1
     galleryImages++;
-    if (galleryImages == 8) {
+    if (galleryImages == 9) {
         galleryImages = 1
     }
 }

@@ -12,9 +12,9 @@ class CustomDesktopMenu extends HTMLElement {
               <div class="nav-groups nav-group-1 nav-group-visible">
                 <li id="home-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/">home</a></li>
                 <li id="events-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/events">events</a></li>
-                <li id="merch-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/merch">merch</a></li>
                 <li id="sponsors-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/sponsors">sponsors</a></li>
                 <!-- 
+                <li id="merch-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/merch">merch</a></li>
                 <li id="schedule-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/schedule">schedule</a></li>
                 <li id="scores-desktop" class="route-desktop text-${textColor}"><a class="underline-on-hover" href="/scores">live-score</a></li>
                 -->

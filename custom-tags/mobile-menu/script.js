@@ -5,7 +5,7 @@ const path = window.location.pathname;
 const home = document.getElementById("home");
 const events = document.getElementById("events");
 const sponsors = document.getElementById("sponsors");
-const merchandise = document.getElementById("merch");
+// const merchandise = document.getElementById("merch");
 // const schedule = document.getElementById("schedule");
 const contact = document.getElementById("contact");
 const about = document.getElementById("about");
@@ -47,14 +47,14 @@ switch (path) {
     case "/sponsors/index.html":
         sponsors.childNodes[0].classList.add("current-route");
         break;
-    case "/merch/":
-    case "/merch/index.html":
-        merchandise.childNodes[0].classList.add("current-route");
-        break;
+    // case "/merch/":
+    // case "/merch/index.html":
+    //     merchandise.childNodes[0].classList.add("current-route");
+    //     break;
     // case "/schedule/":
     // case "/schedule/index.html":
     //     schedule.childNodes[0].classList.add("current-route");
-        break;
+        // break;
     case "/contact/":
     case "/contact/index.html":
         contact.childNodes[0].classList.add("current-route");

@@ -1,254 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xavotsav - 2024 | About Us</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="/tailwindClasses.css" />
-  <link rel="stylesheet" href="/globalStyles.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
-  <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
-  <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
-  <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
-  <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
-  <script src="/custom-tags/mobile-menu/component.js"></script>
-  <script src="/custom-tags/desktop-menu-1/component.js"></script>
-  <script src="/custom-tags/modal/component.js"></script>
-  <script src="/custom-tags/footer/component.js"></script>
-  <script src="/custom-tags/footer-desktop/component.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/favicon/mtile-150x150.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <script src="/custom-tags/page-transition-animation/component.js"></script>
-  <link rel="stylesheet" href="/custom-tags/page-transition-animation/styles.css" />
+    <title>Xavotsav - 2024 | About Us</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/tailwindClasses.css" />
+    <link rel="stylesheet" href="/globalStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
+    <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
+    <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
+    <script src="/custom-tags/modal/component.js"></script>
+    <script src="/custom-tags/footer/component.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
 
-  <script src="/custom-tags/loading-animation/component.js"></script>
-  <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
 
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
+  </head>
 
-</head>
+  <body>
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
 
-<body>
-  <custom-mobile-menu></custom-mobile-menu>
-  <custom-modal></custom-modal>
-  <custom-loader></custom-loader>
-  <custom-page-transition></custom-page-transition>
-
-  <div class="mobile">
-    <div class="background fixed inset-0 w-full h-full">
-      <img class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-        src="/assets/images/about/background.jpg" />
-      <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
-    </div>
-    <div class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10">
-      <img height="35px" src="/assets/logo/logo.png" />
-      <span class="material-symbols-rounded cursor-pointer" onclick="openMenu()">
-        menu
-      </span>
-    </div>
-    <div class="relative content w-full p-2rem box-border">
-      <div class="top-section">
-        <div class="relative display text-3xl mt-5rem z-10" id="page-header">
-          about us
-        </div>
-        <div class="relative text-lg about mt-1rem font-light z-5" id="page-msg">
-          Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-          diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-          mauris enim ipsum dictumst pretium convallis.
-        </div>
-
+    <div class="mobile">
+      <div class="background fixed inset-0 w-full h-full">
+        <img
+          class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
+          src="/assets/images/about/background.jpg"
+        />
+        <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
       </div>
-      <div class="event-items flex flex-col gap-1rem justify-center items-center mt-2rem"></div>
-      <section class="middle-section flex flex-col justify-center items-center">
-
-        <div class="profile-card card-1">
-          <div class="card-wrapper-1">
-            <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-              class="profile-picture">
-            <div class="profile-name">Some Name</div>
-          </div>
-          <div class="card-wrapper-2 flex justify-between items-center">
-            <div class="role">Convenor</div>
-            <div class="profile-icons-group flex items-center">
-              <a id="call" href="tel:+910123456789"><span class="material-symbols-outlined">call</span></a>
-              <div class="more-items flex flex-col">
-                <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                    src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                    class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                    class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
-                <div class="plus-icon-wrapper close" onclick="moreItems(0)">
-                  <span class="plus-icon material-symbols-outlined">add_circle</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-members flex flex-wrap justify-center">
-          <div class="profile-card card-2">
-            <div class="card-wrapper-1">
-              <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                class="profile-picture">
-              <div class="profile-name">Some Name</div>
-            </div>
-            <div class="card-wrapper-2 flex justify-between items-center">
-              <div class="role">Core member</div>
-              <div class="profile-icons-group flex items-center">
-                <a id="call" href="tel:+910123456789"><span class="material-symbols-outlined">call</span></a>
-                <div class="more-items flex flex-col">
-                  <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                      src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
-                  <div class="plus-icon-wrapper close" onclick="moreItems(1)">
-                    <span class="plus-icon material-symbols-outlined">add_circle</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="profile-card card-3">
-            <div class="card-wrapper-1">
-              <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                class="profile-picture">
-              <div class="profile-name">Some Name</div>
-            </div>
-            <div class="card-wrapper-2 flex justify-between items-center">
-              <div class="role">Core member</div>
-              <div class="profile-icons-group flex items-center">
-                <a id="call" href="tel:+910123456789"><span class="material-symbols-outlined">call</span></a>
-                <div class="more-items flex flex-col">
-                  <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                      src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
-                  <div class="plus-icon-wrapper close" onclick="moreItems(2)">
-                    <span class="plus-icon material-symbols-outlined">add_circle</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="profile-card card-4">
-            <div class="card-wrapper-1">
-              <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                class="profile-picture">
-              <div class="profile-name">Some Name</div>
-            </div>
-            <div class="card-wrapper-2 flex justify-between items-center">
-              <div class="role">Core member</div>
-              <div class="profile-icons-group flex items-center">
-                <a id="call" href="tel:+910123456789"><span class="material-symbols-outlined">call</span></a>
-                <div class="more-items flex flex-col">
-                  <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                      src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
-                  <div class="plus-icon-wrapper close" onclick="moreItems(3)">
-                    <span class="plus-icon material-symbols-outlined">add_circle</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="profile-card card-5">
-            <div class="card-wrapper-1">
-              <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                class="profile-picture">
-              <div class="profile-name">Some Name</div>
-            </div>
-            <div class="card-wrapper-2 flex justify-between items-center">
-              <div class="role">Core member</div>
-              <div class="profile-icons-group flex items-center">
-                <a id="call" href="tel:+910123456789"><span class="material-symbols-outlined">call</span></a>
-                <div class="more-items flex flex-col">
-                  <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                      src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                  <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                      class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
-                  <div class="plus-icon-wrapper close" onclick="moreItems(4)">
-                    <span class="plus-icon material-symbols-outlined">add_circle</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-      </section>
-    </div>
-    <custom-footer />
-  </div>
-
-
-  <div class="desktop">
-    <div class="top-bar transition-all w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10">
-      <img width="125px" src="/assets/images/logo/main.png" />
-      <custom-desktop-menu></custom-desktop-menu>
-    </div>
-    <div class="flex w-full h-full">
-      <div class="left-section relative">
-        <div class="background absolute inset-0 w-full h-full">
-          <img class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
-            src="/assets/images/about/background.jpg" />
-          <div class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"></div>
-        </div>
-        <div class="relative display text-3xl mt-5rem z-2" id="desktop-page-header">
-          about us
-        </div>
-        <div class="relative text-lg about mt-1rem font-light z-5" id="desktop-page-msg">
-          Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-          diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-          mauris enim ipsum dictumst pretium convallis.
-        </div>
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
+      >
+        <img height="35px" src="/assets/logo/logo.png" />
+        <span
+          class="material-symbols-rounded cursor-pointer"
+          onclick="openMenu()"
+        >
+          menu
+        </span>
       </div>
+      <div class="relative content w-full p-2rem box-border">
+        <div class="top-section">
+          <div class="relative display text-3xl mt-5rem z-10" id="page-header">
+            the team
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="page-msg"
+          >
+            The glory of a team lies in its visionaries, often known by its
+            cohesion and ability to achieve the holy grail. Illuminating the
+            fervor within our artistic pursuits, we unveil to you the Committee
+            Members for Xavotsav 24'.
+          </div>
+        </div>
+        <div
+          class="event-items flex flex-col gap-1rem justify-center items-center mt-2rem"
+        ></div>
+        <section
+          class="middle-section flex flex-col justify-center items-center"
+        >
+          <div class="profile-card card-1">
+            <div class="card-wrapper-1">
+              <img
+                src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                alt="profile pic"
+                class="profile-picture"
+              />
+              <div class="profile-name">Some Name</div>
+            </div>
+            <div class="card-wrapper-2 flex justify-between items-center">
+              <div class="role">Convenor</div>
+              <div class="profile-icons-group flex items-center">
+                <a id="call" href="tel:+910123456789"
+                  ><span class="material-symbols-outlined">call</span></a
+                >
+                <div class="more-items flex flex-col">
+                  <a class="more-item-links" href="mailto:xyz@example.com"
+                    ><img
+                      class="mailbox-icon"
+                      src="/assets/logo/interface-icons/mail-outlined.svg"
+                      alt="mail"
+                  /></a>
+                  <a
+                    class="more-item-links"
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><img
+                      class="insta-icon"
+                      src="/assets/logo/social-icons/insta.svg"
+                      alt="instagram"
+                  /></a>
+                  <a
+                    class="more-item-links"
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><img
+                      class="linkedin-icon"
+                      src="/assets/logo/social-icons/linkedin-outlined.svg"
+                      alt="linkedin"
+                  /></a>
+                  <div class="plus-icon-wrapper close" onclick="moreItems(0)">
+                    <span class="plus-icon material-symbols-outlined"
+                      >add_circle</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="right-section">
-        <div class="profile-cards-wrapper overflow-scroll flex flex-wrap justify-center events-items-wrapper-desktop-scroll">
-          <!-- <div class="mt-10rem flex flex-wrap justify-center events-items-wrapper-desktop"> -->
+          <div class="team-members flex flex-wrap justify-center">
+            <div class="profile-card card-2">
+              <div class="card-wrapper-1">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
+                <div class="profile-name">Some Name</div>
+              </div>
+              <div class="card-wrapper-2 flex justify-between items-center">
+                <div class="role">Core member</div>
+                <div class="profile-icons-group flex items-center">
+                  <a id="call" href="tel:+910123456789"
+                    ><span class="material-symbols-outlined">call</span></a
+                  >
+                  <div class="more-items flex flex-col">
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
+                    <div class="plus-icon-wrapper close" onclick="moreItems(1)">
+                      <span class="plus-icon material-symbols-outlined"
+                        >add_circle</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-card card-3">
+              <div class="card-wrapper-1">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
+                <div class="profile-name">Some Name</div>
+              </div>
+              <div class="card-wrapper-2 flex justify-between items-center">
+                <div class="role">Core member</div>
+                <div class="profile-icons-group flex items-center">
+                  <a id="call" href="tel:+910123456789"
+                    ><span class="material-symbols-outlined">call</span></a
+                  >
+                  <div class="more-items flex flex-col">
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
+                    <div class="plus-icon-wrapper close" onclick="moreItems(2)">
+                      <span class="plus-icon material-symbols-outlined"
+                        >add_circle</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-card card-4">
+              <div class="card-wrapper-1">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
+                <div class="profile-name">Some Name</div>
+              </div>
+              <div class="card-wrapper-2 flex justify-between items-center">
+                <div class="role">Core member</div>
+                <div class="profile-icons-group flex items-center">
+                  <a id="call" href="tel:+910123456789"
+                    ><span class="material-symbols-outlined">call</span></a
+                  >
+                  <div class="more-items flex flex-col">
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
+                    <div class="plus-icon-wrapper close" onclick="moreItems(3)">
+                      <span class="plus-icon material-symbols-outlined"
+                        >add_circle</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-card card-5">
+              <div class="card-wrapper-1">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
+                <div class="profile-name">Some Name</div>
+              </div>
+              <div class="card-wrapper-2 flex justify-between items-center">
+                <div class="role">Core member</div>
+                <div class="profile-icons-group flex items-center">
+                  <a id="call" href="tel:+910123456789"
+                    ><span class="material-symbols-outlined">call</span></a
+                  >
+                  <div class="more-items flex flex-col">
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
+                    <div class="plus-icon-wrapper close" onclick="moreItems(4)">
+                      <span class="plus-icon material-symbols-outlined"
+                        >add_circle</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <custom-footer></custom-footer>
+    </div>
+
+    <div class="desktop">
+      <div
+        class="top-bar transition-all w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10"
+      >
+        <img width="125px" src="/assets/images/logo/main.png" />
+        <custom-desktop-menu></custom-desktop-menu>
+      </div>
+      <div class="flex w-full h-full">
+        <div class="left-section relative">
+          <div class="background absolute inset-0 w-full h-full">
+            <img
+              class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
+              src="/assets/images/about/background.jpg"
+            />
+            <div
+              class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"
+            ></div>
+          </div>
+          <div
+            class="relative display text-3xl mt-5rem z-2"
+            id="desktop-page-header"
+          >
+            the team
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="desktop-page-msg"
+          >
+            The glory of a team lies in its visionaries, often known by its
+            cohesion and ability to achieve the holy grail. Illuminating the
+            fervor within our artistic pursuits, we unveil to you the Committee
+            Members for Xavotsav 24', whose unwavering dedication, mentorship
+            and artistry birthed an event deemed impossible without their
+            sublime touch.
+          </div>
+        </div>
+
+        <div class="right-section">
+          <div
+            class="profile-cards-wrapper overflow-scroll flex flex-wrap justify-center events-items-wrapper-desktop-scroll"
+          >
+            <!-- <div class="mt-10rem flex flex-wrap justify-center events-items-wrapper-desktop"> -->
             <!-- <div class="gradient-bg absolute top-0"></div> -->
             <div class="profile-card card-6 first-contact-card-desktop">
               <div class="card-wrapper-1">
-                <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                  class="profile-picture">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
                 <div class="profile-name">Some Name</div>
               </div>
               <div class="card-wrapper-2 flex justify-between items-center">
                 <div class="role">Convenor</div>
                 <div class="profile-icons-group flex items-center">
                   <div id="call">
-                    <div class="phone-number-box hide-number"><span class="phone-number">+91 0123456789</span> <span
-                        class="copy-icon material-symbols-outlined" title="copy"
-                        onclick="copyNumber(0)">content_copy</span> </div><span
-                      class="call-icon material-symbols-outlined" onclick="phoneBox(0)">call</span>
+                    <div class="phone-number-box hide-number">
+                      <span class="phone-number">+91 0123456789</span>
+                      <span
+                        class="copy-icon material-symbols-outlined"
+                        title="copy"
+                        onclick="copyNumber(0)"
+                        >content_copy</span
+                      >
+                    </div>
+                    <span
+                      class="call-icon material-symbols-outlined"
+                      onclick="phoneBox(0)"
+                      >call</span
+                    >
                   </div>
                   <div class="more-items flex flex-col">
-                    <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                        src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
                     <div class="plus-icon-wrapper close" onclick="moreItems(5)">
                       <!-- <span class="plus-icon material-symbols-outlined">add_circle</span> -->
-                      <img class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
-                        src="/assets/logo/interface-icons/add-plus-circle.svg" alt="">
+                      <img
+                        class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
+                        src="/assets/logo/interface-icons/add-plus-circle.svg"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -257,30 +483,66 @@
 
             <div class="profile-card card-7">
               <div class="card-wrapper-1">
-                <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                  class="profile-picture">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
                 <div class="profile-name">Some Name</div>
               </div>
               <div class="card-wrapper-2 flex justify-between items-center">
                 <div class="role">Core member</div>
                 <div class="profile-icons-group flex items-center">
                   <div id="call">
-                    <div class="phone-number-box hide-number"><span class="phone-number">+91 0123456789</span> <span
-                        class="copy-icon material-symbols-outlined" title="copy"
-                        onclick="copyNumber(1)">content_copy</span> </div><span
-                      class="call-icon material-symbols-outlined" onclick="phoneBox(1)">call</span>
+                    <div class="phone-number-box hide-number">
+                      <span class="phone-number">+91 0123456789</span>
+                      <span
+                        class="copy-icon material-symbols-outlined"
+                        title="copy"
+                        onclick="copyNumber(1)"
+                        >content_copy</span
+                      >
+                    </div>
+                    <span
+                      class="call-icon material-symbols-outlined"
+                      onclick="phoneBox(1)"
+                      >call</span
+                    >
                   </div>
                   <div class="more-items flex flex-col">
-                    <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                        src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
                     <div class="plus-icon-wrapper close" onclick="moreItems(6)">
                       <!-- <span class="plus-icon material-symbols-outlined">add_circle</span> -->
-                      <img class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
-                        src="/assets/logo/interface-icons/add-plus-circle.svg" alt="">
+                      <img
+                        class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
+                        src="/assets/logo/interface-icons/add-plus-circle.svg"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -289,30 +551,66 @@
 
             <div class="profile-card card-8">
               <div class="card-wrapper-1">
-                <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                  class="profile-picture">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
                 <div class="profile-name">Some Name</div>
               </div>
               <div class="card-wrapper-2 flex justify-between items-center">
                 <div class="role">Core member</div>
                 <div class="profile-icons-group flex items-center">
                   <div id="call">
-                    <div class="phone-number-box hide-number"><span class="phone-number">+91 0123456789</span> <span
-                        class="copy-icon material-symbols-outlined" title="copy"
-                        onclick="copyNumber(2)">content_copy</span> </div><span
-                      class="call-icon material-symbols-outlined" onclick="phoneBox(2)">call</span>
+                    <div class="phone-number-box hide-number">
+                      <span class="phone-number">+91 0123456789</span>
+                      <span
+                        class="copy-icon material-symbols-outlined"
+                        title="copy"
+                        onclick="copyNumber(2)"
+                        >content_copy</span
+                      >
+                    </div>
+                    <span
+                      class="call-icon material-symbols-outlined"
+                      onclick="phoneBox(2)"
+                      >call</span
+                    >
                   </div>
                   <div class="more-items flex flex-col">
-                    <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                        src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
                     <div class="plus-icon-wrapper close" onclick="moreItems(7)">
                       <!-- <span class="plus-icon material-symbols-outlined">add_circle</span> -->
-                      <img class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
-                        src="/assets/logo/interface-icons/add-plus-circle.svg" alt="">
+                      <img
+                        class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
+                        src="/assets/logo/interface-icons/add-plus-circle.svg"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -321,30 +619,66 @@
 
             <div class="profile-card card-9">
               <div class="card-wrapper-1">
-                <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                  class="profile-picture">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
                 <div class="profile-name">Some Name</div>
               </div>
               <div class="card-wrapper-2 flex justify-between items-center">
-                <div class="role">Core member</div> 
+                <div class="role">Core member</div>
                 <div class="profile-icons-group flex items-center">
                   <div id="call">
-                    <div class="phone-number-box hide-number"><span class="phone-number">+91 0123456789</span> <span
-                        class="copy-icon material-symbols-outlined" title="copy"
-                        onclick="copyNumber(3)">content_copy</span> </div><span
-                      class="call-icon material-symbols-outlined" onclick="phoneBox(3)">call</span>
+                    <div class="phone-number-box hide-number">
+                      <span class="phone-number">+91 0123456789</span>
+                      <span
+                        class="copy-icon material-symbols-outlined"
+                        title="copy"
+                        onclick="copyNumber(3)"
+                        >content_copy</span
+                      >
+                    </div>
+                    <span
+                      class="call-icon material-symbols-outlined"
+                      onclick="phoneBox(3)"
+                      >call</span
+                    >
                   </div>
                   <div class="more-items flex flex-col">
-                    <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                        src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
                     <div class="plus-icon-wrapper close" onclick="moreItems(8)">
                       <!-- <span class="plus-icon material-symbols-outlined">add_circle</span> -->
-                      <img class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
-                        src="/assets/logo/interface-icons/add-plus-circle.svg" alt="">
+                      <img
+                        class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
+                        src="/assets/logo/interface-icons/add-plus-circle.svg"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -353,49 +687,82 @@
 
             <div class="profile-card card-10 last-card">
               <div class="card-wrapper-1">
-                <img src="/assets/images/team-pictures/profile_picture_sample.jpg" alt="profile pic"
-                  class="profile-picture">
+                <img
+                  src="/assets/images/team-pictures/profile_picture_sample.jpg"
+                  alt="profile pic"
+                  class="profile-picture"
+                />
                 <div class="profile-name">Some Name</div>
               </div>
               <div class="card-wrapper-2 flex justify-between items-center">
                 <div class="role">Core member</div>
                 <div class="profile-icons-group flex items-center">
                   <div id="call">
-                    <div class="phone-number-box hide-number"><span class="phone-number">+91 0123456789</span> <span
-                        class="copy-icon material-symbols-outlined" title="copy"
-                        onclick="copyNumber(4)">content_copy</span> </div><span
-                      class="call-icon material-symbols-outlined" onclick="phoneBox(4)">call</span>
+                    <div class="phone-number-box hide-number">
+                      <span class="phone-number">+91 0123456789</span>
+                      <span
+                        class="copy-icon material-symbols-outlined"
+                        title="copy"
+                        onclick="copyNumber(4)"
+                        >content_copy</span
+                      >
+                    </div>
+                    <span
+                      class="call-icon material-symbols-outlined"
+                      onclick="phoneBox(4)"
+                      >call</span
+                    >
                   </div>
                   <div class="more-items flex flex-col">
-                    <a class="more-item-links" href="mailto:xyz@example.com"><img class="mailbox-icon"
-                        src="/assets/logo/interface-icons/mail-outlined.svg" alt="mail"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="insta-icon" src="/assets/logo/social-icons/insta.svg" alt="instagram"></a>
-                    <a class="more-item-links" href="http://" target="_blank" rel="noopener noreferrer"><img
-                        class="linkedin-icon" src="/assets/logo/social-icons/linkedin-outlined.svg" alt="linkedin"></a>
+                    <a class="more-item-links" href="mailto:xyz@example.com"
+                      ><img
+                        class="mailbox-icon"
+                        src="/assets/logo/interface-icons/mail-outlined.svg"
+                        alt="mail"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="insta-icon"
+                        src="/assets/logo/social-icons/insta.svg"
+                        alt="instagram"
+                    /></a>
+                    <a
+                      class="more-item-links"
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><img
+                        class="linkedin-icon"
+                        src="/assets/logo/social-icons/linkedin-outlined.svg"
+                        alt="linkedin"
+                    /></a>
                     <div class="plus-icon-wrapper close" onclick="moreItems(9)">
                       <!-- <span class="plus-icon material-symbols-outlined">add_circle</span> -->
-                      <img class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
-                        src="/assets/logo/interface-icons/add-plus-circle.svg" alt="">
+                      <img
+                        class="plus-icon plus-icon-desktop plus-icon-desktop-hover"
+                        src="/assets/logo/interface-icons/add-plus-circle.svg"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-          <!-- </div> -->
+          </div>
         </div>
       </div>
+      <custom-desktop-footer></custom-desktop-footer>
     </div>
-    <custom-desktop-footer />
-  </div>
-</body>
-<script src="/custom-tags/mobile-menu/script.js"></script>
-<script src="/custom-tags/desktop-menu-1/script.js"></script>
-<script src="/custom-tags/modal/script.js"></script>
-<script src="/custom-tags/footer-desktop/script.js"></script>
-<script src="/custom-tags/loading-animation/animate.js"></script>
-<script src="/custom-tags/page-transition-animation/script.js"></script>
-<script src="./script.js"></script>
-
+  </body>
+  <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
+  <script src="/custom-tags/modal/script.js"></script>
+  <script src="/custom-tags/footer-desktop/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
+  <script src="./script.js"></script>
 </html>

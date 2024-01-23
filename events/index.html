@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/favicon/mtile-150x150.png" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Xavotsav - 2024 | Events</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="/tailwindClasses.css" />
@@ -69,11 +89,10 @@
             Xavotsav Events. Dive into a World of Creativity, Talent, and
             Entertainment!
           </div>
-          <div
-            class="mt-1rem text-lg font-bold underline cursor-pointer"
-            onclick="openModal()"
-          >
-            View Guidelines
+          <div class="mt-1rem text-lg font-bold underline cursor-pointer">
+            <a href="https://" style="color: white; text-decoration: none"
+              >View Rulebook</a
+            >
           </div>
           <div class="relative w-full z-5 flex mt-2rem gap-1rem">
             <select class="flex flex-basis-75">
@@ -138,9 +157,10 @@
           </div>
           <div
             class="mt-1rem text-lg font-bold underline cursor-pointer z-10 relative"
-            onclick="openModal()"
           >
-            View Guidelines
+            <a href="http://" style="color: white; text-decoration: none"
+              >View Rulebook</a
+            >
           </div>
           <div class="relative w-full z-5 flex mt-2rem gap-1rem">
             <select class="flex flex-basis-75">
@@ -161,7 +181,9 @@
               <option value="Sports">Sports</option>
             </select>
             <button class="select-button select-button-desktop">
-              <span class="select-button-icon material-symbols-rounded"> arrow_forward </span>
+              <span class="select-button-icon material-symbols-rounded">
+                arrow_forward
+              </span>
             </button>
           </div>
         </div>

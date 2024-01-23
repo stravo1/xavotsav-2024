@@ -1,7 +1,7 @@
 const homeDesktop = document.getElementById("home-desktop");
 const eventsDesktop = document.getElementById("events-desktop");
 const sponsorsDesktop = document.getElementById("sponsors-desktop");
-const merchDesktop = document.getElementById("merch-desktop");
+// const merchDesktop = document.getElementById("merch-desktop");
 const contactDesktop = document.getElementById("contact-desktop");
 const aboutDesktop = document.getElementById("about-desktop");
 // const scheduleDesktop = document.getElementById("schedule-desktop");
@@ -57,10 +57,10 @@ switch (path) {
   case "/sponsors/index.html":
     sponsorsDesktop.childNodes[0].classList.add("current-route");
     break;
-  case "/merch/":
-  case "/merch/index.html":
-    merchDesktop.childNodes[0].classList.add("current-route");
-    break;
+//   case "/merch/":
+//   case "/merch/index.html":
+//     merchDesktop.childNodes[0].classList.add("current-route");
+//     break;
   // case "/scores/":
   //     scoresDesktop.childNodes[0].classList.add("current-route");
   //     break;
