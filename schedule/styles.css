@@ -135,6 +135,10 @@ body {
 
 /* Desktop Mode: */
 
+.pl-36pct {
+  padding-left: 36% !important;
+}
+
 .text-black > a, .text-black button {
   color: #46400e !important;
 }
@@ -206,7 +210,7 @@ header {
 
 .table-headings {
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 16% 0 15%;
   border-bottom: 2px solid #504408;
   font-size: 1.6rem;
   color: #504408;
@@ -241,23 +245,28 @@ td {
   width: 3%;
 }
 
-.timings, .events, .venues {
+.timings, .events {
   text-wrap: nowrap;
 }
 
-.timings {
+.venues {
+  max-width: 300px;
   padding-top: 20px;
+  padding-left: 50px;
   vertical-align: text-top;
-  text-align: center;
+  /* text-align: center; */
+}
+.events {
+  padding-left: 8%;
+}
+.timings {
+  padding-left: 5%;
 }
 
-.events, .venues{
-  padding-left: 10%;
-}
-
-.event-name, .venue-name {
+.event-name, .time-desktop {
   display: block;
   margin: 10px 0;
+  text-align: left;
 }
 
 .mt-5rem {
