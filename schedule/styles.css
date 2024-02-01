@@ -223,15 +223,15 @@ header {
   padding: 0 0 100px;
   opacity: 0;
   visibility: collapse;
-  /* display: none; */
+  height: 0;
   transition: 0.8s ease opacity;
   transition-delay: 0.1s;
 }
 
 
 .visible {
+  height: max-content;
   visibility: visible;
-  display: block;
   opacity: 1;
   z-index: 1;
 }
