@@ -294,3 +294,15 @@ td {
 .desktop .current-route::after {
   background-color: rgb(134, 95, 12) !important;
 }
+
+.dates{
+  height: 35px;
+}
+.date-desktop {
+  visibility: hidden;
+  opacity: 0;
+  width: fit-content;
+  font-size: 1.6rem;
+  color:rgb(99, 71, 13);
+  transition: 0.3s ease;
+}
