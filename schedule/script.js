@@ -162,7 +162,7 @@ function isOngoing(time, day) {
     let [start, end] = time.split("-");
     let startTime = new Date("02/0" + day + "/24 " + start)
     let endTime = new Date("02/0" + day + "/24 " + end)
-    console.log(startTime, endTime);
+    // console.log(startTime, endTime);
     if (now >= startTime && now <= endTime) {
         return "ongoing";
     } else if (now > endTime) {
@@ -183,7 +183,7 @@ setInterval(() => {
             day = 3;
         }
         // console.log(day, eventTimings[i].innerHTML.slice(0).trim().split("-"), isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day + 1));
-        let status = isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day);
+        let status = isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day + 1);
         switch (status) {
             case "completed":
                 completed(i);
