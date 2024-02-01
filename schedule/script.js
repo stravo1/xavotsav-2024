@@ -50,17 +50,8 @@ function addActiveTables(num) {
     }
 }
 
-function initDelays(num) {
-    let scheduleCard = document.querySelectorAll('.schedule-' + (num + 1) + ' .event-wrapper');
-    for (let j = 0; j < scheduleCard.length; j++) {
-        scheduleCard[j].style.transitionDelay = (j + 1) * 2 + "00ms";
-    }
-}
-initDelays(0);  // initializing delay for day-1 schedule event cards
-
 function changeDay(dayNumber) {
     // function to change day tabs for viewing schedules of each day
-    initDelays(dayNumber);
     let scheduleCardAll = document.querySelectorAll('.event-wrapper');
     for (let j = 0; j < scheduleCardAll.length; j++) {
         scheduleCardAll[j].classList.add('infinite-pos');
