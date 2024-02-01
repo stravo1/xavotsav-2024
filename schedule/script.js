@@ -56,9 +56,9 @@ function changeDate(num) {
     if (num >= 3) num -= 3;
     console.log(dates);
     dates[num].classList.add('visible');
-    for(let i = 0; i < dates.length; i++) {
-        if(i !== num)
-        dates[i].classList.remove('visible');
+    for (let i = 0; i < dates.length; i++) {
+        if (i !== num)
+            dates[i].classList.remove('visible');
     }
 }
 
@@ -159,3 +159,62 @@ function ongoing(i) {
 completed(0);
 ongoing(1)
 // --- END
+
+
+// Code scrolling effects of the page header:
+let header = document.querySelector("#page-header");
+let msg = document.querySelector("#page-msg");
+let topBar = document.querySelector(".top-bar");
+let sponsorSection = document.querySelector(".middle-section");
+
+const resetPositions = () => {
+    // console.log("resetting");
+    // header.style.transition = "0.1s font-size, 0.3s padding, top 0.3s linear";
+    // header.style.position = "relative";
+    // header.style.paddingLeft = "40px";
+    // header.style.marginTop = "5rem";
+    // msg.style.marginTop = "1rem";
+    topBar.classList.remove("transparent-glass-bg");
+    // header.classList.add("text-3xl");
+    // header.classList.remove("text-2xl");
+}
+
+window.addEventListener("scroll", function () {
+    let msgPositionFromTop = msg.getBoundingClientRect().top;
+    if (msg.style.paddingTop == "155px") {
+        if (msgPositionFromTop > 0) {
+            resetPositions();
+            return;
+        }
+    }
+
+    else {
+        resetPositions();
+    }
+    if (msgPositionFromTop < 130) {
+        // header.style.paddingLeft = "70px";
+        // header.style.transition = "0.1s font-size, 0.1s padding, top 0.3s linear, 0.3s box-shadow";
+        
+        if (msgPositionFromTop <= 90) {
+            // msg.style.marginTop = "155px";
+            // header.style.position = "fixed";
+            // header.style.top = 0;
+            // header.style.marginTop = "0.5rem";
+            // header.classList.remove("text-3xl");
+            // header.classList.add("text-2xl");
+            topBar.classList.add("transparent-glass-bg")
+        }
+    }
+    else {
+        resetPositions();
+    }
+    setTimeout(() => {
+        let msgPositionFromTop = msg.getBoundingClientRect().top;
+        if (msgPositionFromTop > 130) {
+            resetPositions()
+        }
+    }, 100)
+});
+
+
+changeDay(0)
