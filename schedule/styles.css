@@ -211,7 +211,7 @@ header {
 
 .table-headings {
   margin: 0 auto;
-  padding: 0 16% 0 15%;
+  padding: 0 12% 0 12%;
   border-bottom: 2px solid #504408;
   font-size: 1.6rem;
   color: #504408;
@@ -250,21 +250,22 @@ td {
   text-wrap: nowrap;
 }
 
-.venues {
+.timings {
   max-width: 300px;
-  padding-top: 20px;
   padding-left: 50px;
   vertical-align: text-top;
-  /* text-align: center; */
 }
 .events {
-  padding-left: 8%;
+  padding-left: 4%;
 }
 .timings {
   padding-left: 5%;
 }
+.venues {
+  padding-left: 2%;
+}
 
-.event-name, .time-desktop {
+.event-name, .time-desktop, .venue-name {
   display: block;
   margin: 10px 0;
   text-align: left;
