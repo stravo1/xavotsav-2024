@@ -48,6 +48,7 @@ body {
   }
   .schedule-table {
     padding: 0 20px 78px !important;
+    transition-delay: none;
   }
 }
 
@@ -222,15 +223,15 @@ header {
   padding: 0 0 100px;
   opacity: 0;
   visibility: collapse;
-  /* display: none; */
+  height: 0;
   transition: 0.8s ease opacity;
   transition-delay: 0.1s;
 }
 
 
 .visible {
+  height: max-content;
   visibility: visible;
-  display: block;
   opacity: 1;
   z-index: 1;
 }
@@ -292,4 +293,16 @@ td {
 }
 .desktop .current-route::after {
   background-color: rgb(134, 95, 12) !important;
+}
+
+.dates{
+  height: 35px;
+}
+.date-desktop {
+  visibility: hidden;
+  opacity: 0;
+  width: fit-content;
+  font-size: 1.6rem;
+  color:rgb(99, 71, 13);
+  transition: 0.3s ease;
 }
