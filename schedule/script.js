@@ -50,6 +50,18 @@ function addActiveTables(num) {
     }
 }
 
+let dates = document.querySelectorAll('.date-desktop');
+function changeDate(num) {
+    // function to change date visibility in desktop mode
+    if (num >= 3) num -= 3;
+    console.log(dates);
+    dates[num].classList.add('visible');
+    for(let i = 0; i < dates.length; i++) {
+        if(i !== num)
+        dates[i].classList.remove('visible');
+    }
+}
+
 function changeDay(dayNumber) {
     // function to change day tabs for viewing schedules of each day
     let scheduleCardAll = document.querySelectorAll('.event-wrapper');
@@ -65,6 +77,7 @@ function changeDay(dayNumber) {
     }
     removeActiveTables(dayNumber);
     addActiveTables(dayNumber);
+    changeDate(dayNumber);
 }
 //  --- END
 
