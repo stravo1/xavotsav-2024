@@ -54,7 +54,7 @@ let dates = document.querySelectorAll('.date-desktop');
 function changeDate(num) {
     // function to change date visibility in desktop mode
     if (num >= 3) num -= 3;
-    console.log(dates);
+    // console.log(dates);
     dates[num].classList.add('visible');
     for (let i = 0; i < dates.length; i++) {
         if (i !== num)
@@ -156,8 +156,45 @@ function ongoing(i) {
     eventName[i].style.color = "#7d4317";
     time_venue_Wrapper[i].style.color = "rgb(99 39 15)";
 }
-completed(0);
-ongoing(1)
+
+function isOngoing(time, day) {
+    let now = new Date()
+    let [start, end] = time.split("-");
+    let startTime = new Date("02/0" + day + "/24 " + start)
+    let endTime = new Date("02/0" + day + "/24 " + end)
+    console.log(startTime, endTime);
+    if (now >= startTime && now <= endTime) {
+        return "ongoing";
+    } else if (now > endTime) {
+        return "completed";
+    } else {
+        return "upcoming";
+    }
+}
+
+setInterval(() => {
+    for (var i = 0; i < eventWrapper.length; i++) {
+        let day;
+        if (eventWrapper[i].closest(".schedule-1")) {
+            day = 1;
+        } else if (eventWrapper[i].closest(".schedule-2")) {
+            day = 2;
+        } else {
+            day = 3;
+        }
+        // console.log(day, eventTimings[i].innerHTML.slice(0).trim().split("-"), isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day + 1));
+        let status = isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day);
+        switch (status) {
+            case "completed":
+                completed(i);
+                break;
+            case "ongoing":
+                ongoing(i);
+                break;
+        }
+    }
+}, 1000)
+
 // --- END
 
 
@@ -194,7 +231,7 @@ window.addEventListener("scroll", function () {
     if (msgPositionFromTop < 130) {
         // header.style.paddingLeft = "70px";
         // header.style.transition = "0.1s font-size, 0.1s padding, top 0.3s linear, 0.3s box-shadow";
-        
+
         if (msgPositionFromTop <= 90) {
             // msg.style.marginTop = "155px";
             // header.style.position = "fixed";
@@ -218,3 +255,4 @@ window.addEventListener("scroll", function () {
 
 
 changeDay(0)
+
