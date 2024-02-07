@@ -10,7 +10,7 @@ class CustomPageTransition extends HTMLElement {
               <div class="loader-nature"> 	
               </div>
               <div class="italiana bottom-text">
-                Xavotsav '24
+                <img src="/assets/images/logo/main.png" style="width: 125px; object-fit: contain;" alt="" srcset="">
               </div>
             </div>
           `

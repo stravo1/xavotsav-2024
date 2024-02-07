@@ -106,24 +106,6 @@ button {
   width: 100%;
 }
 
-/* Scroll Bar styling code: */
-@media screen and (min-width: 850px) {
-  ::-webkit-scrollbar {
-    background: #12051d;
-    width: 7px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgb(58, 56, 56);
-    /* border: 5px solid #12051d; */
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(71, 74, 77);
-  }
-  ::-webkit-scrollbar-thumb:active {
-    background: rgb(42, 47, 49);
-  }
-}
 
 .intro {
   width: 100%;

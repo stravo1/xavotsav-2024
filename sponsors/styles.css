@@ -198,13 +198,13 @@ select {
   /* height: 20rem !important; */
 }
 
-.sponsors-items-wrapper-desktop-scroll {
+/* .sponsors-items-wrapper-desktop-scroll {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 .sponsors-items-wrapper-desktop-scroll::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .mobile .background {
   filter: saturate(0.75);

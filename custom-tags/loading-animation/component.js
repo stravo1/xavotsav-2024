@@ -10,7 +10,9 @@ class CustomLoader extends HTMLElement {
           <div class="loader-nature"> 	
           </div>
           <div class="loading-percentage">0%</div>
-          <div class="loader-text">Xavotsav '24</div>
+          <div class="loader-text">
+            <img src="/assets/images/logo/main.png" style="width: 125px; object-fit: contain;" alt="" srcset="">
+          </div>
       </div>
       `
       }

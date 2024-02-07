@@ -205,24 +205,6 @@ body {
 
 /* Desktop mode (desktop + mobile mode css is combined): */
 
-/* Scroll Bar styling code: */
-@media screen and (min-width: 850px) {
-  ::-webkit-scrollbar {
-    background: rgb(0, 0, 0);
-    width: 18px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgb(59, 60, 61);
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(71, 74, 77);
-  }
-  ::-webkit-scrollbar-thumb:active {
-    background: rgb(42, 47, 49);
-  }
-}
 
 /* Body elements styling */
 
@@ -259,12 +241,12 @@ body {
 
 .profile-cards-wrapper-desktop-scroll {
   gap: 3rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
 }
-.profile-cards-wrapper-desktop-scroll::-webkit-scrollbar {
+/* .profile-cards-wrapper-desktop-scroll::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .call-icon:hover {
   color: rgb(24, 92, 50);
