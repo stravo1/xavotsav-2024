@@ -50,17 +50,20 @@ function addActiveTables(num) {
     }
 }
 
-function initDelays(num) {
-    let scheduleCard = document.querySelectorAll('.schedule-' + (num + 1) + ' .event-wrapper');
-    for (let j = 0; j < scheduleCard.length; j++) {
-        scheduleCard[j].style.transitionDelay = (j + 1) * 2 + "00ms";
+let dates = document.querySelectorAll('.date-desktop');
+function changeDate(num) {
+    // function to change date visibility in desktop mode
+    if (num >= 3) num -= 3;
+    // console.log(dates);
+    dates[num].classList.add('visible');
+    for (let i = 0; i < dates.length; i++) {
+        if (i !== num)
+            dates[i].classList.remove('visible');
     }
 }
-initDelays(0);  // initializing delay for day-1 schedule event cards
 
 function changeDay(dayNumber) {
     // function to change day tabs for viewing schedules of each day
-    initDelays(dayNumber);
     let scheduleCardAll = document.querySelectorAll('.event-wrapper');
     for (let j = 0; j < scheduleCardAll.length; j++) {
         scheduleCardAll[j].classList.add('infinite-pos');
@@ -74,6 +77,7 @@ function changeDay(dayNumber) {
     }
     removeActiveTables(dayNumber);
     addActiveTables(dayNumber);
+    changeDate(dayNumber);
 }
 //  --- END
 
@@ -152,6 +156,103 @@ function ongoing(i) {
     eventName[i].style.color = "#7d4317";
     time_venue_Wrapper[i].style.color = "rgb(99 39 15)";
 }
-completed(0);
-ongoing(1)
+
+function isOngoing(time, day) {
+    let now = new Date()
+    let [start, end] = time.split("-");
+    let startTime = new Date("02/0" + day + "/24 " + start)
+    let endTime = new Date("02/0" + day + "/24 " + end)
+    // console.log(startTime, endTime);
+    if (now >= startTime && now <= endTime) {
+        return "ongoing";
+    } else if (now > endTime) {
+        return "completed";
+    } else {
+        return "upcoming";
+    }
+}
+
+setInterval(() => {
+    for (var i = 0; i < eventWrapper.length; i++) {
+        let day;
+        if (eventWrapper[i].closest(".schedule-1")) {
+            day = 1;
+        } else if (eventWrapper[i].closest(".schedule-2")) {
+            day = 2;
+        } else {
+            day = 3;
+        }
+        // console.log(day, eventTimings[i].innerHTML.slice(0).trim().split("-"), isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day + 1));
+        let status = isOngoing(eventTimings[i].innerHTML.slice(0).trim(), day + 1);
+        switch (status) {
+            case "completed":
+                completed(i);
+                break;
+            case "ongoing":
+                ongoing(i);
+                break;
+        }
+    }
+}, 1000)
+
 // --- END
+
+
+// Code scrolling effects of the page header:
+let header = document.querySelector("#page-header");
+let msg = document.querySelector("#page-msg");
+let topBar = document.querySelector(".top-bar");
+let sponsorSection = document.querySelector(".middle-section");
+
+const resetPositions = () => {
+    // console.log("resetting");
+    // header.style.transition = "0.1s font-size, 0.3s padding, top 0.3s linear";
+    // header.style.position = "relative";
+    // header.style.paddingLeft = "40px";
+    // header.style.marginTop = "5rem";
+    // msg.style.marginTop = "1rem";
+    topBar.classList.remove("transparent-glass-bg");
+    // header.classList.add("text-3xl");
+    // header.classList.remove("text-2xl");
+}
+
+window.addEventListener("scroll", function () {
+    let msgPositionFromTop = msg.getBoundingClientRect().top;
+    if (msg.style.paddingTop == "155px") {
+        if (msgPositionFromTop > 0) {
+            resetPositions();
+            return;
+        }
+    }
+
+    else {
+        resetPositions();
+    }
+    if (msgPositionFromTop < 130) {
+        // header.style.paddingLeft = "70px";
+        // header.style.transition = "0.1s font-size, 0.1s padding, top 0.3s linear, 0.3s box-shadow";
+
+        if (msgPositionFromTop <= 90) {
+            // msg.style.marginTop = "155px";
+            // header.style.position = "fixed";
+            // header.style.top = 0;
+            // header.style.marginTop = "0.5rem";
+            // header.classList.remove("text-3xl");
+            // header.classList.add("text-2xl");
+            topBar.classList.add("transparent-glass-bg")
+        }
+    }
+    else {
+        resetPositions();
+    }
+    setTimeout(() => {
+        let msgPositionFromTop = msg.getBoundingClientRect().top;
+        if (msgPositionFromTop > 130) {
+            resetPositions()
+        }
+    }, 100)
+});
+
+
+changeDay(0)
+
