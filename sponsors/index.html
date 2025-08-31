@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xavotsav - 2024 | Events</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/favicon/mtile-150x150.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Xavotsav - 2024 | Sponsors</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="/tailwindClasses.css" />
     <link rel="stylesheet" href="/globalStyles.css" />
@@ -12,27 +32,45 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
     <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
     <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
   </head>
   <body>
-    <custom-mobile-menu />
-    <custom-modal />
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
+
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
           class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-          src="/assets/images/landing/background-8.jpg"
+          src="/assets/images/illustrartions/red.png"
         />
         <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
       </div>
       <div
         class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
       >
-        <img height="35px" src="/assets/logo/logo.png" />
+        <a href="/">
+          <img height="35px" src="/assets/logo/logo.png" />
+        </a>
         <span
           class="material-symbols-rounded cursor-pointer"
           onclick="openMenu()"
@@ -49,9 +87,8 @@
             class="relative text-lg about mt-1rem font-light z-5"
             id="page-msg"
           >
-            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-            mauris enim ipsum dictumst pretium convallis.
+            Empowering Xavotsav: Our gratitude to Sponsors. Partnering in
+            celebration, supporting the spirit of cultural brilliance.
           </div>
         </div>
         <div
@@ -60,8 +97,73 @@
       </div>
       <custom-footer />
     </div>
+    <div class="desktop">
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10"
+      >
+        <a href="/">
+          <img width="125px" src="/assets/images/logo/main.png" />
+        </a>
+        <custom-desktop-menu></custom-desktop-menu>
+      </div>
+      <div class="flex w-full h-full gg">
+        <div class="left-section relative">
+          <div class="background absolute inset-0 w-full h-full">
+            <img
+              class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
+              src="/assets/images/illustrartions/red.png"
+            />
+            <div
+              class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"
+            ></div>
+          </div>
+          <div
+            class="relative display text-3xl mt-5rem z-2"
+            id="desktop-page-header"
+          >
+            sponsors
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="desktop-page-msg"
+          >
+            Xavotsav thrives on the invaluable support of our sponsors, whose
+            commitment fuels the vibrant tapestry of this cultural spectacle. As
+            pillars of our success, they join us in fostering a platform where
+            creativity and community converge. Together, we craft moments that
+            transcend, leaving an indelible mark on the cultural landscape.
+          </div>
+        </div>
+        <div class="right-section">
+          <div
+            class="overflow-scroll sponsors-items-wrapper-desktop-scroll flex flex-col items-center"
+          >
+            <div
+              class="first-sponsor-card-desktop sponsor-card-desktop mt-10rem flex relative p-1rem flex flex-col justify-end items-start rounded"
+            >
+              <div class="picture rounded p-1rem">
+                <img
+                  class="w-full h-full object-contain rounded"
+                  src="/assets/images/sponsors/TWISTED TRUTHS.png"
+                />
+              </div>
+              <div class="flex z-5 w-full gap-05rem">
+                <span class="sponsor-title">Co-Sponsor</span>
+              </div>
+            </div>
+            <div
+              class="flex flex-wrap justify-center sponsors-items-wrapper-desktop"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <custom-desktop-footer></custom-desktop-footer>
+    </div>
   </body>
   <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./script.js"></script>
 </html>

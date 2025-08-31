@@ -41,7 +41,7 @@ class CustomModal extends HTMLElement {
                 </ul>
             </div>
             <div class="modal-bottom register-button-wrapper">
-                <a class="modal-link cursor-pointer" href="" target="__blank">Open Google Form</a>
+                <a class="modal-link cursor-pointer" href="" target="__blank">Open Rulebook</a>
             </div>
         </div>
         `

@@ -99,3 +99,11 @@
     font-size: 12px;
     text-align: center;
 }
+
+.no-bg .mobile-footer {
+    background-color: transparent;
+}
+
+.mobile-footer a {
+    color: white;
+}

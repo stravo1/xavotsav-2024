@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/favicon/mtile-150x150.png" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Xavotsav - 2024 | Events</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="/tailwindClasses.css" />
@@ -11,33 +31,46 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="/custom-tags/mobile-menu/style.css" />
+    <link rel="stylesheet" href="/custom-tags/desktop-menu-1/style.css" />
     <link rel="stylesheet" href="/custom-tags/modal/styles.css" />
     <link rel="stylesheet" href="/custom-tags/footer/styles.css" />
+    <link rel="stylesheet" href="/custom-tags/footer-desktop/styles.css" />
     <script src="/custom-tags/mobile-menu/component.js"></script>
+    <script src="/custom-tags/desktop-menu-1/component.js"></script>
     <script src="/custom-tags/modal/component.js"></script>
     <script src="/custom-tags/footer/component.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/custom-tags/footer-desktop/component.js"></script>
+
+    <script src="/custom-tags/page-transition-animation/component.js"></script>
+    <link
+      rel="stylesheet"
+      href="/custom-tags/page-transition-animation/styles.css"
+    />
+
+    <script src="/custom-tags/loading-animation/component.js"></script>
+    <link rel="stylesheet" href="/custom-tags/loading-animation/styles.css" />
   </head>
   <body>
-    <custom-mobile-menu />
-    <custom-modal />
+    <custom-mobile-menu></custom-mobile-menu>
+    <custom-modal></custom-modal>
+    <custom-loader></custom-loader>
+    <custom-page-transition></custom-page-transition>
+
     <div class="mobile">
       <div class="background fixed inset-0 w-full h-full">
         <img
           class="bg-images fixed inset-0 w-full h-full object-cover z-0 transition-all"
-          src="/assets/images/landing/background-3.jpg"
+          src="/assets/images/illustrartions/red.png"
         />
         <div class="fixed inset-0 w-full h-full black-bg opacity-40 z-1"></div>
       </div>
       <div
         class="top-bar w-full fixed top-0 p-1rem flex justify-between box-border z-10"
       >
-        <img height="35px" src="/assets/logo/logo.png" />
+        <a href="/">
+          <img height="35px" src="/assets/logo/logo.png" />
+        </a>
         <span
           class="material-symbols-rounded cursor-pointer"
           onclick="openMenu()"
@@ -54,24 +87,34 @@
             class="relative text-lg about mt-1rem font-light z-5"
             id="page-msg"
           >
-            Lorem ipsum dolor sit amet consectetur. Odio enim commodo dignissim
-            diam eget. Vel velit mauris nisi pharetra id. In fusce feugiat nunc
-            mauris enim ipsum dictumst pretium convallis.
+            Experience the Cultural Extravaganza: Unveiling the spectrum of
+            Xavotsav events. Dive into a world of creativity, talent, and
+            entertainment!
           </div>
-          <div
-            class="mt-1rem text-lg font-bold underline cursor-pointer"
-            onclick="openModal()"
-          >
-            View Guidelines
-          </div>
+          <!-- <div class="mt-1rem text-lg font-bold underline cursor-pointer">
+            <a href="https://" style="color: white; text-decoration: none"
+              >View Rulebook</a
+            >
+          </div> -->
           <div class="relative w-full z-5 flex mt-2rem gap-1rem">
             <select class="flex flex-basis-75">
               <option disabled selected>Skip to...</option>
               <option value="Dance">Dance</option>
-              <option value="Art">Art</option>
+              <option value="Journalism">Journalism</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Quiz">Quiz</option>
+              <option value="Literary Arts">Literary Arts</option>
+              <option value="Speaking Arts">Speaking Arts</option>
+              <option value="Fine Arts">Fine Arts</option>
               <option value="Music">Music</option>
+              <option value="Business">Business</option>
+              <option value="Design & Digital Events">
+                Design & Digital Events
+              </option>
+              <option value="Dramatics">Dramatics</option>
+              <option value="Sports">Sports</option>
             </select>
-            <button class="select-button">
+            <button class="select-button select-button-mobile">
               <span class="material-symbols-rounded"> arrow_forward </span>
             </button>
           </div>
@@ -82,8 +125,112 @@
       </div>
       <custom-footer />
     </div>
+    <div class="desktop">
+      <div
+        class="top-bar w-full fixed top-0 p-1rem flex justify-between items-center box-border z-10"
+      >
+        <a href="/">
+          <img width="125px" src="/assets/images/logo/main.png" />
+        </a>
+        <custom-desktop-menu></custom-desktop-menu>
+      </div>
+      <div class="flex w-full h-full">
+        <div class="left-section relative">
+          <div class="background absolute inset-0 w-full h-full">
+            <img
+              class="bg-images absolute inset-0 w-full h-full object-cover z-0 transition-all"
+              src="/assets/images/illustrartions/red.png"
+            />
+            <div
+              class="absolute inset-0 w-full h-full black-bg opacity-40 z-1"
+            ></div>
+          </div>
+          <div
+            class="relative display text-3xl mt-5rem z-2"
+            id="desktop-page-header"
+          >
+            events
+          </div>
+          <div
+            class="relative text-lg about mt-1rem font-light z-5"
+            id="desktop-page-msg"
+          >
+            Experience the Cultural Extravaganza: Unveiling the spectrum of
+            Xavotsav events. Dive into a world of creativity, talent, and
+            entertainment!
+          </div>
+          <!-- <div
+            class="mt-1rem text-lg font-bold underline cursor-pointer z-10 relative"
+          >
+            <a href="http://" style="color: white; text-decoration: none"
+              >View Rulebook</a
+            >
+          </div> -->
+          <div class="relative w-full z-5 flex mt-2rem gap-1rem">
+            <select class="flex flex-basis-75">
+              <option disabled selected>Skip to...</option>
+              <option value="Dance">Dance</option>
+              <option value="Journalism">Journalism</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Quiz">Quiz</option>
+              <option value="Literary Arts">Literary Arts</option>
+              <option value="Speaking Arts">Speaking Arts</option>
+              <option value="Fine Arts">Fine Arts</option>
+              <option value="Music">Music</option>
+              <option value="Business">Business</option>
+              <option value="Design & Digital Events">
+                Design and Digital Events
+              </option>
+              <option value="Dramatics">Dramatics</option>
+              <option value="Sports">Sports</option>
+            </select>
+            <button class="select-button select-button-desktop">
+              <span class="select-button-icon material-symbols-rounded">
+                arrow_forward
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="overflow-scroll events-items-wrapper-desktop-scroll">
+            <div
+              class="mt-10rem flex flex-wrap justify-center events-items-wrapper-desktop"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="marquee" data-scroll="">
+        <div class="track track-1">
+          <ul class="marquee-texts flex">
+            <li>xavotsav'24</li>
+            <li>Dance</li>
+            <li>Lifestyle</li>
+            <li>Quiz</li>
+            <li>Sports</li>
+            <li>Gaming</li>
+            <li>Literary Arts</li>
+            <li>Speaking Arts</li>
+            <li>Fine Arts</li>
+            <li>Music</li>
+            <li>Dramatics</li>
+            <li>Journalism</li>
+            <li>Business</li>
+            <li>Design</li>
+            <li>Painting</li>
+            <li>Photography</li>
+            <li>xavotsav'24</li>
+          </ul>
+        </div>
+      </div>
+      <custom-desktop-footer />
+    </div>
   </body>
   <script src="/custom-tags/mobile-menu/script.js"></script>
+  <script src="/custom-tags/desktop-menu-1/script.js"></script>
   <script src="/custom-tags/modal/script.js"></script>
+  <script src="/custom-tags/footer-desktop/script.js"></script>
+  <script src="/custom-tags/loading-animation/animate.js"></script>
+  <script src="/custom-tags/page-transition-animation/script.js"></script>
   <script src="./script.js"></script>
+  <script src="./scrollToDiv.js"></script>
 </html>

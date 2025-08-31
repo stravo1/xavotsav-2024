@@ -41,6 +41,10 @@
   margin: 1rem;
 }
 
+.m-3rem {
+  margin: 3rem;
+}
+
 .p-1rem {
   padding: 1rem;
 }
@@ -152,8 +156,13 @@
 .bottom-0 {
   bottom: 0;
 }
+
 .left-0 {
   left: 0;
+}
+
+.right-0 {
+  right: 0;
 }
 
 .inset-0 {
@@ -171,6 +180,7 @@
 
 .overflow-scroll {
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 /* Visibility */
@@ -180,6 +190,10 @@
 
 .visible {
   visibility: visible;
+}
+
+.collapse {
+  visibility: collapse;
 }
 
 /* Z-Index */
@@ -219,7 +233,6 @@
 .object-contain {
   object-fit: contain;
 }
-
 
 .opacity-0 {
   opacity: 0%;

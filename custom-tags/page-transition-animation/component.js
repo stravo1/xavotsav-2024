@@ -7,17 +7,10 @@ class CustomPageTransition extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
             <div class="transition-wrapper transition-visible">
-              <div class="domino">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <div class="loader-nature"> 	
               </div>
-              <div class="pixelated bottom-text">
-                eXabyte' 24
+              <div class="italiana bottom-text">
+                <img src="/assets/images/logo/main.png" style="width: 125px; object-fit: contain;" alt="" srcset="">
               </div>
             </div>
           `
